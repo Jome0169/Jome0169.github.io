@@ -1,7 +1,7 @@
 # Site wide configuration
 
-title: "My Site"
-description: "This is a description of my awesome site."
+title: Generally Biology
+description: A blog about computer science, biology, and everything else
 logo: # 120x120 px default image used for Twitter summary card
 teaser: # 400x250 px default teaser image used in image archive grid
 locale: en
@@ -15,6 +15,7 @@ sass:
   sass_dir: _sass
   style: compressed
 permalink: /:categories/:title/
+
 kramdown:
   toc_levels: 1..2
 highlighter: rouge
@@ -24,21 +25,49 @@ gems:
   - jekyll-feed
 
 
+
 # Site owner
-owner:
-  name:
-  email:
-  twitter:
-  google:
-    ad-client:
-    ad-slot:
-  bio:
-  avatar: bio-photo.jpg # 160x160 px image for author byline
-  disqus-shortname:
+owner: jome0169
+name: Pablo-Mendieta
+email: John.mendieta@colorado.edu
+twitter: Pabster212
+google:
+  ad-client:
+  ad-slot:
+bio: A computational interested in those little green things that stick out of the ground everywhere
+avatar: bio-photo.jpg # 160x160 px image for author byline
+disqus-shortname:
 
 
-include:
-  - .htaccess
+
+permalink: /about/
+#PagesDefault
+default:
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+
+
+
+
+#post Defaults
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: true
+      share: true
+      related: true
+
+
+
 exclude:
   - "*.less"
   - "*.sublime-project"

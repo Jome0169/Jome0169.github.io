@@ -1,6 +1,20 @@
 # Site navigation links
 
-- title:
-  url:
-  excerpt:
+- title: "Blog"
+  url: /Blog/
+  excerpt: "Writing on Biology and Life"
+
+- title: "About"
+  url: /about.md/
+  excerpt: "Who I am and why you should care"
   image:
+
+- title: "Citations"
+  url: /citations/
+  excerpt: "Who I am and why you should care"
+ 
+
+
+
+
+
