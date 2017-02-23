@@ -4,6 +4,11 @@ permalink: /
 title: "Latest Posts"
 ---
 
+
+<div class="HeaderImage">
+
+</div>
+
 <div class="tiles">
 {% for post in site.posts %}
 	{% include post-grid.html %}
