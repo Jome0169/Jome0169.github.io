@@ -1,10 +1,9 @@
-A
+___
 layout: archive
 permalink: /
-image: forest.jpg
-feature: forest.jpg
-
-title: "Latest Posts"
+excerpt: I love biology!
+image: 
+title: Latest Posts
 ---
 
 

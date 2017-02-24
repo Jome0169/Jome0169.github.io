@@ -38,9 +38,7 @@ bio: A computational interested in those little green things that stick out of t
 avatar: bio-photo.jpg # 160x160 px image for author byline
 disqus-shortname:
 
-permalink: /blog/
 
-permalink: /about/
 #PagesDefault
 default:
   - scope:
@@ -68,7 +66,6 @@ defaults:
 
 #Archive Settings
 #
-
 
 collections:
   portfolio:

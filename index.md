@@ -1,11 +1,11 @@
-A
+---
 layout: archive
 permalink: /
 image: forest.jpg
-feature: forest.jpg
-
 title: "Latest Posts"
 ---
+
+
 
 
 <div class="tiles">

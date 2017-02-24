@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>/about/</loc>
+<loc>/jekyll/update/TESTINGEVERYTHING3/</loc>
 <lastmod>2017-02-23T10:16:01-07:00</lastmod>
 </url>
 <url>
-<loc>/about/</loc>
+<loc>/jekyll/update/TESTINGEVERYTHING2/</loc>
 <lastmod>2015-11-17T15:16:01-07:00</lastmod>
 </url>
 <url>
-<loc>/about/</loc>
+<loc>/jekyll/update/TESTINGEVERYTHING/</loc>
 <lastmod>2015-11-17T15:16:01-07:00</lastmod>
 </url>
 <url>
-<loc>/about/</loc>
+<loc>/jekyll/update/IHAVENOCLUE/</loc>
 <lastmod>2015-10-01T16:16:01-06:00</lastmod>
 </url>
 <url>
@@ -21,5 +21,8 @@
 </url>
 <url>
 <loc>/blog/</loc>
+</url>
+<url>
+<loc>/</loc>
 </url>
 </urlset>
