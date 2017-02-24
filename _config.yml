@@ -25,6 +25,11 @@ gems:
   - jekyll-feed
 
 
+breadcrumbs: true
+breadcrumb_home_label : "home"
+breadcrumb_separator  : ">"
+
+
 
 # Site owner
 owner: jome0169

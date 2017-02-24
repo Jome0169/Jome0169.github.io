@@ -1,9 +1,8 @@
 ---
 layout: archive
-title: Blog
+title: Blog Post
 date: 2-23-2017
 modified:
-excerpt: YES
 ---
 
 <div class="tiles">

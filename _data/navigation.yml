@@ -2,11 +2,11 @@
 
 - title: "Blog"
   url: /Blog/
-  excerpt: "Writing on Biology and Life"
+  excerpt: "My Writings on Biology, and computers, and the insane intersection between the two that we call bioinformatics/computational biology."
 
 - title: "About"
-  url: /about.md/
-  excerpt: "Who I am and why you should care"
+  url: /About/
+  excerpt: " John Pablo Mendieta"
   image:
 
 - title: "Citations"

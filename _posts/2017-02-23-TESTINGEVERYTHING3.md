@@ -2,10 +2,10 @@
 layout: article
 title: "I Love making Test Post"
 date: 2017-2-23 11:16:01 -0600
+categories: Blog
 image:
      teaser: pexels-photo-90807.jpeg
      feature: plant-photo-1.jpeg
-categories: jekyll update
 ---
 
 This post is literally just me making sure I am able to and capable up updating

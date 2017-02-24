@@ -7,9 +7,9 @@ locales:
   en: &DEFAULT_EN
     overview: "Overview"
     toc: "Table of Contents"
-    written_by: "Written by"
+    written_by: "Written by Pablo Mendieta"
     updated: "Updated"
-    share: "Share on"
+    share: 
   en_US:
     <<: *DEFAULT_EN     # use English translation for en_US
   en_UK:

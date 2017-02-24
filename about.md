@@ -1,7 +1,9 @@
 ---
-title: About Me
-permalink: /about.md/
 layout: default
+title: "About Me"
+excerpt: About 
 ---
 
-I am one Sick bioinformatics guy -- I will Tell you wut
+Bioinformatics researcher with a passion for Plants, Bioinformatics, and
+everything inbetween. Graduated from CU boulder in 2015 with a BA in Molecular
+Bioloy, and Evolutionary Biology. Currently looking for graduate programs.
