@@ -1,7 +1,12 @@
 # Footer navigation links
 
-- title: Github
-  url: https://github.com/Jome0169
+- title: "Follow:"
 
 - title: Twitter
   url: https://twitter.com/pabster212?lang=en
+
+- title: Github
+  url: https://github.com/Jome0169
+
+- title: Linkedin
+  url: https://www.linkedin.com/in/john-mendieta-016305119/
