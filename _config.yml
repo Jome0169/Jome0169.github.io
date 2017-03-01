@@ -45,7 +45,17 @@ disqus-shortname:
 
 
 
+defaults:
+  # _pages
+  - scope:
+      path: ""
+      type: default
+    values:
+      layout: single
+      author_profile: true
 
+
+#
 #post Defaults
 defaults:
   - scope:
