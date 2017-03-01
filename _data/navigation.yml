@@ -1,14 +1,14 @@
 # Site navigation links
 
 - title: "About"
-  url: /About/
+  url: /about/
   excerpt: " John Pablo Mendieta"
   image:
 
 
 
 - title: "Blog"
-  url: /Blog/
+  url: /blog/
   excerpt: "My Writings on Biology, and computers, and the insane intersection between the two that we call bioinformatics/computational biology."
   image: 
 
