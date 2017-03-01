@@ -70,7 +70,9 @@ defaults:
       related: true
 
 #Archive Settings
-#
+
+permalink: /about.md
+permalink: /blog.md
 
 collections:
   portfolio:
