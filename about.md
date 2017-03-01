@@ -4,33 +4,29 @@ title: "About Me"
 excerpt: About 
 ---
 
-Genomics - Bioinformatics - Computational Biology
+As far as I can tell, people reading this blog will experiance it in one of two
+ways, so down below make sure to read the section and post that apply to you
 
-Three words that to most, mean relativly little. But to this of us
-indoctrinated into the field of biology, we know these three terms lie in a
-danerous state of contention. 
-
-What I aim to acheice with this blog is create a place where both people new to
-the field, and people in the field can gain something. Whether it be a post
-explaining the very fundamentals of what computational biology/bioinformatics
-is, or a post going into the nitty gritty of how suffix trees are utalized in
-BLAST., there will be something for everyone. 
+1. You haven't taken a biology class since high school, and to you DNA is a
+   long distant memory dealing with two old white dudes, and some pea plants.
+If that's the case I hope this blog can show you that the world of biology,
+genetics, and genomics is far more interesting and accesible than you were
+taught to believe. Biology is for everyone, and that includes you.
 
 
-But I am a bioinformatics researcher in love with the intersection of biology
-and computers. Where we currently sit is on the precipice where biology stands
-to be the next great engineering discipline. We live in remarkable times, and
-the way things
+OR
+
+2. You are a biologist in the field who loves, and breathes all things
+   biological. If that is the case - welcome. You will feel right at home. My
+specialty is all things genomics and bioinformatics (coding is sweet). A field
+that is ever growing and becoming ever more important in biology. So hopefully you
+can find somethiong of use. You can find my gith=ub here.
 
 
 
-#It was once said to me that science today is a teasure trove of riches and
-#knowledge the like of which humanity has never seen before, and in Biology,
-#this is especially true. For those of us in the field modern Genetics and
-#Genomics have changed the way in which we look at the world, as well as
-#changing the way we allocate where we stand in the modern world. 
-#
-#But, sadly, these riches so fast and expansive are unkown to the general
-#public. So, in this blog I aim to help people new or curious to the field dive
-#in, and dive deep. 
+
+
+
+
+
 
