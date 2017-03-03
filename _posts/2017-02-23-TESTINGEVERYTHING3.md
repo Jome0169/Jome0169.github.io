@@ -2,7 +2,7 @@
 layout: article
 title: "I Love making Test Post"
 date: 2017-2-23 11:16:01 -0600
-categories: Blog
+categories: Bioinformatics
 image:
      teaser: pexels-photo-90807.jpeg
      feature: plant-photo-1.jpeg

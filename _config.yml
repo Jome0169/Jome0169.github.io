@@ -71,9 +71,8 @@ defaults:
 
 #Archive Settings
 
-permalink: /about.md
-permalink: /blog.md
 
+permalinmlink: /:categories/:title/
 collections:
   portfolio:
     output: true

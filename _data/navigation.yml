@@ -1,10 +1,8 @@
 # Site navigation links
 
-- title: "About"
-  url: /about/
-  excerpt: " John Pablo Mendieta"
-  image:
-
+- title: "Home"
+  url: /index/
+  excerpt: "Generally Biology"
 
 
 - title: "Blog"
@@ -12,10 +10,21 @@
   excerpt: "My Writings on Biology, and computers, and the insane intersection between the two that we call bioinformatics/computational biology."
   image: 
 
+
+- title: "Collections"
+  url: /collections/
+  excerpt: "Writings on specific subjects"
+
           #- title: "Citations"
           #url: /citations/
           #excerpt: "Who I am and why you should care"
  
+
+- title: "About"
+  url: /about/
+  excerpt: "John Pablo Mendieta"
+  image:
+
 
 
 

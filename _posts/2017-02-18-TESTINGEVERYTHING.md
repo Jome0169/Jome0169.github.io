@@ -2,7 +2,7 @@
 layout: article
 title:  "WOOP WOOP ICP"
 date:   2015-11-17 16:16:01 -0600
-categories: Blog Biology
+categories: Writing
 image:
     feature: dnaimage.jpg
     teaser: dnaimage.jpg

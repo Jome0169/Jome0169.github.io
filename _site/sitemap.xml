@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>/blog/TESTINGEVERYTHING3/</loc>
+<loc>/blog.md</loc>
 <lastmod>2017-02-23T10:16:01-07:00</lastmod>
 </url>
 <url>
-<loc>/blog/TESTINGEVERYTHING2/</loc>
+<loc>/blog.md</loc>
 <lastmod>2015-11-17T15:16:01-07:00</lastmod>
 </url>
 <url>
-<loc>/blog/biology/TESTINGEVERYTHING/</loc>
+<loc>/blog.md</loc>
 <lastmod>2015-11-17T15:16:01-07:00</lastmod>
 </url>
 <url>
-<loc>/blog/IHAVENOCLUE/</loc>
+<loc>/blog.md</loc>
 <lastmod>2015-10-01T16:16:01-06:00</lastmod>
 </url>
 <url>
-<loc>/about/</loc>
+<loc>/about</loc>
 </url>
 <url>
-<loc>/blog/</loc>
+<loc>/blog</loc>
 </url>
 <url>
-<loc>/citations/</loc>
+<loc>/citations</loc>
 </url>
 <url>
 <loc>/</loc>
