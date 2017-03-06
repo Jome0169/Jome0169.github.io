@@ -1,4 +1,51 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.6">Jekyll</generator><link href="/atom.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2017-03-01T17:03:31-07:00</updated><id>/</id><title>Generally Biology</title><subtitle>A blog about computer science, biology, and everything else</subtitle><entry><title>I Love making Test Post</title><link href="/blog.md" rel="alternate" type="text/html" title="I Love making Test Post" /><published>2017-02-23T10:16:01-07:00</published><updated>2017-02-23T10:16:01-07:00</updated><id>/TESTINGEVERYTHING3</id><content type="html" xml:base="/blog.md">&lt;p&gt;This post is literally just me making sure I am able to and capable up updating
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.6">Jekyll</generator><link href="/atom.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2017-03-06T11:06:00-07:00</updated><id>/</id><title>Generally Biology</title><subtitle>A blog about computer science, biology, and everything else</subtitle><entry><title>What is Bioinformatics?</title><link href="/bioinformatics/WhatIsBioinformatics/" rel="alternate" type="text/html" title="What is Bioinformatics?" /><published>2017-03-05T08:00:00-07:00</published><updated>2017-03-05T08:00:00-07:00</updated><id>/bioinformatics/WhatIsBioinformatics</id><content type="html" xml:base="/bioinformatics/WhatIsBioinformatics/">&lt;p&gt;Alright, I have a question for you. If I tell you I am a genomic biologist,
+where do you expect I spend most of my time?&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;In a lab surrounded by chemicals wearing a white lab coat&lt;/li&gt;
+  &lt;li&gt;At a desk, on a laptop smack my head against the keyboard&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;If you answered 2, you are correct! But, if you answered 1, don’t worry about
+it. I barely understood what genomic biologist did when I was in college
+learning this stuff. But it takes many people by suprise when they
+initially learn that what I predominitly do with my day is either creating or
+running software on my computer to answer biological questions. How did this
+happen you might ask? Where are my nerds in white with pipettes and beakers
+doing &lt;em&gt;trill&lt;/em&gt; science? Why is this nerd wanting to talk about algorithms with
+me? Well, let me tell you a brief story about how we got here (don’t worry,
+it’ll be a quick recap, I promise).&lt;/p&gt;
+
+&lt;p&gt;Alright, stop me if you’ve heard this story before. For a long time, up until
+the mid 1990’s, genomics was an idea reserved for sci-fi novels and speculative
+fiction writers. But all of a sudden, something changed. The government decided
+to pour a bunch of money into a first of its kind research, the human genome
+project.&lt;/p&gt;
+
+&lt;p&gt;In broad sweeping stroakes, bioinformatics is the filed of using techniques
+from computer science to create tools and answer questions regarding biology.
+Since almost all sequence data currently created is done so in a digitial
+foramt, our only option for manipulating such large amounts of data relies on
+the use of computers.&lt;/p&gt;</content><summary>Alright, I have a question for you. If I tell you I am a genomic biologist,
+where do you expect I spend most of my time?</summary></entry><entry><title>Getting Started in Bioinformatics</title><link href="/bioinformatics/GettingintoBioinforamtics/" rel="alternate" type="text/html" title="Getting Started in Bioinformatics" /><published>2017-03-05T08:00:00-07:00</published><updated>2017-03-05T08:00:00-07:00</updated><id>/bioinformatics/GettingintoBioinforamtics</id><content type="html" xml:base="/bioinformatics/GettingintoBioinforamtics/">&lt;p&gt;So, you’ve read about it, researched it, looked into what it entails, and you
+think bioinformatics might be the field for you. Well, great! It’s an amazing
+field of science. One undergoing some tremendous growth, and has the potential
+to revolutionize the field of biology, medicine, and human health. But… Now
+you’re left with an issue. Where do you start?&lt;/p&gt;
+
+&lt;p&gt;Honestly, this isn’t an easy question. Bioinformtics is not a field in which
+you can take a single coursera course and be good to go. Rather, bioinformatics
+is a massive field where there is a seemingly limitless amount of information
+to cram in your very limited brain.&lt;/p&gt;
+
+&lt;p&gt;So, rather than attempt to do the impossible and write an extensive guide to
+being a genome wizard, I’m going to instead write a little about some resources
+I used to get started in the field as well as a little about what you should be
+getting from each piece.&lt;/p&gt;</content><summary>So, you’ve read about it, researched it, looked into what it entails, and you
+think bioinformatics might be the field for you. Well, great! It’s an amazing
+field of science. One undergoing some tremendous growth, and has the potential
+to revolutionize the field of biology, medicine, and human health. But… Now
+you’re left with an issue. Where do you start?</summary></entry><entry><title>I Love making Test Post</title><link href="/bioinformatics/TESTINGEVERYTHING3/" rel="alternate" type="text/html" title="I Love making Test Post" /><published>2017-02-23T10:16:01-07:00</published><updated>2017-02-23T10:16:01-07:00</updated><id>/bioinformatics/TESTINGEVERYTHING3</id><content type="html" xml:base="/bioinformatics/TESTINGEVERYTHING3/">&lt;p&gt;This post is literally just me making sure I am able to and capable up updating
 this site with the things I am going to need to amke it
 succeednkdfsjknafdjnkdfajnkdfjknfdjnkafdjknfdjnkafdsjknfdjnkdfsjnkfdajnkdfjnkjdfnkjnkfdsjknfdnkfdjnkadfjnkfadsdfnsdfsadfs
 a
@@ -16,7 +63,7 @@ dsa
 d
 sad
 as
-‘</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="{&quot;teaser&quot;=&gt;&quot;pexels-photo-90807.jpeg&quot;, &quot;feature&quot;=&gt;&quot;plant-photo-1.jpeg&quot;}" /></entry><entry><title>Welcome to Jekyll!</title><link href="/blog.md" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2015-11-17T15:16:01-07:00</published><updated>2015-11-17T15:16:01-07:00</updated><id>/TESTINGEVERYTHING2</id><content type="html" xml:base="/blog.md">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and
+‘</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="{&quot;teaser&quot;=&gt;&quot;pexels-photo-90807.jpeg&quot;, &quot;feature&quot;=&gt;&quot;plant-photo-1.jpeg&quot;}" /></entry><entry><title>Welcome to Jekyll!</title><link href="/bioinformatics/TESTINGEVERYTHING2/" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2015-11-17T15:16:01-07:00</published><updated>2015-11-17T15:16:01-07:00</updated><id>/bioinformatics/TESTINGEVERYTHING2</id><content type="html" xml:base="/bioinformatics/TESTINGEVERYTHING2/">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and
 re-build the site to see your changes. You can rebuild the site in many
 different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;bundle exec jekyll serve&lt;/code&gt;,
 which launches a web server and auto-regenerates your site when a file is
@@ -29,7 +76,7 @@ works.&lt;/p&gt;</content><summary>You’ll find this post in your _posts direct
 re-build the site to see your changes. You can rebuild the site in many
 different ways, but the most common way is to run bundle exec jekyll serve,
 which launches a web server and auto-regenerates your site when a file is
-updated.</summary></entry><entry><title>WOOP WOOP ICP</title><link href="/blog.md" rel="alternate" type="text/html" title="WOOP WOOP ICP" /><published>2015-11-17T15:16:01-07:00</published><updated>2015-11-17T15:16:01-07:00</updated><id>/TESTINGEVERYTHING</id><content type="html" xml:base="/blog.md">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and
+updated.</summary></entry><entry><title>WOOP WOOP ICP</title><link href="/writing/TESTINGEVERYTHING/" rel="alternate" type="text/html" title="WOOP WOOP ICP" /><published>2015-11-17T15:16:01-07:00</published><updated>2015-11-17T15:16:01-07:00</updated><id>/writing/TESTINGEVERYTHING</id><content type="html" xml:base="/writing/TESTINGEVERYTHING/">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and
 re-build the site to see your changes. You can rebuild the site in many
 different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;bundle exec jekyll serve&lt;/code&gt;,
 which launches a web server and auto-regenerates your site when a file is
@@ -42,4 +89,4 @@ works.&lt;/p&gt;</content><summary>You’ll find this post in your _posts direct
 re-build the site to see your changes. You can rebuild the site in many
 different ways, but the most common way is to run bundle exec jekyll serve,
 which launches a web server and auto-regenerates your site when a file is
-updated.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="{&quot;feature&quot;=&gt;&quot;dnaimage.jpg&quot;, &quot;teaser&quot;=&gt;&quot;dnaimage.jpg&quot;}" /></entry><entry><title>MORE BIOOO</title><link href="/blog.md" rel="alternate" type="text/html" title="MORE BIOOO" /><published>2015-10-01T16:16:01-06:00</published><updated>2015-10-01T16:16:01-06:00</updated><id>/IHAVENOCLUE</id><content type="html" xml:base="/blog.md">&lt;p&gt;Trying&lt;/p&gt;</content><summary>Trying</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="{&quot;feature&quot;=&gt;&quot;forest.jpg&quot;}" /></entry></feed>
+updated.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="{&quot;feature&quot;=&gt;&quot;dnaimage.jpg&quot;, &quot;teaser&quot;=&gt;&quot;dnaimage.jpg&quot;}" /></entry><entry><title>MORE BIOOO</title><link href="/writing/IHAVENOCLUE/" rel="alternate" type="text/html" title="MORE BIOOO" /><published>2015-10-01T16:16:01-06:00</published><updated>2015-10-01T16:16:01-06:00</updated><id>/writing/IHAVENOCLUE</id><content type="html" xml:base="/writing/IHAVENOCLUE/">&lt;p&gt;Trying&lt;/p&gt;</content><summary>Trying</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="{&quot;feature&quot;=&gt;&quot;forest.jpg&quot;}" /></entry></feed>
