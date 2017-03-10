@@ -3,7 +3,6 @@ layout: archive
 permalink: /
 image: forest.jpg
 header:
-  overlay_color: "#333"
 title: "Latest Posts"
 ---
 
