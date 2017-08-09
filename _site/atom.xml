@@ -1,107 +1,197 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.6">Jekyll</generator><link href="/atom.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2017-03-08T15:39:54-07:00</updated><id>/</id><title>Generally Biology</title><subtitle>A blog about computer science, biology, and everything else</subtitle><entry><title>What is Bioinformatics?</title><link href="/writing/WhatIsBioinformatics/" rel="alternate" type="text/html" title="What is Bioinformatics?" /><published>2017-03-05T08:00:00-07:00</published><updated>2017-03-05T08:00:00-07:00</updated><id>/writing/WhatIsBioinformatics</id><content type="html" xml:base="/writing/WhatIsBioinformatics/">&lt;p&gt;Alright, I have a question for you. If I tell you I am a genomic biologist,
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.6">Jekyll</generator><link href="/atom.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2017-07-16T12:47:11-04:00</updated><id>/</id><title>Generally Biology</title><subtitle>A blog about computer science, biology, and everything else</subtitle><entry><title>Genome Annotation</title><link href="/bioinformatics/GenomeAnnotation/" rel="alternate" type="text/html" title="Genome Annotation" /><published>2017-07-07T11:00:00-04:00</published><updated>2017-07-07T11:00:00-04:00</updated><id>/bioinformatics/GenomeAnnotation</id><content type="html" xml:base="/bioinformatics/GenomeAnnotation/">&lt;p&gt;ARE WE UPDATEING&lt;/p&gt;</content><summary>E DA BEST</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="{&quot;feature&quot;=&gt;&quot;forest.jpg&quot;}" /></entry><entry><title>Getting Started in Bioinformatics</title><link href="/bioinformatics/WhatKindOfBioinformaticianAreYou/" rel="alternate" type="text/html" title="Getting Started in Bioinformatics" /><published>2017-06-23T11:00:00-04:00</published><updated>2017-06-23T11:00:00-04:00</updated><id>/bioinformatics/WhatKindOfBioinformaticianAreYou</id><content type="html" xml:base="/bioinformatics/WhatKindOfBioinformaticianAreYou/"></content><summary></summary></entry><entry><title>A Brief History of Bioinformatics?</title><link href="/writing/TrainingAugusts/" rel="alternate" type="text/html" title="A Brief History of Bioinformatics?" /><published>2017-03-05T10:00:00-05:00</published><updated>2017-03-05T10:00:00-05:00</updated><id>/writing/TrainingAugusts</id><content type="html" xml:base="/writing/TrainingAugusts/">&lt;p&gt;#Training AUGUSTUS for genome Anotation&lt;/p&gt;
+
+&lt;p&gt;So, if you’re like me and you’re annotating a genome in 2017 you’ve probably
+been blown away also with just how bad the documentation and resouces are. In
+my extensive googling i only found a handful of blog posts (maybe 5) dealing
+with augstus training data sets, and all of these blogs were from almost 5
+years ago. So, i though I would make a brief how-to turtorial on how to create
+an augustus training set that will (hopefully) actually work.&lt;/p&gt;
+
+&lt;p&gt;Let it be know right now that this the systems and examples I will be
+discussing have quite alot of data, which in all honesty made my life quite a
+bit easier. It should be noted that species with minimal to non-existant data
+are going to have a very challenging time. But with enough patience and
+attempts I am sure it can be done.&lt;/p&gt;
+
+&lt;p&gt;#Step 1 - Create a transcriptome&lt;/p&gt;
+
+&lt;p&gt;#Step 2 - Create a Genome aligned trasncriptome&lt;/p&gt;
+
+&lt;p&gt;#Step 3 - Run PASA pipeline&lt;/p&gt;
+
+&lt;p&gt;#Step 4 - Download Databases&lt;/p&gt;
+
+&lt;p&gt;Alright - now’re we’re getting to the fun stuff
+#Step 5 - Pipeline&lt;/p&gt;
+
+&lt;p&gt;#Step6 - Refine Genes&lt;/p&gt;
+
+&lt;p&gt;#Step7 - ACTUALLY RUN AND TRAIN AUGUSTUS&lt;/p&gt;</content><summary>#Training AUGUSTUS for genome Anotation</summary></entry><entry><title>A Brief History of Bioinformatics?</title><link href="/writing/YourFirstBioinformaticsProject/" rel="alternate" type="text/html" title="A Brief History of Bioinformatics?" /><published>2017-03-05T10:00:00-05:00</published><updated>2017-03-05T10:00:00-05:00</updated><id>/writing/YourFirstBioinformaticsProject</id><content type="html" xml:base="/writing/YourFirstBioinformaticsProject/"></content><summary></summary></entry><entry><title>You don’t know What I do</title><link href="/writing/YouDontKnowWhatIDo/" rel="alternate" type="text/html" title="You don&#39;t know What I do" /><published>2017-03-05T10:00:00-05:00</published><updated>2017-03-05T10:00:00-05:00</updated><id>/writing/YouDontKnowWhatIDo</id><content type="html" xml:base="/writing/YouDontKnowWhatIDo/">&lt;p&gt;You don’t know what I do. I don’t wear a white lab coat, i don’t spend my days around beakers or bunsen burners, and i haven’t worn proper “lab safe” clothing since i was an undergraduate. I don’t work in a lab with chemical, or explosives. Rather I work at a desk plugging away writing code for some of the worlds most powerful computers to run. I spend all day reading and trying to understand math, biology, and computer science and try and find a way that allows all of these fields to work together to allow me to understand how thing change, and how we as things change as well.&lt;/p&gt;
+
+&lt;p&gt;Your genome isn’t sequecned and assembled by people using microscopes. Heck, if you got your genome sequenced chances are they didn’t sequence all of it. Rather the company you sent your DNA to seqeuenced only short segments that are the most “informative”, that tell sciensitst the most information with spending the least amount of money to do it. But these little snips of DNA on an inocmplete genome can reveal huge amounts about where you come from and who your ancestors are. It can be a great predictor of diseases we know alot about, but can’t tell us anything about more complex traits like why some peoples metabolisms are faster or slower.&lt;/p&gt;
+
+&lt;p&gt;You have 20,000 genes in your body (roughly). I can tell you where they generally lie and on what chromosme. I cna tell you their names. But for 60Z% of them i cant tell you what they do. Of the other 40% i might have a general idaa of what they’re function is. But how they releate to other genes or even the other 40% we still aren’t sure.&lt;/p&gt;
+
+&lt;p&gt;We didn’t know any of this 17 years ago.&lt;/p&gt;
+
+&lt;p&gt;We didn’t know half of this 8 years ago.&lt;/p&gt;
+
+&lt;p&gt;#I’m not a doctor, and i can’t explain every phenomon in your body. i can’t tell you why you inherited your mothers weird neck crick or that mole on your left calf that looks exactly like a horse. but i can tell you that a majority of what you are is, is junk dna. you’re 90% garbage.&lt;/p&gt;
+
+&lt;p&gt;Most biologist nowadays don’t venture out into foreign unexplored wildrenesses. Generally they spend more and more time on computers, using the most advanced technoligy we have today to unravel source code that has been under refinment for 3.5 billion years.&lt;/p&gt;
+
+&lt;p&gt;I could spend all day telling you about how little we know about genomes. I could spend all day telling you how much we know. But please - keep asking me questions, because i love it. And I want you to know what I do. You don’t know anything nad so do I, and that’s wonderful.&lt;/p&gt;</content><summary>You don’t know what I do. I don’t wear a white lab coat, i don’t spend my days around beakers or bunsen burners, and i haven’t worn proper “lab safe” clothing since i was an undergraduate. I don’t work in a lab with chemical, or explosives. Rather I work at a desk plugging away writing code for some of the worlds most powerful computers to run. I spend all day reading and trying to understand math, biology, and computer science and try and find a way that allows all of these fields to work together to allow me to understand how thing change, and how we as things change as well.</summary></entry><entry><title>Doing Science Research as an Undergraduate</title><link href="/bioinformatics/GettingIntoResearchAsAnUnderGraduate/" rel="alternate" type="text/html" title="Doing Science Research as an Undergraduate" /><published>2017-03-05T10:00:00-05:00</published><updated>2017-03-05T10:00:00-05:00</updated><id>/bioinformatics/GettingIntoResearchAsAnUnderGraduate</id><content type="html" xml:base="/bioinformatics/GettingIntoResearchAsAnUnderGraduate/">&lt;p&gt;An undergraduate science degree without research experiance is totally
+worthless and a horrible investment. There, I said it. And if that sentance
+angered or irritated you, just keep reading.&lt;/p&gt;
+
+&lt;p&gt;Undergraduate level courses in college are nothing more than highschool 2.0.
+You go to class, you take notes, you do homework, and finally you take tests.
+And these tests are the culmination of all your hard work right? Those grades
+at the end of college are actually what matter right?&lt;/p&gt;
+
+&lt;p&gt;Wrong&lt;/p&gt;
+
+&lt;p&gt;So god damn Wrong&lt;/p&gt;
+
+&lt;p&gt;A large majority of the people in STEM that i know who weren’t involeved in
+undergrauate research usually ended up not doin anything with their degree and
+working a non related 9-5 desk job, or worse, spending their futures in a&lt;/p&gt;</content><summary>An undergraduate science degree without research experiance is totally
+worthless and a horrible investment. There, I said it. And if that sentance
+angered or irritated you, just keep reading.</summary></entry><entry><title>Getting Started in Bioinformatics</title><link href="/bioinformatics/GettingintoBioinforamtics/" rel="alternate" type="text/html" title="Getting Started in Bioinformatics" /><published>2017-03-05T10:00:00-05:00</published><updated>2017-03-05T10:00:00-05:00</updated><id>/bioinformatics/GettingintoBioinforamtics</id><content type="html" xml:base="/bioinformatics/GettingintoBioinforamtics/">&lt;p&gt;#Getting into Bioinformatics for Begginers&lt;/p&gt;
+
+&lt;p&gt;So, you’ve read about it, researched it, looked into what it entails, and you think bioinformatics might be the field for you. Well, great! It’s an amazing field of science. One undergoing some tremendous growth, and has the potential to revolutionize the field of biology, medicine, and human health. But… Now you’re left with an issue. Where do you start?&lt;/p&gt;
+
+&lt;p&gt;Honestly, this isn’t an easy question. Bioinformatics is not a field in where a single course or even degree will prepare you. Rather, bioinformatics is a massive field where there is a seemingly limitless amount of information to cram into your very limited brain. The best in the field are always learning and improving as fast as they can.&lt;/p&gt;
+
+&lt;p&gt;In this blog post, I’m going to introduce you to some of the resources that got me started on my journey into this field. And while this is certainly not an exhaustive list, it attempts to highlight some of the skills that I think are critical for any young bioinformatician to learn and develop early on.&lt;/p&gt;
+
+&lt;p&gt;It should be noted that I am writing this blog post for people who may have some biology knowledge, but relatively little to no computer science background. If you are in the reverse situation I would recommend reading X’s guide. It gives a far better approach for someone coming from a computer science background.&lt;/p&gt;
+
+&lt;p&gt;##Command Line&lt;/p&gt;
+
+&lt;p&gt;If you don’t know a thing about using computers, this is where you need to start.&lt;/p&gt;
+
+&lt;p&gt;Relearning how to navigate your computer and file system not using a visual interface is essential in bioinformatics. Often times you’ll be working on a computer cluster with no access to a desktop environment, so you’re forced to navigate the system in the most basic format - terminal and command line. When you think about movies with hackers typing into all black screens with green text, this is generally what they’re doing.&lt;/p&gt;
+
+&lt;p&gt;Many of the programs and software were written for bioinformatics are written to be run on the command line. These programs do not have graphical user interfaces (GUIs) like most software you’re probably familiar with (think Microsoft word or google chrome). Rather these programs put all of their power into running complicated algorithms on huge datasets. So, it kinda makes sense why the creators chose to skip creating a friendly user interface when they’re writing software to untangle biological complexity.&lt;/p&gt;
+
+&lt;p&gt;The resource I used starting out was LINK. I would recommend sections 1-3 I think it’s a great intro into doing basic operations on the command line, as well as a great way to start getting your head around how file systems operate (hint everything is a tree like structure). If you’re a Mac user make sure you download Xcode before you start the tutorial above - it’ll ensure you can access all parts of your system.&lt;/p&gt;
+
+&lt;p&gt;If playing around on your own system makes you nervous, and you don’t trust yourself to not “break” your computer, then you can also use code-academy. CodeAcademy has a built-in interpreter that runs in your browser so you don’t have to worry about deleting files on accident. You will at some point though have to get over this fear and just jump in. You’re gonna break something eventually. It’s basically the only way to learn.&lt;/p&gt;
+
+&lt;p&gt;But once you’re done with tutorials try to manage your computer with only command line. You’ll be surprised how much easier it can be than dragging and dropping everything around.&lt;/p&gt;
+
+&lt;p&gt;But - back to bioinformatics, everything at some point will come back to command line. If you stay in this field terminal will become your new home. It’ll feel strange opening a computer without opening a terminal first thing.  Knowing a few good sed tricks or one liners can save you hours of pain and manual labor.&lt;/p&gt;
+
+&lt;p&gt;##Learning About the Data&lt;/p&gt;
+
+&lt;p&gt;So, while command line is interesting, it’s essential to now understand how biology on a computer works, and for that I’m going to point you to a brief crash course in all things bioinformatics file types. Just so you’re aware there are a million, and you’ll constantly be learning more as you continue in the field. But to begin with there are two that you should familiarize yourself with off the bat,
+FASTQ, and FASTA. Depending on what you’ll be working on these two file types are the bulk of what you’ll be manipulating in your day to day processes, so being able to spot either on site is important.&lt;/p&gt;
+
+&lt;p&gt;The primary difference between these two is, of course, the FASTQ actually has quality scores encoded in the file. What this means is that there is an amount of certainty that we can attribute to each base pair, we don’t always know them for certain, so fastq are great because they provide evidence from the sequencing systems to tell us just how sure we are each base is actually each base.&lt;/p&gt;
+
+&lt;p&gt;If none of the above paragraphs makes sense to you, make sure you watch THIS youtube video to get a brief idea on how DNA is currently sequenced. If you’re like me you’ll probably never or rarely touch a pipette in this field, but it’s still essential to understand HOW this data is created to understand some of the shortcomings of these systems.&lt;/p&gt;
+
+&lt;p&gt;##Learning to Use Software&lt;/p&gt;
+
+&lt;p&gt;So, while much of my day is spent writing my own software and scripts, people are often times surprised when they find out that much more of my day is spent running other peoples software and scripts. These programs have been made to work with biological sequence data and are generally known to be time-tested (at least some of them). The old adage of not reinventing the wheel is an essential idiom to take to heart in this field. Your time will
+almost always be better spent developing something new rather than trying to create something that certainly already exists.&lt;/p&gt;
+
+&lt;p&gt;But if you’re super new to this field, I would certainly say that learning to run and install bioinformatics programs is one  essential skills to learn. The challenging part about learning to install many of these tools is that only time and practice can make you good at this. One of the only reasons that I can install challenging programs like RepeatMasker with any semblance of
+speed is my experience having tracked down each of the software pieces and know their dependencies.&lt;/p&gt;
+
+&lt;p&gt;But in order to get a basic grasp of installing software from source I
+recommend reading X, Y, and Z. Once you’ve read those try and install something more basic such as Q. AFter all that I would also recommend trying my “little bio project one” to familiarize yourself with some of the basic pieces of bioinformatics software (BLAST, Samtools, BWA, etc…)&lt;/p&gt;
+
+&lt;h2 id=&quot;scripting-languages-parcel-tongue-for-beginners&quot;&gt;Scripting languages (parcel tongue for beginners)&lt;/h2&gt;
+
+&lt;p&gt;So, before I recommend the following I want you to know that the following section is optional but highly recommended. In my opinion, you cannot do bioinformatics without knowing a modern scripting language, and yet, I have known a few graduate students who have done all their work by utilizing pre existing tools and bash/awk. That being said I am a firm believer that any modern day bioinformatics programmer has to learn at least one scripting
+language to make their life easier.&lt;/p&gt;
+
+&lt;p&gt;Alright, now that you might have the basic understanding of how bioinformatics works, I think it’s now important to be able to manipulate sequence data, and program outputs. Being able to write programs to extract information and manipulate data is a fundamental skill in bioinformatics. Being able to reformat files on the fly can make your life much easier, and make you indispensable.&lt;/p&gt;
+
+&lt;p&gt;In order to learn these skills, I highly recommend learning python. It’s easily the most popular language in bioinformatics, and in tech recently. This makes learning Python relatively easy with super abundant resources.&lt;/p&gt;
+
+&lt;p&gt;To learn Python I personally used code-academy to learn the fundamentals. Once I did this I began practicing with real data and practice problems. An amazing website for this is Rosalind.info (named after the Rosalind Franklin, scientists whose contributions to the discovery of DNA are often overlooked). They have some excellent problems utilizing bioinformatics which will actually
+make you code up solutions. Don’t’ be fooled though, by the first few, these problems rapidly rise in difficulty.&lt;/p&gt;
+
+&lt;p&gt;##Start Reading&lt;/p&gt;
+
+&lt;p&gt;While this may seem like a trivial mention, I honestly think reading diversly and deeply in this field might be one of the most under discussed methods. In order to ascertain how anyone does anything, you have to get some kind of inclination as to what we know, and what we don’t know. (In short, we know a ton… but we don’t know even more).&lt;/p&gt;
+
+&lt;p&gt;Modern biology is treasure trove of information. We know far more about life and how it works than we ever have before. But in order to learn what exactly we do and do not know, you have to start reading. And not just reading textbooks - reading journal articles, the “primary source”&lt;/p&gt;
+
+&lt;p&gt;Reading journal articles is not fun. I would even go so far as to argue that they are a terrible method of distributing scientific knowledge. But&lt;/p&gt;
+
+&lt;p&gt;But great books that I think are certainly worth reading at your local
+universities library are Mike lynch - the origin of genomic architecture, and
+X.&lt;/p&gt;
+
+&lt;p&gt;However, make sure you also include a healthy dose of code books and other nonsense – it’ll help&lt;/p&gt;
+
+&lt;h2 id=&quot;keep-learning&quot;&gt;Keep Learning&lt;/h2&gt;
+
+&lt;p&gt;So, while all these tools are essential for any bioinformatician to learn, there is one last fundamental skill you need to learn. And that is how to learn.&lt;/p&gt;
+
+&lt;p&gt;Bioinformatics is a field of learning. Since you’re reading this blog post and attempting to self-teach im going to imagine you’re probably already motivatte which is great. But it’s important to realize in a field changing as fast as this one you need to keep learning and expanding your skill set.&lt;/p&gt;
+
+&lt;p&gt;Often times it may seem insurmountable to learn all this motivated has to offer (and I would argue it actually is). But take it slow. If you learned one valuable thing after every session of work or study, I’d argue you’re doing great.&lt;/p&gt;</content><summary>#Getting into Bioinformatics for Begginers</summary></entry><entry><title>A Brief History of Bioinformatics?</title><link href="/writing/ABriefHistoryOfBioinformatics/" rel="alternate" type="text/html" title="A Brief History of Bioinformatics?" /><published>2017-03-05T10:00:00-05:00</published><updated>2017-03-05T10:00:00-05:00</updated><id>/writing/ABriefHistoryOfBioinformatics</id><content type="html" xml:base="/writing/ABriefHistoryOfBioinformatics/">&lt;p&gt;Alright, I have a question for you. If I tell you I am a genomic biologist,
 where do you expect I spend most of my time?&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;In a lab surrounded by chemicals wearing a white lab coat&lt;/li&gt;
-  &lt;li&gt;At a desk, on a laptop smacking my head against the keyboard&lt;/li&gt;
+  &lt;li&gt;At a desk, on a laptop smacking my head against a keyboard&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;If you answered 2, you are correct! But, if you answered 1, don’t worry about
-it. I barely understood what genomic biologist did when I was in college
-learning this stuff. But it takes many people by suprise when they
-initially learn that what I predominitly do with my day is either creating or
-running software on my computer to answer biological questions. How did this
-happen you might ask? Where are my nerds in white with pipettes and beakers
-doing &lt;em&gt;real&lt;/em&gt; science? And why is this nerd wanting to talk about algorithms with me? Well, let me tell you a brief story about how we got here (don’t worry,
-it’ll be a quick recap, I promise).&lt;/p&gt;
+&lt;p&gt;If you answered #2, you’re right! But, if you answered 1, that’s pretty
+understandable. Biology has changed more than almost any other branch of
+science in the last 20 years. It takes many people by surprise when they learn that I predominantly work on a computer.&lt;/p&gt;
+
+&lt;p&gt;How did this happen you might ask? Where are all the Jane Goodalls of the world
+sitting in blinds watching chimpanzees? The Darwins traveling through uncharted lands and jungles, collecting new specimens? The
+1950’s era scientist in their white lab coats and horn rims? And finally, why
+have all of these people been replaced by a nerd wanting to talk to me about
+programming languages and algorithms? Well, to understand this evolution and
+this paradigm shift, you first need to understand a brief history of about how 
+we got here (don’t worry, it’ll be a quick recap, I promise).&lt;/p&gt;
 
 &lt;p&gt;Alright, stop me if you’ve heard this story before. DNA was discovered in the
 1950’s by two older white men (LINK) who stole some really important data from
-a female scientist. Once this happened, the race was on to understand how DNA, this silly little chemcial defined what makes us different from a tree.&lt;/p&gt;
+a female scientist(LINK). Once it was confirmed that this molecule was the basis of all life, we began trying to understand how it shaped all life.&lt;/p&gt;
 
-&lt;p&gt;Initially, we only focused on learning understanding how to make more DNA to
-study. After some intensive research Fredrick Sanger(LINK) created a methaology
-which allowed for scientist to make lots of DNA copies to study. But this came
-with a new problem… How do I analyze all of these new DNA copies? How do I
-compare my DNA to a tree? Well, intitially DNA comparison looked something like this…&lt;/p&gt;
+&lt;p&gt;DNA research initially was slow. Scientist at the time were working
+with limited tools, and no way of replicating DNA in large quantities.
+So, while we knew DNA was the molecule of inheritance, we knew little
+about how it actually worked at all. But, for a great recap of the how
+we came to learn about how DNA, RNA, and protein came together, check
+out these links LINK LINK LINK. They do a far better job than I could
+at the moment of explaining some of these early breakthroughs.&lt;/p&gt;
+
+&lt;p&gt;In the 1970’s however, a massive breakthrough occurred. Fredrick Sanger(LINK) created a
+methodology which allowed for scientist to make lots of DNA at once. But this came with a new problem… How do I analyze all of these new DNA copies? How do I
+compare my DNA to the DNA of a tree, or a chimp? Well, initially to
+understand the contents of DNA, to get down to the level of A’s, T’s,
+G’s, and C’s you had to do quite a bit of chemistry, and then analyze
+something like this…&lt;/p&gt;
 
 &lt;p&gt;PICTURE&lt;/p&gt;
 
-&lt;p&gt;If the above photo makes very little sense to you, don’t worry. These types of photos hardly make sense to anyone anymore. Quickly people realized that the above method of comparison was inefficient and limiting. Early on we had some idea of how much DNA is in a human cell using flow cytomatry, and we established that it was probably arounda  few billion base pairs. So if it took weeks or months to get the sequence of a strand of DNA that was 500 DNA pairs long, the idea of sequencing all of the DNA of an organisms seemed like a pipe dream.&lt;/p&gt;
+&lt;p&gt;If the above photo makes very little sense to you, don’t worry. These types of photos hardly make sense to anyone anymore. Quickly, people realized that the above method of comparison was inefficient and limiting. If it was challenging comparing two slightly different pieces od DNA, comparing a genomes worth, 3.1 billion nucleotides, would be impossible.&lt;/p&gt;
 
-&lt;p&gt;But in comes our heroin, a scientist by the name of Margaret Dayhoff. Dayhoff did something that changed science and biology forever. She created computer programs to help us read and analyze biological data. And thus, the field of bioinformatics was born. Not out of a random act, but out of sheer neccesity due to the absurdly large data problem now looming in the not too distant future.&lt;/p&gt;
+&lt;p&gt;Early on we had some idea of how much DNA is in a human cell using flow cytomatry, and we established that it was probably arounda  few billion base pairs. So if it took weeks or months to get the sequence of a strand of DNA that was 500 base pairs long, the idea of sequencing all of the DNA of an organisms seemed like a pipe dream. )&lt;/p&gt;
+
+&lt;p&gt;But in comes our heroin, a scientist by the name of Margaret Dayhoff. Dayhoff did something that changed science and biology forever. She created a computer program to help us read and analyze biological data. And thus, the field of bioinformatics was born. Not out of a random act, but out of neccesity.&lt;/p&gt;
 
 &lt;p&gt;While all this work was being done, the idea of genomics in the mid 1990’s, was still an idea reserved for sci-fi novels and speculative fiction writers. The idea of sequencing the whole of an organisms DNA still far off. But all of a sudden, something changed. The government decided to pour a bunch of money into a first of its kind research, the human genome project.&lt;/p&gt;
 
-&lt;p&gt;While genomes had been sequenced before, they were generally limited to either
-very small organisms, or human organelles (The little machines in your cells
-that allow them to work). But the human genome project was the first of its
-kind that proposed the idea of sequencing a large genome, a genome that
-comprised 3.1 billion DNA bases. As a comparsion, before the human genome was
-proposed, one of the largest things that had been sequenced was the human
-mitochondria (the powerhouse of the cell) which had just over 16,000 DNA bases.&lt;/p&gt;
+&lt;p&gt;So, bioinformatics was born. Not out of a happy coincidence. But by
+a group of men and women well aware that to tackle this problem. To
+understand who we are and what we are, we needed to utilize every tool
+available to us. And it&lt;/p&gt;
 
-&lt;p&gt;So, 3 billion dollars, and so many years later.)&lt;/p&gt;</content><summary>Alright, I have a question for you. If I tell you I am a genomic biologist,
-where do you expect I spend most of my time?</summary></entry><entry><title>Getting Started in Bioinformatics</title><link href="/bioinformatics/GettingintoBioinforamtics/" rel="alternate" type="text/html" title="Getting Started in Bioinformatics" /><published>2017-03-05T08:00:00-07:00</published><updated>2017-03-05T08:00:00-07:00</updated><id>/bioinformatics/GettingintoBioinforamtics</id><content type="html" xml:base="/bioinformatics/GettingintoBioinforamtics/">&lt;p&gt;So, you’ve read about it, researched it, looked into what it entails, and you
-think bioinformatics might be the field for you. Well, great! It’s an amazing
-field of science. One undergoing some tremendous growth, and has the potential
-to revolutionize the field of biology, medicine, and human health. But… Now
-you’re left with an issue. Where do you start?&lt;/p&gt;
-
-&lt;p&gt;Honestly, this isn’t an easy question. Bioinformtics is not a field in which
-you can take a single coursera course and be good to go. Rather, bioinformatics
-is a massive field where there is a seemingly limitless amount of information
-to cram in your very limited brain.&lt;/p&gt;
-
-&lt;p&gt;So, rather than attempt to do the impossible and write an extensive guide to
-being a genome wizard, I’m going to instead write a little about some resources
-I used to get started in the field as well as a little about what you should be
-getting from each piece.&lt;/p&gt;</content><summary>So, you’ve read about it, researched it, looked into what it entails, and you
-think bioinformatics might be the field for you. Well, great! It’s an amazing
-field of science. One undergoing some tremendous growth, and has the potential
-to revolutionize the field of biology, medicine, and human health. But… Now
-you’re left with an issue. Where do you start?</summary></entry><entry><title>I Love making Test Post</title><link href="/bioinformatics/TESTINGEVERYTHING3/" rel="alternate" type="text/html" title="I Love making Test Post" /><published>2017-02-23T10:16:01-07:00</published><updated>2017-02-23T10:16:01-07:00</updated><id>/bioinformatics/TESTINGEVERYTHING3</id><content type="html" xml:base="/bioinformatics/TESTINGEVERYTHING3/">&lt;p&gt;This post is literally just me making sure I am able to and capable up updating
-this site with the things I am going to need to amke it
-succeednkdfsjknafdjnkdfajnkdfjknfdjnkafdjknfdjnkafdsjknfdjnkdfsjnkfdajnkdfjnkjdfnkjnkfdsjknfdnkfdjnkadfjnkfadsdfnsdfsadfs
-a
-‘dsa
-dsa
-d
-sad
-as
-‘&lt;/p&gt;</content><summary>This post is literally just me making sure I am able to and capable up updating
-this site with the things I am going to need to amke it
-succeednkdfsjknafdjnkdfajnkdfjknfdjnkafdjknfdjnkafdsjknfdjnkdfsjnkfdajnkdfjnkjdfnkjnkfdsjknfdnkfdjnkadfjnkfadsdfnsdfsadfs
-a
-‘dsa
-dsa
-d
-sad
-as
-‘</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="{&quot;teaser&quot;=&gt;&quot;pexels-photo-90807.jpeg&quot;, &quot;feature&quot;=&gt;&quot;plant-photo-1.jpeg&quot;}" /></entry><entry><title>Welcome to Jekyll!</title><link href="/bioinformatics/TESTINGEVERYTHING2/" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2015-11-17T15:16:01-07:00</published><updated>2015-11-17T15:16:01-07:00</updated><id>/bioinformatics/TESTINGEVERYTHING2</id><content type="html" xml:base="/bioinformatics/TESTINGEVERYTHING2/">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and
-re-build the site to see your changes. You can rebuild the site in many
-different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;bundle exec jekyll serve&lt;/code&gt;,
-which launches a web server and auto-regenerates your site when a file is
-updated.&lt;/p&gt;
-
-&lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the
-convention &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front
-matter. Take a look at the source for this post to get an idea about how it
-works.&lt;/p&gt;</content><summary>You’ll find this post in your _posts directory. Go ahead and edit it and
-re-build the site to see your changes. You can rebuild the site in many
-different ways, but the most common way is to run bundle exec jekyll serve,
-which launches a web server and auto-regenerates your site when a file is
-updated.</summary></entry><entry><title>WOOP WOOP ICP</title><link href="/writing/TESTINGEVERYTHING/" rel="alternate" type="text/html" title="WOOP WOOP ICP" /><published>2015-11-17T15:16:01-07:00</published><updated>2015-11-17T15:16:01-07:00</updated><id>/writing/TESTINGEVERYTHING</id><content type="html" xml:base="/writing/TESTINGEVERYTHING/">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and
-re-build the site to see your changes. You can rebuild the site in many
-different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;bundle exec jekyll serve&lt;/code&gt;,
-which launches a web server and auto-regenerates your site when a file is
-updated.&lt;/p&gt;
-
-&lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the
-convention &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front
-matter. Take a look at the source for this post to get an idea about how it
-works.&lt;/p&gt;</content><summary>You’ll find this post in your _posts directory. Go ahead and edit it and
-re-build the site to see your changes. You can rebuild the site in many
-different ways, but the most common way is to run bundle exec jekyll serve,
-which launches a web server and auto-regenerates your site when a file is
-updated.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="{&quot;feature&quot;=&gt;&quot;dnaimage.jpg&quot;, &quot;teaser&quot;=&gt;&quot;dnaimage.jpg&quot;}" /></entry><entry><title>MORE BIOOO</title><link href="/writing/IHAVENOCLUE/" rel="alternate" type="text/html" title="MORE BIOOO" /><published>2015-10-01T16:16:01-06:00</published><updated>2015-10-01T16:16:01-06:00</updated><id>/writing/IHAVENOCLUE</id><content type="html" xml:base="/writing/IHAVENOCLUE/">&lt;p&gt;Trying&lt;/p&gt;</content><summary>Trying</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="{&quot;feature&quot;=&gt;&quot;forest.jpg&quot;}" /></entry></feed>
+&lt;p&gt;Before I begin I just want to make one thing very clear. Bioinformatics is a
+huge field. At the time I am writing this, it is a tool and skill set being
+used in almost every realm of biology. From Cellular biology, all the way up to
+developmental biology. It’s everywhere. And the tools that one computational
+biologist uses might be totally different than another. )&lt;/p&gt;</content><summary>Alright, I have a question for you. If I tell you I am a genomic biologist,
+where do you expect I spend most of my time?</summary></entry></feed>

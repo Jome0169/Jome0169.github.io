@@ -31,6 +31,9 @@ specialty is all things genomics and bioinformatics (coding is sweet). A field
 that is ever growing and becoming ever more important in biology. So hopefully you
 can find somethiong of use. You can find me on [github](https://github.com/Jome0169), or follow me on [twitter](https://twitter.com/pabster212?lang=en).
 
+Feel free to contact me with any thoughts or questions 
+--Pablo Mendieta
+
 
 
 
