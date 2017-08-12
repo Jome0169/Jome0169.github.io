@@ -1,12 +1,13 @@
 ---
 layout: home
 permalink: /
-title: "Welcome to HerdNerds"
-subtitle: "IoT, Electronics, and more..."
-
-image: 
-    feature: plant-photo-1.jpeg
+title: "Generally Biology"
+subtitle: "All thing bioinformats"
+image:
+  feature: Plants.jpg
 ---
+
+WELCOME MY FRIENDS
 
 
 <div class="tiles">

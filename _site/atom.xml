@@ -1,4 +1,112 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.6">Jekyll</generator><link href="/atom.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2017-07-16T12:47:11-04:00</updated><id>/</id><title>Generally Biology</title><subtitle>A blog about computer science, biology, and everything else</subtitle><entry><title>Genome Annotation</title><link href="/bioinformatics/GenomeAnnotation/" rel="alternate" type="text/html" title="Genome Annotation" /><published>2017-07-07T11:00:00-04:00</published><updated>2017-07-07T11:00:00-04:00</updated><id>/bioinformatics/GenomeAnnotation</id><content type="html" xml:base="/bioinformatics/GenomeAnnotation/">&lt;p&gt;ARE WE UPDATEING&lt;/p&gt;</content><summary>E DA BEST</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="{&quot;feature&quot;=&gt;&quot;forest.jpg&quot;}" /></entry><entry><title>Getting Started in Bioinformatics</title><link href="/bioinformatics/WhatKindOfBioinformaticianAreYou/" rel="alternate" type="text/html" title="Getting Started in Bioinformatics" /><published>2017-06-23T11:00:00-04:00</published><updated>2017-06-23T11:00:00-04:00</updated><id>/bioinformatics/WhatKindOfBioinformaticianAreYou</id><content type="html" xml:base="/bioinformatics/WhatKindOfBioinformaticianAreYou/"></content><summary></summary></entry><entry><title>A Brief History of Bioinformatics?</title><link href="/writing/TrainingAugusts/" rel="alternate" type="text/html" title="A Brief History of Bioinformatics?" /><published>2017-03-05T10:00:00-05:00</published><updated>2017-03-05T10:00:00-05:00</updated><id>/writing/TrainingAugusts</id><content type="html" xml:base="/writing/TrainingAugusts/">&lt;p&gt;#Training AUGUSTUS for genome Anotation&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.6">Jekyll</generator><link href="/atom.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2017-08-12T16:12:32-04:00</updated><id>/</id><title>Generally Biology</title><subtitle>A blog about computer science, biology, and everything else</subtitle><entry><title>Genome Annotation</title><link href="/bioinformatics/GenomeAnnotation/" rel="alternate" type="text/html" title="Genome Annotation" /><published>2017-07-07T11:00:00-04:00</published><updated>2017-07-07T11:00:00-04:00</updated><id>/bioinformatics/GenomeAnnotation</id><content type="html" xml:base="/bioinformatics/GenomeAnnotation/">&lt;p&gt;The human genome may have been sequenced in 2001. Im the time between 2001 and
+2017 genome sequencing adn assembly have become common place. There are a host
+of well annotated software suites that can take you from raw sequence to
+genomes in a short amount of time and explain every step to you. However,
+i hate to tell you that this is nothing like genomic annotation.&lt;/p&gt;
+
+&lt;p&gt;When I sarted annotating the Bitter Melon genome summer 2017 I was startled to
+learn that there were almost no reources explaining how to take an assembled
+genome from scaffolds to gene annoations. So, with that realization I created
+this guide in order to distill everything I learned from this process to
+hopefully make your experiance a little more tranparerent than mine was.&lt;/p&gt;
+
+&lt;p&gt;But Before we begin the annotation process I would encourage you to be honest
+with the resources that you’re currently bringing to the table for this
+annotation. Well annotated genomes require alot of resources, and if you simply
+don’t hvae the resources than this pursiot may simply not be worth it. Terrible genome annotations are worse than useless.&lt;/p&gt;
+
+&lt;p&gt;This guide will assume though that you have the following things at your disposal. If you’re missing one of these items it may not be cripaling but it will probably negativly affect your genome annotation.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Well assembled genome (Scaffold size &amp;gt; mean gene size)&lt;/li&gt;
+  &lt;li&gt;RNA seq data, the more the better&lt;/li&gt;
+  &lt;li&gt;Closely related species that are decently annotated&lt;/li&gt;
+  &lt;li&gt;Large amount of computational resources&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;In my experience MAKER tends to yield the best genome annotations. So, much of the data prodcued will be fed into maker. Instead of giving maker any raw data we will instead be feeding in all the data we process ourselves. This is for two fold reasons. 1. Maker tends to spit out pretty poor assemblies when you feed it raw data, and 2. We need to ensure that out intermediates are the highest quality we can. Genome annotation is already rife with errors no matter how well done, so by synthesizing these parts seperatly we can hopefully catch erros that might have been glossed over in a larger pipeline such as maker.&lt;/p&gt;
+
+&lt;p&gt;##1 Repeat Annotation&lt;/p&gt;
+
+&lt;p&gt;In order to annotate you genome with any semblance of correctness we have to
+first create a repeat library with which to mask the genome. IN order to do
+this I utalized RepeatMasker, RepeatScout, REPark, ltrdigest, and MITEhunter.&lt;/p&gt;
+
+&lt;p&gt;I loosly followed the MAKER turtiruial in creating a basic repeat library. I
+atempted to run use the advanced repeat libraray sections but a large majority
+of the code was broken.&lt;/p&gt;
+
+&lt;p&gt;If interested my scripts to generate all this stuff can be found at mu github
+here. The scripts are failry simple bash scripts and will require a bit of
+editing, but are far simpler than some of the other turtorials you will find
+online.&lt;/p&gt;
+
+&lt;p&gt;But what you’re going to need to create at the end of this step is a repeat
+libary file containing both MITE, LTRs, and any sequence identified by Repark.
+We will use thils file far further down the pipeline.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Quick note** *&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Mite hunter is a horrible error laiden piece of software that hasn’t been
+updated or maintained since 2007. This simple little package took me 2 days of
+trouble shooting to finally get working at one point. At soem point I might
+have to write a spereate guide on creating painless repeatlibraries utalizing
+docker and nextflow (if i ever have enough time for that)&lt;/p&gt;
+
+&lt;p&gt;##2 Trinity assemblies&lt;/p&gt;
+
+&lt;p&gt;In order to utilize RNA seq we need to create three different transcriptomes
+assmeblies for pasa and MAKER to use. We are going to need a DeNovo genome
+assembly, a genome guided assembly and finally read alignmenst using HISAT or
+cufflinks in order to generate a .bam file. It’s important to gauge just how
+many BUSCOs are within each transcriptome assembly&lt;/p&gt;
+
+&lt;p&gt;##Pasa Pipeline&lt;/p&gt;
+
+&lt;p&gt;To create the best training set we possibly we can we are going to create a
+agapped transcriptome alignment. To do some i used PASA pipeline produced by
+Brian Haas of the broad institure. I’m using pasa because based off it’s paper
+where it was compared to similar programs (genemark, etc…) it per formaed the
+best with the most accuracy.&lt;/p&gt;
+
+&lt;p&gt;Installing pasa can be rather intimidating if you haven’t installed mysql
+before. But, it’s far simpler than many online blogs would have you believe.
+SInce mysql has so many variable flavors the documentation is rather
+nightmarish when you attempt to untangle what version or flavor to install.
+So, to install pasa pipelien i ran.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;##SPALN Gapped alignments&lt;/p&gt;
+
+&lt;p&gt;Next, we need to create a gapped protein alignemnt. Since w&lt;/p&gt;
+
+&lt;h2 id=&quot;augutust&quot;&gt;Augutust&lt;/h2&gt;
+
+&lt;p&gt;This is one of the most challenging parts of genomic annotation. Since we
+cannot rely on gapped alignments of prior genomes to predict novel genes, we
+are forced to implement software which utalizes hidden markov models. These
+models, while effective, are incredibly challening to train and can take many
+iterations to achieve detection levels sensative and accuarate enough to
+identify novel genes.&lt;/p&gt;
+
+&lt;p&gt;The gene predictor i will be training is Augustus. AUgustus has become the
+software of choice for many gene predcictors. However, while heavily used,
+there are very poor resources out there illustrating how to create an effective
+and accurate training set. After much struggle and a little guidance from other
+bioinformaticians here at BTI i was able to create a training set that
+performed fairly well on a novel genome.&lt;/p&gt;
+
+&lt;p&gt;So, in order to train augustus we need to isolate a set of training genes that
+we are certain are represenative of the genome as a whole. To do this i created
+a nice litte pipeline in python which utalizes closely related species, and
+recipricol blasting to generate a high quality training set. After using this
+pipeline i was able to get a training set that had a sensativity of .857, which
+I think is pretty good. So below i Will illustrate how i created this training
+set in more detail.&lt;/p&gt;</content><summary>ENTER THE BEST</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="{&quot;feature&quot;=&gt;&quot;forest.jpg&quot;}" /></entry><entry><title>Getting Started in Bioinformatics</title><link href="/bioinformatics/WhatKindOfBioinformaticianAreYou/" rel="alternate" type="text/html" title="Getting Started in Bioinformatics" /><published>2017-06-23T11:00:00-04:00</published><updated>2017-06-23T11:00:00-04:00</updated><id>/bioinformatics/WhatKindOfBioinformaticianAreYou</id><content type="html" xml:base="/bioinformatics/WhatKindOfBioinformaticianAreYou/"></content><summary></summary></entry><entry><title>A Brief History of Bioinformatics?</title><link href="/writing/TrainingAugusts/" rel="alternate" type="text/html" title="A Brief History of Bioinformatics?" /><published>2017-03-05T10:00:00-05:00</published><updated>2017-03-05T10:00:00-05:00</updated><id>/writing/TrainingAugusts</id><content type="html" xml:base="/writing/TrainingAugusts/">&lt;p&gt;#Training AUGUSTUS for genome Anotation&lt;/p&gt;
 
 &lt;p&gt;So, if you’re like me and you’re annotating a genome in 2017 you’ve probably
 been blown away also with just how bad the documentation and resouces are. In
@@ -26,7 +134,83 @@ attempts I am sure it can be done.&lt;/p&gt;
 
 &lt;p&gt;#Step6 - Refine Genes&lt;/p&gt;
 
-&lt;p&gt;#Step7 - ACTUALLY RUN AND TRAIN AUGUSTUS&lt;/p&gt;</content><summary>#Training AUGUSTUS for genome Anotation</summary></entry><entry><title>A Brief History of Bioinformatics?</title><link href="/writing/YourFirstBioinformaticsProject/" rel="alternate" type="text/html" title="A Brief History of Bioinformatics?" /><published>2017-03-05T10:00:00-05:00</published><updated>2017-03-05T10:00:00-05:00</updated><id>/writing/YourFirstBioinformaticsProject</id><content type="html" xml:base="/writing/YourFirstBioinformaticsProject/"></content><summary></summary></entry><entry><title>You don’t know What I do</title><link href="/writing/YouDontKnowWhatIDo/" rel="alternate" type="text/html" title="You don&#39;t know What I do" /><published>2017-03-05T10:00:00-05:00</published><updated>2017-03-05T10:00:00-05:00</updated><id>/writing/YouDontKnowWhatIDo</id><content type="html" xml:base="/writing/YouDontKnowWhatIDo/">&lt;p&gt;You don’t know what I do. I don’t wear a white lab coat, i don’t spend my days around beakers or bunsen burners, and i haven’t worn proper “lab safe” clothing since i was an undergraduate. I don’t work in a lab with chemical, or explosives. Rather I work at a desk plugging away writing code for some of the worlds most powerful computers to run. I spend all day reading and trying to understand math, biology, and computer science and try and find a way that allows all of these fields to work together to allow me to understand how thing change, and how we as things change as well.&lt;/p&gt;
+&lt;p&gt;#Step7 - ACTUALLY RUN AND TRAIN AUGUSTUS&lt;/p&gt;</content><summary>#Training AUGUSTUS for genome Anotation</summary></entry><entry><title>A Brief History of Bioinformatics?</title><link href="/writing/YourFirstBioinformaticsProject/" rel="alternate" type="text/html" title="A Brief History of Bioinformatics?" /><published>2017-03-05T10:00:00-05:00</published><updated>2017-03-05T10:00:00-05:00</updated><id>/writing/YourFirstBioinformaticsProject</id><content type="html" xml:base="/writing/YourFirstBioinformaticsProject/">&lt;p&gt;Often times after one is done with a class in bioinformatics programming or an
+intro course you’re left with an unexpected questions, “Now what?”. It’s a
+catch 22 that you need experiance to get a bioinforamtics job, but the only way
+to get that experiance is doing bioinformatics. So this guide is going to take
+you through a bioinformatics project in miniuture.&lt;/p&gt;
+
+&lt;p&gt;One of the coolest parts in bioinforamtics to me is the fact that all US
+government funded data at some point has to be put online and made public
+access. This apart of the new age of open science and it’s honestly wonderful.
+But the location of all of this data is called the national center for biological 
+inforamtion repository or NCBI for short.&lt;/p&gt;
+
+&lt;p&gt;So, to give you a brief idea of how a project might work, or at least how some
+basic data analysis would work I’m going to take you through a very basic
+bioinformatics project using some of this public data. We’re going to covering
+topics from downloadind sequence reads, understanding their relative quality,
+trimming reads, genomic assembly, and a few other topics along the way. We’ll
+be using bacterial genomes in this mini project with the hopes that basic
+laptops will be able to run the code and programs required. For your referance
+I will be running all of this stuff on a 2014 macbook Pro with 8gb of ram.&lt;/p&gt;
+
+&lt;p&gt;So, lets start!&lt;/p&gt;
+
+&lt;h2 id=&quot;the-question&quot;&gt;The Question:&lt;/h2&gt;
+
+&lt;p&gt;Possibly the most important part about any project is trying to figure out
+exactly what question you’re trying to answer. This question is generally
+limited to the scope of the data. You can’t hope to answer questions about gene
+expression levels unless you have the actual expressed RNA-seq data. So, i’m
+going to link to a small data set I found on NCBI and we’ll take it from there.&lt;/p&gt;
+
+&lt;p&gt;To download this software you can either take the long way and click all links
+and download, or you can simply use the wget command inclued with most unix
+distributions.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;wget
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;ncbi&quot;&gt;NCBI&lt;/h2&gt;
+
+&lt;p&gt;Ncbi is an absolute maze when it comes to data. If you are ever in a lab and
+find yourself on a useful page, bookmark it or you stand the risk of never
+finding it again. It’s a mess of a website, but the best that could be created
+under such an onslaught of data being uploaded. The basic way ncbi works is…
+well no one knows how it works. It’s fine.&lt;/p&gt;
+
+&lt;h2 id=&quot;what-can-we-do&quot;&gt;What can we do?&lt;/h2&gt;
+
+&lt;h3 id=&quot;a-brief-note&quot;&gt;A brief note&lt;/h3&gt;
+
+&lt;p&gt;We’re about to get into the data analysis protion of this blog post and i just
+wanted to emphazize that although i will have the code you should run to get
+the correct output I am going to encourage you to spend time trying to read the
+documentation and creating the commands to be run. Being able to read manuals
+to even poorlly writeen software is an invaluable skill for field that has tons
+of software and flag inconsistencies.&lt;/p&gt;
+
+&lt;h2 id=&quot;trimmin-data&quot;&gt;Trimmin Data&lt;/h2&gt;
+
+&lt;p&gt;Now that we have the question in mind and the data downloaded we can finally
+get around to actually manipulating data. And first things first we have to
+trim our reads.&lt;/p&gt;
+
+&lt;p&gt;Since we don’t know the exact identity of every read when sequencing DNA we
+associate this read with a certain quality score based off of how posotive we
+are about he identity of this base. In this way we have to trim our reads to
+ensure that erroneous errors from our reads won’t throw off our assembly. So we
+have to trim our raw data before we can begin.&lt;/p&gt;
+
+&lt;p&gt;###Installing Trimmomatic&lt;/p&gt;
+
+&lt;p&gt;In order to trim raw reads we will use the program trimmomatic. &lt;a href=&quot;http://www.usadellab.org/cms/?page=trimmomatic&quot;&gt;Trimmomatic&lt;/a&gt; is a sofware sweate written in JAVA and has become a standard for read trimmming in many ways. So, before we begin i am going to encourage you once again to try and install trimmomatic by yourself. before&lt;/p&gt;</content><summary>Often times after one is done with a class in bioinformatics programming or an
+intro course you’re left with an unexpected questions, “Now what?”. It’s a
+catch 22 that you need experiance to get a bioinforamtics job, but the only way
+to get that experiance is doing bioinformatics. So this guide is going to take
+you through a bioinformatics project in miniuture.</summary></entry><entry><title>You don’t know What I do</title><link href="/writing/YouDontKnowWhatIDo/" rel="alternate" type="text/html" title="You don&#39;t know What I do" /><published>2017-03-05T10:00:00-05:00</published><updated>2017-03-05T10:00:00-05:00</updated><id>/writing/YouDontKnowWhatIDo</id><content type="html" xml:base="/writing/YouDontKnowWhatIDo/">&lt;p&gt;You don’t know what I do. I don’t wear a white lab coat, i don’t spend my days around beakers or bunsen burners, and i haven’t worn proper “lab safe” clothing since i was an undergraduate. I don’t work in a lab with chemical, or explosives. Rather I work at a desk plugging away writing code for some of the worlds most powerful computers to run. I spend all day reading and trying to understand math, biology, and computer science and try and find a way that allows all of these fields to work together to allow me to understand how thing change, and how we as things change as well.&lt;/p&gt;
 
 &lt;p&gt;Your genome isn’t sequecned and assembled by people using microscopes. Heck, if you got your genome sequenced chances are they didn’t sequence all of it. Rather the company you sent your DNA to seqeuenced only short segments that are the most “informative”, that tell sciensitst the most information with spending the least amount of money to do it. But these little snips of DNA on an inocmplete genome can reveal huge amounts about where you come from and who your ancestors are. It can be a great predictor of diseases we know alot about, but can’t tell us anything about more complex traits like why some peoples metabolisms are faster or slower.&lt;/p&gt;
 
@@ -61,11 +245,11 @@ angered or irritated you, just keep reading.</summary></entry><entry><title>Gett
 
 &lt;p&gt;So, you’ve read about it, researched it, looked into what it entails, and you think bioinformatics might be the field for you. Well, great! It’s an amazing field of science. One undergoing some tremendous growth, and has the potential to revolutionize the field of biology, medicine, and human health. But… Now you’re left with an issue. Where do you start?&lt;/p&gt;
 
-&lt;p&gt;Honestly, this isn’t an easy question. Bioinformatics is not a field in where a single course or even degree will prepare you. Rather, bioinformatics is a massive field where there is a seemingly limitless amount of information to cram into your very limited brain. The best in the field are always learning and improving as fast as they can.&lt;/p&gt;
+&lt;p&gt;Honestly, this isn’t an easy question. Bioinformatics is not a field in where a single course or even degree will prepare you. Rather, bioinformatics is a massive field where there is a seemingly limitless amount of information to cram into your very limited brain, but hopefully this blog post will give you a beggning guide to the process&lt;/p&gt;
 
 &lt;p&gt;In this blog post, I’m going to introduce you to some of the resources that got me started on my journey into this field. And while this is certainly not an exhaustive list, it attempts to highlight some of the skills that I think are critical for any young bioinformatician to learn and develop early on.&lt;/p&gt;
 
-&lt;p&gt;It should be noted that I am writing this blog post for people who may have some biology knowledge, but relatively little to no computer science background. If you are in the reverse situation I would recommend reading X’s guide. It gives a far better approach for someone coming from a computer science background.&lt;/p&gt;
+&lt;p&gt;It should be noted that I am writing this blog post for people who may have some biology knowledge, but relatively little to no computer science background. If you are in the reverse situation there might be some resources in this post that might prove to be useful, but a majority of these resources are targed towards compoutational beginners.&lt;/p&gt;
 
 &lt;p&gt;##Command Line&lt;/p&gt;
 
@@ -75,13 +259,13 @@ angered or irritated you, just keep reading.</summary></entry><entry><title>Gett
 
 &lt;p&gt;Many of the programs and software were written for bioinformatics are written to be run on the command line. These programs do not have graphical user interfaces (GUIs) like most software you’re probably familiar with (think Microsoft word or google chrome). Rather these programs put all of their power into running complicated algorithms on huge datasets. So, it kinda makes sense why the creators chose to skip creating a friendly user interface when they’re writing software to untangle biological complexity.&lt;/p&gt;
 
-&lt;p&gt;The resource I used starting out was LINK. I would recommend sections 1-3 I think it’s a great intro into doing basic operations on the command line, as well as a great way to start getting your head around how file systems operate (hint everything is a tree like structure). If you’re a Mac user make sure you download Xcode before you start the tutorial above - it’ll ensure you can access all parts of your system.&lt;/p&gt;
+&lt;p&gt;The resource I used starting out was &lt;a href=&quot;http://linuxcommand.org/lc3_learning_the_shell.php&quot;&gt;this&lt;/a&gt;. I would recommend doing all of the sections. It’s a great intro into doing basic operations on the command line, as well as a great way to start getting your head around how file systems operate (hint everything is a tree like structure). If you’re a Mac user make sure you download &lt;a href=&quot;https://itunes.apple.com/us/app/xcode/id497799835?mt=12&quot;&gt;Xcode&lt;/a&gt; before you start the tutorial above - it’ll ensure you can access all parts of your system.&lt;/p&gt;
 
-&lt;p&gt;If playing around on your own system makes you nervous, and you don’t trust yourself to not “break” your computer, then you can also use code-academy. CodeAcademy has a built-in interpreter that runs in your browser so you don’t have to worry about deleting files on accident. You will at some point though have to get over this fear and just jump in. You’re gonna break something eventually. It’s basically the only way to learn.&lt;/p&gt;
+&lt;p&gt;If playing around on your own system makes you nervous, then you can also use code-academy. &lt;a href=&quot;https://www.codecademy.com/learn/learn-the-command-line&quot;&gt;CodeAcademy&lt;/a&gt; has a built-in interpreter that runs in your browser so you don’t have to worry about deleting important files on accident. It should be noted though taht at some point you will have to migrate over to your own system.&lt;/p&gt;
 
-&lt;p&gt;But once you’re done with tutorials try to manage your computer with only command line. You’ll be surprised how much easier it can be than dragging and dropping everything around.&lt;/p&gt;
+&lt;p&gt;These tutorials are rather short, so be sure to practice these skills once you have completed these assignments. I recommend trying to manage your computer with only command line. You’ll be surprised how much easier it can be than dragging and dropping everything around.&lt;/p&gt;
 
-&lt;p&gt;But - back to bioinformatics, everything at some point will come back to command line. If you stay in this field terminal will become your new home. It’ll feel strange opening a computer without opening a terminal first thing.  Knowing a few good sed tricks or one liners can save you hours of pain and manual labor.&lt;/p&gt;
+&lt;p&gt;Everything at some point will come back to command line. If you stay in this field terminal will become your new home. It’ll feel strange opening a computer without opening a terminal first thing. Knowing a few good sed tricks or one liners can save you hours of pain and manual labor.&lt;/p&gt;
 
 &lt;p&gt;##Learning About the Data&lt;/p&gt;
 

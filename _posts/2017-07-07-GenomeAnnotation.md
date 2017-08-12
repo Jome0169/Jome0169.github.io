@@ -36,7 +36,6 @@ This guide will assume though that you have the following things at your disposa
 In my experience MAKER tends to yield the best genome annotations. So, much of the data prodcued will be fed into maker. Instead of giving maker any raw data we will instead be feeding in all the data we process ourselves. This is for two fold reasons. 1. Maker tends to spit out pretty poor assemblies when you feed it raw data, and 2. We need to ensure that out intermediates are the highest quality we can. Genome annotation is already rife with errors no matter how well done, so by synthesizing these parts seperatly we can hopefully catch erros that might have been glossed over in a larger pipeline such as maker.
 
 
-
 ##1 Repeat Annotation
 
 
@@ -96,5 +95,31 @@ So, to install pasa pipelien i ran.
 ##SPALN Gapped alignments
 
 Next, we need to create a gapped protein alignemnt. Since w
+
+## Augutust
+
+This is one of the most challenging parts of genomic annotation. Since we
+cannot rely on gapped alignments of prior genomes to predict novel genes, we
+are forced to implement software which utalizes hidden markov models. These
+models, while effective, are incredibly challening to train and can take many
+iterations to achieve detection levels sensative and accuarate enough to
+identify novel genes.
+
+The gene predictor i will be training is Augustus. AUgustus has become the
+software of choice for many gene predcictors. However, while heavily used,
+there are very poor resources out there illustrating how to create an effective
+and accurate training set. After much struggle and a little guidance from other
+bioinformaticians here at BTI i was able to create a training set that
+performed fairly well on a novel genome.
+
+
+So, in order to train augustus we need to isolate a set of training genes that
+we are certain are represenative of the genome as a whole. To do this i created
+a nice litte pipeline in python which utalizes closely related species, and
+recipricol blasting to generate a high quality training set. After using this
+pipeline i was able to get a training set that had a sensativity of .857, which
+I think is pretty good. So below i Will illustrate how i created this training
+set in more detail.
+
 
 
