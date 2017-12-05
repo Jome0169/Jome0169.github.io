@@ -1,12 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>/GATKForNoneModels/</loc>
+<lastmod>2017-10-09T00:00:00-04:00</lastmod>
+</url>
+<url>
 <loc>/bioinformatics/GenomeAnnotation/</loc>
 <lastmod>2017-07-07T11:00:00-04:00</lastmod>
 </url>
 <url>
 <loc>/bioinformatics/WhatKindOfBioinformaticianAreYou/</loc>
 <lastmod>2017-06-23T11:00:00-04:00</lastmod>
+</url>
+<url>
+<loc>/bioinformatics/things-i-keep-forgetting/</loc>
+<lastmod>2017-03-05T10:00:00-05:00</lastmod>
 </url>
 <url>
 <loc>/writing/TrainingAugusts/</loc>

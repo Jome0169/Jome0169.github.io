@@ -1,4 +1,21 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.6">Jekyll</generator><link href="/atom.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2017-08-12T16:12:32-04:00</updated><id>/</id><title>Generally Biology</title><subtitle>A blog about computer science, biology, and everything else</subtitle><entry><title>Genome Annotation</title><link href="/bioinformatics/GenomeAnnotation/" rel="alternate" type="text/html" title="Genome Annotation" /><published>2017-07-07T11:00:00-04:00</published><updated>2017-07-07T11:00:00-04:00</updated><id>/bioinformatics/GenomeAnnotation</id><content type="html" xml:base="/bioinformatics/GenomeAnnotation/">&lt;p&gt;The human genome may have been sequenced in 2001. Im the time between 2001 and
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.6">Jekyll</generator><link href="/atom.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2017-12-03T11:18:53-05:00</updated><id>/</id><title>Generally Biology</title><subtitle>A blog about computer science, biology, and everything else</subtitle><entry><title>Gatkfornonemodels</title><link href="/GATKForNoneModels/" rel="alternate" type="text/html" title="Gatkfornonemodels" /><published>2017-10-09T00:00:00-04:00</published><updated>2017-10-09T00:00:00-04:00</updated><id>/GATKForNoneModels</id><content type="html" xml:base="/GATKForNoneModels/">&lt;p&gt;So, i just finished a project over the last months where I was working on
+variant calling utalizing the GATK pipeline for a non model plant organisms.
+And, like most of my projects, I wanted to write this brief guide, hopefully
+giving others a sense of what this project intails, as well as provide insight
+into some of the more opaque issues that they will most likely run into.&lt;/p&gt;
+
+&lt;p&gt;But, first things first, a warning to anyone beginning one of these projects:
+THIS WILL TAKE SOME TIME. Even if you’re only dealing with half a dozen
+sampeles on a super cluster, GATK, while a marvel of experimental design and
+data analysis takes time, because, well, it does an intense amount of analysis
+under the hood.&lt;/p&gt;
+
+&lt;p&gt;###Creating the Golden SNPS&lt;/p&gt;
+
+&lt;p&gt;This is probably the part that if you’re utalizing a non model organism seems
+like the most opaque and challenging step. Whilethe GATK forums are expansive,
+and impressive, the guides and advice on how to create this golden snp set is
+spread over multople posts from different time points (from 2013 - 2018).&lt;/p&gt;</content><summary></summary></entry><entry><title>Genome Annotation</title><link href="/bioinformatics/GenomeAnnotation/" rel="alternate" type="text/html" title="Genome Annotation" /><published>2017-07-07T11:00:00-04:00</published><updated>2017-07-07T11:00:00-04:00</updated><id>/bioinformatics/GenomeAnnotation</id><content type="html" xml:base="/bioinformatics/GenomeAnnotation/">&lt;p&gt;The human genome may have been sequenced in 2001. Im the time between 2001 and
 2017 genome sequencing adn assembly have become common place. There are a host
 of well annotated software suites that can take you from raw sequence to
 genomes in a short amount of time and explain every step to you. However,
@@ -106,7 +123,58 @@ a nice litte pipeline in python which utalizes closely related species, and
 recipricol blasting to generate a high quality training set. After using this
 pipeline i was able to get a training set that had a sensativity of .857, which
 I think is pretty good. So below i Will illustrate how i created this training
-set in more detail.&lt;/p&gt;</content><summary>ENTER THE BEST</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="{&quot;feature&quot;=&gt;&quot;forest.jpg&quot;}" /></entry><entry><title>Getting Started in Bioinformatics</title><link href="/bioinformatics/WhatKindOfBioinformaticianAreYou/" rel="alternate" type="text/html" title="Getting Started in Bioinformatics" /><published>2017-06-23T11:00:00-04:00</published><updated>2017-06-23T11:00:00-04:00</updated><id>/bioinformatics/WhatKindOfBioinformaticianAreYou</id><content type="html" xml:base="/bioinformatics/WhatKindOfBioinformaticianAreYou/"></content><summary></summary></entry><entry><title>A Brief History of Bioinformatics?</title><link href="/writing/TrainingAugusts/" rel="alternate" type="text/html" title="A Brief History of Bioinformatics?" /><published>2017-03-05T10:00:00-05:00</published><updated>2017-03-05T10:00:00-05:00</updated><id>/writing/TrainingAugusts</id><content type="html" xml:base="/writing/TrainingAugusts/">&lt;p&gt;#Training AUGUSTUS for genome Anotation&lt;/p&gt;
+set in more detail.&lt;/p&gt;</content><summary>ENTER THE BEST</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="{&quot;feature&quot;=&gt;&quot;forest.jpg&quot;}" /></entry><entry><title>Getting Started in Bioinformatics</title><link href="/bioinformatics/WhatKindOfBioinformaticianAreYou/" rel="alternate" type="text/html" title="Getting Started in Bioinformatics" /><published>2017-06-23T11:00:00-04:00</published><updated>2017-06-23T11:00:00-04:00</updated><id>/bioinformatics/WhatKindOfBioinformaticianAreYou</id><content type="html" xml:base="/bioinformatics/WhatKindOfBioinformaticianAreYou/"></content><summary></summary></entry><entry><title>Doing Science Research as an Undergraduate</title><link href="/bioinformatics/things-i-keep-forgetting/" rel="alternate" type="text/html" title="Doing Science Research as an Undergraduate" /><published>2017-03-05T10:00:00-05:00</published><updated>2017-03-05T10:00:00-05:00</updated><id>/bioinformatics/things-i-keep-forgetting</id><content type="html" xml:base="/bioinformatics/things-i-keep-forgetting/">&lt;p&gt;Madness has always been definied as the act of doing the same action and
+getting different results. Bioinformatics might be the pinacle of examplar
+diciplines if this is the case. Thousands of gigagbytpes of data, dozens of
+file types, counltess issues that can arise. It’s a messy field to do biology
+in. I’ve realized that one of the most important skill any person in the field
+of genomics must learn is to not trust a single thing. Not a program, or the
+data quality or a pipeline. Beacue invariably somethiings going to go wrong,
+and the only thing you can do, the best thing you can do, is catch that error
+early, as it creeps up. If that error is not caught immedietly, it going to do
+one of two thins.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;It’s going to force you to redo work somewhere farther down the line,
+costing you time and effort that you could have prevented.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;or&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;This error will creep its way into your analysis. Causing doubt and
+uncertainty in research that’s is already filled with noise and complex
+variables. The worst scenario here is you either try to explain an error away
+as a biological oddity, and you publish this data.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;It’s challenging to constantly be questioning your outpouts. Often time you
+just wnat to accept the result of a pipeline and pretesnd that it’s correct.
+However this is a mistake. One that i’ve made countless times. So, below is a
+list of things that i need to personally do more to ensure that what im doing
+doesnt result in one of the two above scenarios.&lt;/p&gt;
+
+&lt;h2 id=&quot;always-check-the-output&quot;&gt;Always Check the Output:&lt;/h2&gt;
+
+&lt;p&gt;No Matter the program something that i alywas atcivly try to do is eye the
+output file and ask myself a few questions such as, does this output make sense
+and is it the right file type? Is the size something that I would expect? Is
+there a way to quality check this file, or oculd i write something to check it
+myself?&lt;/p&gt;
+
+&lt;h2 id=&quot;keep-better-notes-than-you-think-you-need-to&quot;&gt;Keep better notes than you think you need to&lt;/h2&gt;
+
+&lt;p&gt;Inadvertantly when running through a pipeline, the last thing that seems
+important at any given moment is the&lt;/p&gt;</content><summary>Madness has always been definied as the act of doing the same action and
+getting different results. Bioinformatics might be the pinacle of examplar
+diciplines if this is the case. Thousands of gigagbytpes of data, dozens of
+file types, counltess issues that can arise. It’s a messy field to do biology
+in. I’ve realized that one of the most important skill any person in the field
+of genomics must learn is to not trust a single thing. Not a program, or the
+data quality or a pipeline. Beacue invariably somethiings going to go wrong,
+and the only thing you can do, the best thing you can do, is catch that error
+early, as it creeps up. If that error is not caught immedietly, it going to do
+one of two thins.</summary></entry><entry><title>A Brief History of Bioinformatics?</title><link href="/writing/TrainingAugusts/" rel="alternate" type="text/html" title="A Brief History of Bioinformatics?" /><published>2017-03-05T10:00:00-05:00</published><updated>2017-03-05T10:00:00-05:00</updated><id>/writing/TrainingAugusts</id><content type="html" xml:base="/writing/TrainingAugusts/">&lt;p&gt;#Training AUGUSTUS for genome Anotation&lt;/p&gt;
 
 &lt;p&gt;So, if you’re like me and you’re annotating a genome in 2017 you’ve probably
 been blown away also with just how bad the documentation and resouces are. In
