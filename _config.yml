@@ -9,6 +9,9 @@ url:
 feed:
   path: atom.xml
 
+header:
+        image: "Plants.jpg"
+        homepage-image: "Plants.jpg"
 # Jekyll configuration
 
 sass:

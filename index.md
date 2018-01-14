@@ -2,16 +2,18 @@
 layout: home
 permalink: /
 title: "Generally Biology"
-subtitle: "All thing bioinformats"
+subtitle: "Plants, Genomics, and Conputer Science"
 image:
   feature: Plants.jpg
+background-image: Plants.jpg
 ---
 
-WELCOME MY FRIENDS
+Welcome to my blog. Below you'll find a short list of some of my most recent
+blog posts
 
 
 <div class="tiles">
 {% for post in site.posts %}
-	{% include post-grid.html %}
+	{% include post-list.html %}
 {% endfor %}
 </div><!-- /.tiles -->

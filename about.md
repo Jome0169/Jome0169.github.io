@@ -5,7 +5,7 @@ date: 2-28-17
 modified:
 excerpt: A bit about me
 image:
-  feature: Plants.jpg
+  feature: 
   teaser:
   thumb:
 ads: false  
