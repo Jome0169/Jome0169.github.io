@@ -2,7 +2,7 @@
 layout: home
 permalink: /
 title: "Generally Biology"
-subtitle: "Plants, Genomics, and Conputer Science"
+subtitle: "Plants, Genomics, and Computer Science"
 image:
   feature: Plants.jpg
 background-image: Plants.jpg
