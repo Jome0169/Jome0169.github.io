@@ -5,7 +5,7 @@ gem "jekyll"
 gem "jekyll-sitemap"
 gem "jekyll-gist"
 gem "jekyll-feed"
-
+gem 'jekyll-compose', group: [:jekyll_plugins]
 
 gem 'octopress', '~> 3.0'
 

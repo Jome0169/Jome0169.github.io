@@ -2,14 +2,11 @@
 layout: home
 permalink: /
 title: "Generally Biology"
-subtitle: "Plants, Genomics, and Computer Science"
+subtitle: "Plants and Genomics, with a dash of hip hop"
 image:
   feature: Plants.jpg
 background-image: Plants.jpg
 ---
-
-Welcome to my blog. Below you'll find a short list of some of my most recent
-blog posts
 
 
 <div class="tiles">

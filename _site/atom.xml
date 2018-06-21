@@ -1,4 +1,213 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.6">Jekyll</generator><link href="/atom.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2018-01-14T15:50:50-05:00</updated><id>/</id><title>Generally Biology</title><subtitle>A blog about computer science, biology, and everything else</subtitle><entry><title>A Brief History of Bioinformatics?</title><link href="/writing/ABriefHistoryOfBioinformatics/" rel="alternate" type="text/html" title="A Brief History of Bioinformatics?" /><published>2017-03-05T10:00:00-05:00</published><updated>2017-03-05T10:00:00-05:00</updated><id>/writing/ABriefHistoryOfBioinformatics</id><content type="html" xml:base="/writing/ABriefHistoryOfBioinformatics/">&lt;p&gt;Alright, I have a question for you. If I tell you I am a genomic biologist,
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.6">Jekyll</generator><link href="/atom.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2018-03-31T12:37:48-04:00</updated><id>/</id><title>Generally Biology</title><subtitle>A blog about computer science, biology, and everything else</subtitle><entry><title>running SNAP in 2018</title><link href="/running-snap-in-2018/" rel="alternate" type="text/html" title="running SNAP in 2018" /><published>2018-03-07T14:11:00-05:00</published><updated>2018-03-07T14:11:00-05:00</updated><id>/running-snap-in-2018</id><content type="html" xml:base="/running-snap-in-2018/">&lt;p&gt;In order to run SNAP, you’ll need a few different scripts in order for it to
+run correctly. For whatever reason, different perl scripts in different places
+don’t seem to run correctly.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;You’ll need the maker2zff script found in the maker install package located
+in the directory /maker/bin/. This script converts your gff3 file of
+training genes into a zff file.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;However you’ll also need a zff.dna file which is simply a fasta file in the
+corret order of trainign as produced by SNAP&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;For this you can use this script below titled fasta_sort.pl which I found
+from the Biowize blog https://biowize.wordpress.com/2012/06/01/training-the-snap-ab-initio-gene-predictor/&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;#!/usr/bin/env perl&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;use&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;strict&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;use&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;Bio::&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;SeqIO&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+ 
+&lt;span class=&quot;k&quot;&gt;my&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$filterfile&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$ARGV&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;my&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$seqs_to_keep&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{};&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;my&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$FILTER&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;&amp;lt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$filterfile&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;or&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;die&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Error: could not open &#39;$filterfile&#39; $!&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;while&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;&amp;lt;$FILTER&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;chomp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+  &lt;span class=&quot;nv&quot;&gt;$seqs_to_keep&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$_&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;close&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$FILTER&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+ 
+&lt;span class=&quot;k&quot;&gt;my&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$seqs&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{};&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;my&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$loader&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;Bio::&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;SeqIO&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;fh&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;\*&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;STDIN&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;format&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&#39;Fasta&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;while&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;my&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$seq&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$loader&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;next_seq&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nv&quot;&gt;$seqs&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$seq&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$seq&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+ 
+&lt;span class=&quot;k&quot;&gt;my&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;@keys&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;sort&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;keys&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;%$seqs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;my&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$writer&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;Bio::&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;SeqIO&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;fh&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;\*&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;STDOUT&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;format&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&#39;Fasta&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;foreach&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;my&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$seqid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;@keys&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nv&quot;&gt;$writer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;write_seq&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$seqs&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$seqid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$seqs_to_keep&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$seqid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Running these two scripts will then create your genome.ann and genome.dna files
+which will now be used for actually creating a training set in SNAP&lt;/p&gt;</content><summary>In order to run SNAP, you’ll need a few different scripts in order for it to
+run correctly. For whatever reason, different perl scripts in different places
+don’t seem to run correctly.</summary></entry><entry><title>Running Spaln for Genome Annotation</title><link href="/bioinformatics/running-spaln-for-genome-annotation/" rel="alternate" type="text/html" title="Running Spaln for Genome Annotation" /><published>2018-02-19T10:35:00-05:00</published><updated>2018-02-19T10:35:00-05:00</updated><id>/bioinformatics/running-spaln-for-genome-annotation</id><content type="html" xml:base="/bioinformatics/running-spaln-for-genome-annotation/">&lt;p&gt;Before entering the Fei Lab I had never head of SPALN, and quite frankly, no
+one I knew had either. While small and unknown, SPALN is useful in genomic
+annotaation in its capacity to align various CDS sequences from other species
+to your current genome. This comes in and assists tremendously with annotation
+later on when running MAKER. So, if well annotataed closely related organisms
+are availabe, SPALN is a useful tool that will be worth running.&lt;/p&gt;
+
+&lt;p&gt;That being said, SPALN is not an easy tool to work with. It comes out of the
+university of Kyoto, has a minimalist website, and rather unclear documentation
+which you can read
+&lt;a href=&quot;http://www.genome.ist.i.kyoto-u.ac.jp/~aln_user/spaln/#Usr&quot;&gt;here&lt;/a&gt;. Below i’ll
+detail I install and ran this program. If you’re still unconvinced on the
+usefullness of SPALN, I reccomend reading their
+&lt;a href=&quot;https://academic.oup.com/nar/article/40/20/e161/2414522&quot;&gt;publication&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;download-and-install-spaln&quot;&gt;Download and Install SPALN&lt;/h4&gt;
+
+&lt;p&gt;To install SPALN I heavily reccomend using the pre-compiled binaries. Since
+there is little to no trouble shooting help, attempting to fix any issue with
+compililation can be incredibly tedious.&lt;/p&gt;
+
+&lt;p&gt;To download and unpack the binaries run&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;wget http://www.genome.ist.i.kyoto-u.ac.jp/~aln_user/archive/spaln2.1.0.linux64.tar.gz
+tar xfz spaln2.1.0.linux64.tar.gz
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;spaln -t1 -M4 -Q7 -O0 -LS -ya2 -o ${DBNAME}.spaln.gff3 -d${CutGenome} ${i}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;So, that’s it! Hopefully your SPALN run went well. After this, I would
+reccomend editing your SPALN gff3 files in order to reformat them for use with
+other software. If you’re looking for a quick way to do this I reccomend my own
+gff3 editing code built specifically for SPALN. You can find this code here https://github.com/Jome0169/NoMoreScripting under the “annotation” folder. Simply run the command&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;python3 /data/pabster212/Programs/NoMoreScripting/nomorescripting/annotation/readgff.py -g WM97v1.spaln.gff3 -f1 100 -f2 50000 -spaln -o WM97v1.spaln.clean.gff3
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;</content><summary>Before entering the Fei Lab I had never head of SPALN, and quite frankly, no
+one I knew had either. While small and unknown, SPALN is useful in genomic
+annotaation in its capacity to align various CDS sequences from other species
+to your current genome. This comes in and assists tremendously with annotation
+later on when running MAKER. So, if well annotataed closely related organisms
+are availabe, SPALN is a useful tool that will be worth running.</summary></entry><entry><title>My New Post</title><link href="/my-new-post/" rel="alternate" type="text/html" title="My New Post" /><published>2018-02-12T16:41:00-05:00</published><updated>2018-02-12T16:41:00-05:00</updated><id>/my-new-post</id><content type="html" xml:base="/my-new-post/"></content><summary></summary></entry><entry><title>Genomic Annotation Intro</title><link href="/bioinforamtics/GenomeAnnotationIn2018/" rel="alternate" type="text/html" title="Genomic Annotation Intro" /><published>2018-02-08T10:00:00-05:00</published><updated>2018-02-08T10:00:00-05:00</updated><id>/bioinforamtics/GenomeAnnotationIn2018</id><content type="html" xml:base="/bioinforamtics/GenomeAnnotationIn2018/">&lt;p&gt;When I initially arrized at the Fei lab at BTI I was given the oppertunity to
+create a genomic annotation for the Cucubitacea Citroides, a variety of non
+sugar forming watermelon in the genus Cucurbitaceae. As someone who reallly
+enjoys bioinforamtics I was excited to annotate my first genome. However, the
+entire process was foreign and unfamiliar to me, and after reading blog posts
+online, the path forward didn’t become any clearer. Without the help of some of
+my fantastic lab mates, and resources at BTI, I am unsure I would have been
+able to fininish the annotation with anything even close to my sanity.&lt;/p&gt;
+
+&lt;p&gt;This gets at the core of why I’m doing this blog series on genomic annotation.
+In an age where genomic assemblies are comman place and easy, genomic
+annotation remains anything but.&lt;/p&gt;
+
+&lt;p&gt;This guide seaks to guide you through how I do modern genome annotation in 2018.Each step of the annotation will have its own post where I detail what software I ran and the parameters I used to acheive my results. My github code will also be linked if you would like to view/use it.&lt;/p&gt;
+
+&lt;h5 id=&quot;note&quot;&gt;NOTE:&lt;/h5&gt;
+
+&lt;p&gt;Before we begin annotation it’s important that you first deducde IF you should
+be annotating a genome. The best genome annotations are those which had access
+to plentiful data for their organism. At very least, you’ll need a well
+assembeled genome with the N50 at LEAST as large as the mean gene size in the
+organism. An RNA Seq library is also going to be needed in order to identify
+genes that are activly expressed in the genome, giving us a better sense of
+what genes are actually real and expressed. Added benefit can also be gained by
+having a closely related species with a well annotated genome.&lt;/p&gt;
+
+&lt;p&gt;If you’re looking for a more formal review before you begin your annotation
+I would reccomed a few papers https://www.nature.com/articles/nrg3174 and
+https://www.nature.com/articles/35080529 are excellent basic primers.&lt;/p&gt;
+
+&lt;p&gt;And lastly, before we start I wanted to impart you with a piece of wisdom from
+my indomitable past advisor Nolan Kane. “All Genomes are shit, but some are
+useful.” Your annotation will never be perfect, genomics is an imperfect art,
+so with that in mind, proceed forward and give it your best. Something you
+create just might be useful and interesting.&lt;/p&gt;
+
+&lt;h3 id=&quot;step-1-repeat-masking&quot;&gt;Step 1 Repeat Masking&lt;/h3&gt;
+
+&lt;p&gt;Repeat masking is an essential step in any genomic annotation. Since many
+repetative elements have evolved to be transcribed like a gene, transposbale
+elements can throw off genomic annotations a tremendous amount.&lt;/p&gt;
+
+&lt;p&gt;However, while being important to your annotation, TEs tend to be
+the elephant in the room in genomics. People tend to simply run a pipeline such
+as repeatmasker and pretend that these results are “good enough”. While these
+results might be somewhat useful, they most likely don’t cover a wide enough
+range of TE diversity to identify some lineages of TEs that might be unique to
+the organism and not within the known libraries of TEs.&lt;/p&gt;</content><summary>When I initially arrized at the Fei lab at BTI I was given the oppertunity to
+create a genomic annotation for the Cucubitacea Citroides, a variety of non
+sugar forming watermelon in the genus Cucurbitaceae. As someone who reallly
+enjoys bioinforamtics I was excited to annotate my first genome. However, the
+entire process was foreign and unfamiliar to me, and after reading blog posts
+online, the path forward didn’t become any clearer. Without the help of some of
+my fantastic lab mates, and resources at BTI, I am unsure I would have been
+able to fininish the annotation with anything even close to my sanity.</summary></entry><entry><title>Getting Started in Bioinformatics</title><link href="/writing/GettingIntoBioInformatics/" rel="alternate" type="text/html" title="Getting Started in Bioinformatics" /><published>2018-01-19T10:00:00-05:00</published><updated>2018-01-19T10:00:00-05:00</updated><id>/writing/GettingIntoBioInformatics</id><content type="html" xml:base="/writing/GettingIntoBioInformatics/">&lt;p&gt;This is a question I see ad nauseam in various online communities. Any form of
+“Where should I start, and what do i need to learn to get into bioinformatics?”. So, in the hopes of guiding others who are just getting started or interested in getting started, I wanted to write a brief post about how I got started, and what I did to actually learn genomics.&lt;/p&gt;
+
+&lt;p&gt;This guide it by no means intensvie. The reality is that genomics is far too
+vast and large for me to try and teach yo ueverything you need to know. Rather,
+I’ll just be highlighting a few fundamental building blocks that you’ll need to
+know to really begin understanding genomics as a whole.&lt;/p&gt;
+
+&lt;h5 id=&quot;the-very-beggining&quot;&gt;1. The Very Beggining&lt;/h5&gt;
+
+&lt;p&gt;The first thing you must absolutly learn is command line. Command line is a
+simplified method in which you can access and interact with your computer.
+Rather than&lt;/p&gt;
+
+&lt;p&gt;So, I would reccomend that the first thing that anyone getting started need to
+learn is command line. In bioinformatics many of the programs that are
+utalizied do not have a Graphical User Interfaces (GUI), so instead you must
+interact with them on a more basic level of computation, the command line&lt;/p&gt;
+
+&lt;p&gt;To learn the ins and ours of command line i would reccomend a few places to
+start. If you’re technophobic and a little unsure of yourself i would reccomend
+Code Academy. Code Academy offers users the oppertunity to beggin learning the
+basics of using command lines on a ocmputer without the need to worry if you’re
+“messing up” your computer.&lt;/p&gt;
+
+&lt;h5 id=&quot;the-actual-programming&quot;&gt;2. The Actual Programming&lt;/h5&gt;
+
+&lt;p&gt;While learning the command line is a crucial step in bioinforamtics, learning
+to program and script are fundamental and important skills any developing
+bioinformatician must learn.&lt;/p&gt;
+
+&lt;h5 id=&quot;getting-to-know-the-greatest-hits&quot;&gt;3. Getting to Know The “Greatest Hits”&lt;/h5&gt;
+
+&lt;h5 id=&quot;creating-projects&quot;&gt;4. Creating Projects&lt;/h5&gt;
+
+&lt;h5 id=&quot;reading-scienctific-articles&quot;&gt;5. Reading Scienctific Articles&lt;/h5&gt;
+
+&lt;p&gt;This is an aspect of bioinformatics/genomics that I believe is heavily
+understated in most “intro” guides. While many such guides instruct you to get
+a handle and grasp on programming, far fewer discuss the necessity of reading
+everything you possibly can related to the field. With whatever you end up
+pursiong there’s no point in redoing work that has been done by a precursor.
+Why try and create a genome assembler without knowing the current
+methadologies. Reading, and reserach is crucial.&lt;/p&gt;
+
+&lt;p&gt;Something I found to be&lt;/p&gt;
+
+&lt;h5 id=&quot;continue-to-learn&quot;&gt;6. Continue to Learn&lt;/h5&gt;
+
+&lt;p&gt;The last point I’ll make in this list is that this list is far from exhaustive.
+Bioinforamtics is a massive field that is only getting more complex and
+advanced as time goes on. This puts the task of continuoius development
+direcltly on the individual. There comes a point where no one can teach you
+everything you must learn, so it’s up to you to figure out what you need to
+learn, and how to learn it.&lt;/p&gt;
+
+&lt;p&gt;The best people in thie field are those who have a voracious desire to learn
+and understand. My advice is to keep trying, and keep advancing. It’s amazing
+what consisten effort can yield even if you don’t belive yourself to be gifted&lt;/p&gt;</content><summary>This is a question I see ad nauseam in various online communities. Any form of
+“Where should I start, and what do i need to learn to get into bioinformatics?”. So, in the hopes of guiding others who are just getting started or interested in getting started, I wanted to write a brief post about how I got started, and what I did to actually learn genomics.</summary></entry><entry><title>A Brief History of Bioinformatics?</title><link href="/writing/ABriefHistoryOfBioinformatics/" rel="alternate" type="text/html" title="A Brief History of Bioinformatics?" /><published>2017-03-05T10:00:00-05:00</published><updated>2017-03-05T10:00:00-05:00</updated><id>/writing/ABriefHistoryOfBioinformatics</id><content type="html" xml:base="/writing/ABriefHistoryOfBioinformatics/">&lt;p&gt;Alright, I have a question for you. If I tell you I am a genomic biologist,
 where do you expect I spend most of my time?&lt;/p&gt;
 
 &lt;ol&gt;

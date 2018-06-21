@@ -1,0 +1,52 @@
+<p>In order to run SNAP, you’ll need a few different scripts in order for it to
+run correctly. For whatever reason, different perl scripts in different places
+don’t seem to run correctly.</p>
+
+<ol>
+  <li>You’ll need the maker2zff script found in the maker install package located
+in the directory /maker/bin/. This script converts your gff3 file of
+training genes into a zff file.</li>
+</ol>
+
+<p>However you’ll also need a zff.dna file which is simply a fasta file in the
+corret order of trainign as produced by SNAP</p>
+
+<ol>
+  <li>For this you can use this script below titled fasta_sort.pl which I found
+from the Biowize blog https://biowize.wordpress.com/2012/06/01/training-the-snap-ab-initio-gene-predictor/</li>
+</ol>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="c1">#!/usr/bin/env perl</span>
+<span class="k">use</span> <span class="nv">strict</span><span class="p">;</span>
+<span class="k">use</span> <span class="nn">Bio::</span><span class="nv">SeqIO</span><span class="p">;</span>
+ 
+<span class="k">my</span> <span class="nv">$filterfile</span> <span class="o">=</span> <span class="nv">$ARGV</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+<span class="k">my</span> <span class="nv">$seqs_to_keep</span> <span class="o">=</span> <span class="p">{};</span>
+<span class="nb">open</span><span class="p">(</span><span class="k">my</span> <span class="nv">$FILTER</span><span class="p">,</span> <span class="s">"&lt;"</span><span class="p">,</span> <span class="nv">$filterfile</span><span class="p">)</span> <span class="ow">or</span> <span class="nb">die</span><span class="p">(</span><span class="s">"Error: could not open '$filterfile' $!"</span><span class="p">);</span>
+<span class="k">while</span><span class="p">(</span><span class="sr">&lt;$FILTER&gt;</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="nb">chomp</span><span class="p">();</span>
+  <span class="nv">$seqs_to_keep</span><span class="o">-&gt;</span><span class="p">{</span><span class="nv">$_</span><span class="p">}</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nb">close</span><span class="p">(</span><span class="nv">$FILTER</span><span class="p">);</span>
+ 
+<span class="k">my</span> <span class="nv">$seqs</span> <span class="o">=</span> <span class="p">{};</span>
+<span class="k">my</span> <span class="nv">$loader</span> <span class="o">=</span> <span class="nn">Bio::</span><span class="nv">SeqIO</span><span class="o">-&gt;</span><span class="k">new</span><span class="p">(</span><span class="o">-</span><span class="nv">fh</span> <span class="o">=&gt;</span> <span class="o">\*</span><span class="bp">STDIN</span><span class="p">,</span> <span class="o">-</span><span class="nb">format</span> <span class="o">=&gt;</span> <span class="s">'Fasta'</span><span class="p">);</span>
+<span class="k">while</span><span class="p">(</span><span class="k">my</span> <span class="nv">$seq</span> <span class="o">=</span> <span class="nv">$loader</span><span class="o">-&gt;</span><span class="nv">next_seq</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="nv">$seqs</span><span class="o">-&gt;</span><span class="p">{</span><span class="nv">$seq</span><span class="o">-&gt;</span><span class="nv">id</span><span class="p">}</span> <span class="o">=</span> <span class="nv">$seq</span><span class="p">;</span>
+<span class="p">}</span>
+ 
+<span class="k">my</span> <span class="nv">@keys</span> <span class="o">=</span> <span class="nb">sort</span><span class="p">(</span><span class="nb">keys</span><span class="p">(</span><span class="nv">%$seqs</span><span class="p">));</span>
+<span class="k">my</span> <span class="nv">$writer</span> <span class="o">=</span> <span class="nn">Bio::</span><span class="nv">SeqIO</span><span class="o">-&gt;</span><span class="k">new</span><span class="p">(</span> <span class="o">-</span><span class="nv">fh</span> <span class="o">=&gt;</span> <span class="o">\*</span><span class="bp">STDOUT</span><span class="p">,</span> <span class="o">-</span><span class="nb">format</span> <span class="o">=&gt;</span> <span class="s">'Fasta'</span><span class="p">);</span>
+<span class="k">foreach</span> <span class="k">my</span> <span class="nv">$seqid</span><span class="p">(</span><span class="nv">@keys</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="nv">$writer</span><span class="o">-&gt;</span><span class="nv">write_seq</span><span class="p">(</span><span class="nv">$seqs</span><span class="o">-&gt;</span><span class="p">{</span><span class="nv">$seqid</span><span class="p">})</span> <span class="k">if</span><span class="p">(</span><span class="nv">$seqs_to_keep</span><span class="o">-&gt;</span><span class="p">{</span><span class="nv">$seqid</span><span class="p">});</span>
+<span class="p">}</span>
+
+</code></pre>
+</div>
+
+<p>Running these two scripts will then create your genome.ann and genome.dna files
+which will now be used for actually creating a training set in SNAP</p>
+
