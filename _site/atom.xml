@@ -1,4 +1,26 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.6">Jekyll</generator><link href="/atom.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2018-03-31T12:37:48-04:00</updated><id>/</id><title>Generally Biology</title><subtitle>A blog about computer science, biology, and everything else</subtitle><entry><title>running SNAP in 2018</title><link href="/running-snap-in-2018/" rel="alternate" type="text/html" title="running SNAP in 2018" /><published>2018-03-07T14:11:00-05:00</published><updated>2018-03-07T14:11:00-05:00</updated><id>/running-snap-in-2018</id><content type="html" xml:base="/running-snap-in-2018/">&lt;p&gt;In order to run SNAP, you’ll need a few different scripts in order for it to
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.6">Jekyll</generator><link href="/atom.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2018-09-06T19:40:35-04:00</updated><id>/</id><title>Generally Biology</title><subtitle>A blog about computer science, biology, and everything else</subtitle><entry><title>Cleaning Gff3 Files</title><link href="/cleaning-gff3-files/" rel="alternate" type="text/html" title="Cleaning Gff3 Files" /><published>2018-06-20T10:38:00-04:00</published><updated>2018-06-20T10:38:00-04:00</updated><id>/cleaning-gff3-files</id><content type="html" xml:base="/cleaning-gff3-files/">&lt;p&gt;Gff3 files are a constant source of frustration for me. They’re never
+consistent, and every piece of software that creates them operates by their own paradigm, forcing
+the users downstream to scratch their heads and find the errors within. This
+quick little blog post describes how to quickly use the package genome tools&lt;/p&gt;
+&lt;link /&gt;
+&lt;p&gt;to quickly correct some of the most common problems I encounter in gff3. If you’re on a mac, and don’t have genome tools it can be installed with the
+one liner &lt;code class=&quot;highlighter-rouge&quot;&gt;brew install genometools&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Then, to briefly clean the raw gff3 file and only output “gene” ids and
+sequence information run:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;gt gff3 -sort yes -tidy yes -checkids yes -o Colocynth.correct.all.gff3 CC_raw.all.gff3
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;And walla! Cleaned gff3 file with the correct &lt;code class=&quot;highlighter-rouge&quot;&gt;###&lt;/code&gt; delineators in the correct
+place.&lt;/p&gt;</content><summary>Gff3 files are a constant source of frustration for me. They’re never
+consistent, and every piece of software that creates them operates by their own paradigm, forcing
+the users downstream to scratch their heads and find the errors within. This
+quick little blog post describes how to quickly use the package genome tools
+
+to quickly correct some of the most common problems I encounter in gff3. If you’re on a mac, and don’t have genome tools it can be installed with the
+one liner brew install genometools.</summary></entry><entry><title>running SNAP in 2018</title><link href="/running-snap-in-2018/" rel="alternate" type="text/html" title="running SNAP in 2018" /><published>2018-03-07T14:11:00-05:00</published><updated>2018-03-07T14:11:00-05:00</updated><id>/running-snap-in-2018</id><content type="html" xml:base="/running-snap-in-2018/">&lt;p&gt;In order to run SNAP, you’ll need a few different scripts in order for it to
 run correctly. For whatever reason, different perl scripts in different places
 don’t seem to run correctly.&lt;/p&gt;
 
@@ -67,18 +89,51 @@ usefullness of SPALN, I reccomend reading their
 
 &lt;h4 id=&quot;download-and-install-spaln&quot;&gt;Download and Install SPALN&lt;/h4&gt;
 
-&lt;p&gt;To install SPALN I heavily reccomend using the pre-compiled binaries. Since
-there is little to no trouble shooting help, attempting to fix any issue with
-compililation can be incredibly tedious.&lt;/p&gt;
+&lt;p&gt;To install SPALN I heavily reccomend using the pre-compiled binaries from a
+specific github linke.. Since there is little to no trouble shooting help, attempting to fix any issue with
+compililation can be incredibly tedious. The linked github also has the
+advantage of a perl script which will allow us to avoid creating tedious
+indexes by hand.&lt;/p&gt;
 
-&lt;p&gt;To download and unpack the binaries run&lt;/p&gt;
+&lt;p&gt;To download:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;wget http://www.genome.ist.i.kyoto-u.ac.jp/~aln_user/archive/spaln2.1.0.linux64.tar.gz
-tar xfz spaln2.1.0.linux64.tar.gz
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git clone https://github.com/ogotoh/spaln
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;spaln -t1 -M4 -Q7 -O0 -LS -ya2 -o ${DBNAME}.spaln.gff3 -d${CutGenome} ${i}
+&lt;p&gt;This is where SPALN gets a little tricky. In order to align proteins, the
+proteins, and all refernce scripts have to be in the same directory. Also,
+we’re going to have to change the ending to our files for the program to
+recognize them. The genome should have a .mfa ending, and the sequences to be
+aligned should have a .faa ending.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#Make A directory and move everything to this directory
+mkdir spaln_work
+mv ./table/* spaln_work
+mv ./seqdb/* spaln_work
+
+# link to genome and protein
+ln -s /data/pabster212/genomes/Gy14_v2.0_final.fa . 
+ln -s /data/pabster212/genomes/TAIR11.pep.fa .
+
+#Change ending names. Spaln requires a specified ending name to run
+mv Gy14_v2.0_final.fa Gy14.mfa
+mv TAIR10_pep.fa TAIR10_pep.faa
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;From there, we need to create a few index files before we can run the final
+program. The easiest way of doing this being to utalize the makeidx.pl software
+in the perl folder.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;/Programs/spaln/seqdb/makeidx.pl -ipn ${genome}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;After this, multiple .idx files should be generated. These are binary files
+that will be used for alinment. To run the final step of the software just run
+the following command.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;spaln -t1 -M4 -Q7 -O0 -LS -ya2 -o TAIR10.spaln.gff3 -dGy14 $TAIR_10.faa
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
@@ -89,12 +144,14 @@ gff3 editing code built specifically for SPALN. You can find this code here http
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;python3 /data/pabster212/Programs/NoMoreScripting/nomorescripting/annotation/readgff.py -g WM97v1.spaln.gff3 -f1 100 -f2 50000 -spaln -o WM97v1.spaln.clean.gff3
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;</content><summary>Before entering the Fei Lab I had never head of SPALN, and quite frankly, no
+&lt;/div&gt;
+
+&lt;p&gt;This will clean the  SPALN, replace the second column of the gff3 and only keep alignments betwenn 100 and 50000. Sometimes SPALN makes the mistake of outputting far too large of proteins.&lt;/p&gt;</content><summary>Before entering the Fei Lab I had never head of SPALN, and quite frankly, no
 one I knew had either. While small and unknown, SPALN is useful in genomic
 annotaation in its capacity to align various CDS sequences from other species
 to your current genome. This comes in and assists tremendously with annotation
 later on when running MAKER. So, if well annotataed closely related organisms
-are availabe, SPALN is a useful tool that will be worth running.</summary></entry><entry><title>My New Post</title><link href="/my-new-post/" rel="alternate" type="text/html" title="My New Post" /><published>2018-02-12T16:41:00-05:00</published><updated>2018-02-12T16:41:00-05:00</updated><id>/my-new-post</id><content type="html" xml:base="/my-new-post/"></content><summary></summary></entry><entry><title>Genomic Annotation Intro</title><link href="/bioinforamtics/GenomeAnnotationIn2018/" rel="alternate" type="text/html" title="Genomic Annotation Intro" /><published>2018-02-08T10:00:00-05:00</published><updated>2018-02-08T10:00:00-05:00</updated><id>/bioinforamtics/GenomeAnnotationIn2018</id><content type="html" xml:base="/bioinforamtics/GenomeAnnotationIn2018/">&lt;p&gt;When I initially arrized at the Fei lab at BTI I was given the oppertunity to
+are availabe, SPALN is a useful tool that will be worth running.</summary></entry><entry><title>Genomic Annotation Intro</title><link href="/bioinforamtics/GenomeAnnotationIn2018/" rel="alternate" type="text/html" title="Genomic Annotation Intro" /><published>2018-02-08T10:00:00-05:00</published><updated>2018-02-08T10:00:00-05:00</updated><id>/bioinforamtics/GenomeAnnotationIn2018</id><content type="html" xml:base="/bioinforamtics/GenomeAnnotationIn2018/">&lt;p&gt;When I initially arrized at the Fei lab at BTI I was given the oppertunity to
 create a genomic annotation for the Cucubitacea Citroides, a variety of non
 sugar forming watermelon in the genus Cucurbitaceae. As someone who reallly
 enjoys bioinforamtics I was excited to annotate my first genome. However, the

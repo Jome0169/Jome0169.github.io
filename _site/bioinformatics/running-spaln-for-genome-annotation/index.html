@@ -166,18 +166,51 @@ usefullness of SPALN, I reccomend reading their
 
 <h4 id="download-and-install-spaln">Download and Install SPALN</h4>
 
-<p>To install SPALN I heavily reccomend using the pre-compiled binaries. Since
-there is little to no trouble shooting help, attempting to fix any issue with
-compililation can be incredibly tedious.</p>
+<p>To install SPALN I heavily reccomend using the pre-compiled binaries from a
+specific github linke.. Since there is little to no trouble shooting help, attempting to fix any issue with
+compililation can be incredibly tedious. The linked github also has the
+advantage of a perl script which will allow us to avoid creating tedious
+indexes by hand.</p>
 
-<p>To download and unpack the binaries run</p>
+<p>To download:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>wget http://www.genome.ist.i.kyoto-u.ac.jp/~aln_user/archive/spaln2.1.0.linux64.tar.gz
-tar xfz spaln2.1.0.linux64.tar.gz
+<div class="highlighter-rouge"><pre class="highlight"><code>git clone https://github.com/ogotoh/spaln
 </code></pre>
 </div>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>spaln -t1 -M4 -Q7 -O0 -LS -ya2 -o ${DBNAME}.spaln.gff3 -d${CutGenome} ${i}
+<p>This is where SPALN gets a little tricky. In order to align proteins, the
+proteins, and all refernce scripts have to be in the same directory. Also,
+we’re going to have to change the ending to our files for the program to
+recognize them. The genome should have a .mfa ending, and the sequences to be
+aligned should have a .faa ending.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>#Make A directory and move everything to this directory
+mkdir spaln_work
+mv ./table/* spaln_work
+mv ./seqdb/* spaln_work
+
+# link to genome and protein
+ln -s /data/pabster212/genomes/Gy14_v2.0_final.fa . 
+ln -s /data/pabster212/genomes/TAIR11.pep.fa .
+
+#Change ending names. Spaln requires a specified ending name to run
+mv Gy14_v2.0_final.fa Gy14.mfa
+mv TAIR10_pep.fa TAIR10_pep.faa
+</code></pre>
+</div>
+<p>From there, we need to create a few index files before we can run the final
+program. The easiest way of doing this being to utalize the makeidx.pl software
+in the perl folder.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>/Programs/spaln/seqdb/makeidx.pl -ipn ${genome}
+</code></pre>
+</div>
+
+<p>After this, multiple .idx files should be generated. These are binary files
+that will be used for alinment. To run the final step of the software just run
+the following command.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>spaln -t1 -M4 -Q7 -O0 -LS -ya2 -o TAIR10.spaln.gff3 -dGy14 $TAIR_10.faa
 </code></pre>
 </div>
 
@@ -189,6 +222,8 @@ gff3 editing code built specifically for SPALN. You can find this code here http
 <div class="highlighter-rouge"><pre class="highlight"><code>python3 /data/pabster212/Programs/NoMoreScripting/nomorescripting/annotation/readgff.py -g WM97v1.spaln.gff3 -f1 100 -f2 50000 -spaln -o WM97v1.spaln.clean.gff3
 </code></pre>
 </div>
+
+<p>This will clean the  SPALN, replace the second column of the gff3 and only keep alignments betwenn 100 and 50000. Sometimes SPALN makes the mistake of outputting far too large of proteins.</p>
 
 				<hr />
 				<footer class="page-footer">
