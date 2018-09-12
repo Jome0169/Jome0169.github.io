@@ -2,7 +2,7 @@
 layout: home
 permalink: /
 title: "Generally Biology"
-subtitle: "Plants and Genomics, with a dash of hip hop"
+subtitle: "Plants From the Command Line"
 image:
   feature: Plants.jpg
 background-image: Plants.jpg
