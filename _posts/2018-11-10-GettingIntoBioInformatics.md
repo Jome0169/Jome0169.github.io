@@ -1,0 +1,83 @@
+---
+layout: article
+title:  "Getting Started in Bioinformatics"
+date:   2018-01-19 9:00 -0600
+categories: Bioinformatics
+image:
+    thumb:pablo_author.JPG
+---
+
+This is a question I see all the time online. It has many variants, but the
+most frequent I see is something like - "Where should I start, and what do i need to learn to get into bioinformatics/genomics?". 
+
+So, in the hopes of providing at least decent guidance to others who are just getting started or interested in getting started in the field, I wanted to write a brief in the hopes of addressing this question that I see most frequently.
+
+This guide it by no means intensive introduction to the field, nor is it meant to be. The reality is that bioinformatics as a field is far too vast and large for me to try and  describe everything the field encompasses. Rather, I'll just be highlighting a few fundamental building blocks that'll get you started.
+
+##### 1. The Very Beginning
+
+The first thing you must absolutely learn is command line. Command line is a
+simplified method in which you can access and interact with your computer. Instead of using a [graphical user interface](https://en.wikipedia.org/wiki/Graphical_user_interface)(GUI for short), you'll be interacting with your computer on a more basal level of only text and commands. And while this may appear intimidating at first, its an increibly empowering tool that can change the way in which you use computers.
+
+Most bioinformatics software is not created to be run with a GUI. The designers
+of said softwares are far more focused on results rather than creating a
+simplified programming interface. So this means that learning the command line
+and being proficient in it is of massive importance. I would go so far as to
+say that if you can't use the command line or refuse to learn, you can't do
+bioinformatics on any discernible level. 
+
+To learn the ins and ours of command line i would reccomend a few places to
+start. If you're technophobic and a little unsure of yourself i would reccomend
+Code Academys command line course. Code Academy offers users the oppertunity to begin learning the basics of using command lines on a computer without the need to worry about "messing up" your computer. But once you complete this step I would highly encourage you to begin working on command line on your own computer. There is no subsitution for repeated practice.
+
+
+##### 2. The Actual Programming
+
+While learning the command line is a crucial step in bioinforamtics, learning
+to program and script are fundamental and important skills any developing
+bioinformatician must learn. 
+
+Often times the output from software isn't exactly what you want. Or it simply
+won't be imputed very easily due to the nature of the file format. The best
+solution to this issue is to begin teaching yourself 'scripting'. Scripting can
+basically be thought of as writing small pieces of code that can help you
+impute different types of data to a more reasonable format. At a basic level if
+can make working with text files a much easier affair, and at a higher level it
+opens up avenues of publishing bioinforamtics software.
+
+At first scripting can seem like and inconquerable task. It can seem like the
+difference between 
+
+
+
+##### 3. Getting to Know The "Greatest Hits"
+
+##### 4. Creating Projects
+
+##### 5. Reading Scienctific Articles
+
+This is an aspect of bioinformatics/genomics that I believe is heavily
+understated in most "intro" guides. While many such guides instruct you to get
+a handle and grasp on programming, far fewer discuss the necessity of reading
+everything you possibly can related to the field. With whatever you end up
+pursiong there's no point in redoing work that has been done by a precursor.
+Why try and create a genome assembler without knowing the current
+methadologies. Reading, and reserach is crucial.
+
+Something I found to be 
+
+
+##### 6. Continue to Learn
+
+The last point I'll make in this list is that this list is far from exhaustive.
+Bioinforamtics is a massive field that is only getting more complex and
+advanced as time goes on. This puts the task of continuoius development
+direcltly on the individual. There comes a point where no one can teach you
+everything you must learn, so it's up to you to figure out what you need to
+learn, and how to learn it.
+
+The best people in thie field are those who have a voracious desire to learn
+and understand. My advice is to keep trying, and keep advancing. It's amazing
+what consisten effort can yield even if you don't belive yourself to be gifted
+
+

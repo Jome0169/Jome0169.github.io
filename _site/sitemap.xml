@@ -1,28 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>/cleaning-gff3-files/</loc>
-<lastmod>2018-06-20T10:38:00-04:00</lastmod>
-</url>
-<url>
-<loc>/running-snap-in-2018/</loc>
-<lastmod>2018-03-07T14:11:00-05:00</lastmod>
-</url>
-<url>
-<loc>/bioinformatics/running-spaln-for-genome-annotation/</loc>
-<lastmod>2018-02-19T10:35:00-05:00</lastmod>
-</url>
-<url>
-<loc>/bioinforamtics/GenomeAnnotationIn2018/</loc>
-<lastmod>2018-02-08T10:00:00-05:00</lastmod>
-</url>
-<url>
-<loc>/writing/GettingIntoBioInformatics/</loc>
+<loc>/bioinformatics/GettingIntoBioInformatics/</loc>
 <lastmod>2018-01-19T10:00:00-05:00</lastmod>
-</url>
-<url>
-<loc>/writing/ABriefHistoryOfBioinformatics/</loc>
-<lastmod>2017-03-05T10:00:00-05:00</lastmod>
 </url>
 <url>
 <loc>/about/</loc>
