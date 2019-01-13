@@ -3,8 +3,8 @@ layout: article
 title:  "Getting Started in Bioinformatics"
 date:   2018-01-19 9:00 -0600
 categories: Bioinformatics
+share: false
 image:
-    thumb:pablo_author.JPG
 ---
 
 This is a question I see all the time online. It has many variants, but the
