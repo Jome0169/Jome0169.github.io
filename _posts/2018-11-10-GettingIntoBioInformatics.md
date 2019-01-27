@@ -1,5 +1,5 @@
 ---
-layout: article
+:qayout: article
 title:  "Getting Started in Bioinformatics"
 date:   2018-01-19 9:00 -0600
 categories: Bioinformatics

@@ -1,14 +1,10 @@
 ---
 layout: article
 title: About Me
-date: 9-11-18
+date: 2018-01-19 9:00 -0600
 modified:
 excerpt: A bit about me
-image:
-  feature: 
-  teaser:
-  thumb:
-ads: false  
+share: false
 ---
 You're most likely at this blog for one of two reasons:
 
