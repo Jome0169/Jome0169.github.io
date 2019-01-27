@@ -14,7 +14,7 @@ this problem I found nothing. So I thought I would document briefly what I did
 to fix it.
 
 ### Initial Output
-----------------------
+```
 program version:          1.18
 Data files:
  File format:             bam
@@ -50,9 +50,7 @@ Reads statistics after correction:
  Calling peaks...
 
 Segmentation fault (core dumped)
-
-----------------------
-
+```
 
 Upon investigating this further, I decided to see if the issue was coming from the scaffold reported in the error, B73V4_ctg162. To see check this I first analysed how many reads were aligning to this contig in the maize genome using  using a quick samtools command: `samtools idxstats chip_B73_ear_H3K36me3_rep1_bowtie2algn.sorted.bam | grep B73V4_ctg162` , and found the following:  
 
@@ -67,7 +65,8 @@ grep -v "B73V4_ctg*" chip_rep1_bowtie2algn.sam  > chip_rep1_bowtie2algn.noctg_sc
 I eventuall re-ran this software using these generated SAM (I didn't want to take the extra step of going from `samtools view | grep _v ` back to sam) files, and was eventually rewarded with:
 
 ### Final output:
-------------------
+
+```
 program version:          1.18
 Data files:
  File format:             sam
@@ -116,8 +115,7 @@ Discovered 0    regions in Pt.
 
 
 Total regions discovered:       17877
-
-----------------------------
+``
 
 Success! It appears that those nasty scaffolds were proving to be quite troublesome for this software. But, this isn't an ideal solution. We're still casting out genomic information that I would prefer to keep for analysis. So... There has to be a smarter way of doing this. Maybe pin pointing the exact scaffolds that were failing and why? But in my case, this got me the desired results I needed.
 
