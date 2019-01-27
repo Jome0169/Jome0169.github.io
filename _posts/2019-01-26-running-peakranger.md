@@ -5,7 +5,7 @@ date:   2018-01-19 9:00 -0600
 categories: Bioinformatics
 share: false
 image:
--
+---
 
 So, I was interestd in running the software peakranger bcp recently, but
 stumbeled into a rather irritating probelm. I kept getting the classic message
