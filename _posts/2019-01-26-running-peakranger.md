@@ -52,9 +52,15 @@ Reads statistics after correction:
 Segmentation fault (core dumped)
 ```
 
-Upon investigating this further, I decided to see if the issue was coming from the scaffold reported in the error, B73V4_ctg162. To see check this I first analysed how many reads were aligning to this contig in the maize genome using  using a quick samtools command: `samtools idxstats chip_B73_ear_H3K36me3_rep1_bowtie2algn.sorted.bam | grep B73V4_ctg162` , and found the following:  
+Upon investigating this further, I decided to see if the issue was coming from the scaffold reported in the error, B73V4_ctg162. To see check this I first analysed how many reads were aligning to this contig in the maize genome using  using a quick samtools command: 
 
-`B73V4_ctg162    40634   0       0`
+```
+#Command:
+samtools idxstats chip_B73_ear_H3K36me3_rep1_bowtie2algn.sorted.bam | grep B73V4_ctg162
+
+#Output:
+B73V4_ctg162    40634   0       0
+```
 
 So, there were ZERO reads aligning to this contig. Making me think the software might be chocking on this scaffold. But after removing this scaffold from the SAM file, I was still being greated by `Segmentation fault (core dumped)` . So, in order to try again I took a more drastic measure removed all scaffolds that had CTG in them. I did this after checking the gff3 file for all scaffolds/contigs, and coming to the conclusion that none of them are particularly gene rich and/or interesting for my questions. I removed ALL of these scaffolds using the following command:
 
@@ -115,9 +121,9 @@ Discovered 0    regions in Pt.
 
 
 Total regions discovered:       17877
-``
+```
 
-Success! It appears that those nasty scaffolds were proving to be quite troublesome for this software. But, this isn't an ideal solution. We're still casting out genomic information that I would prefer to keep for analysis. So... There has to be a smarter way of doing this. Maybe pin pointing the exact scaffolds that were failing and why? But in my case, this got me the desired results I needed.
+Success! It appears that those nasty scaffolds/contigs were proving to be quite troublesome for this software. But, this isn't an ideal solution. We're still casting out genomic information that I would prefer to keep for analysis. So... There has to be a smarter way of doing this. Maybe pin pointing the exact scaffolds that were failing and why? But in my case, this got me the desired results I needed.
 
 
 
