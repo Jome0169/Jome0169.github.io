@@ -1,6 +1,6 @@
 ---
 layout: article
-title: DoubleCheckUnderstanding
+title: You Probably Don't Understand Strandedness and RNA-Sequencing
 date: 2019-03-15
 categories: Bioinforamtics
 ---
