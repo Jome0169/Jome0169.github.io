@@ -2,9 +2,7 @@
 
 title: Generally Biology
 description: A blog about computer science, biology, and everything else
-logo: dnaimage.jpg # 120x120 px default image used for Twitter summary card
-teaser: skinny-bones-demo.gif
-locale: en
+logo: dnaimage.jpg # 120x120 px default image used for Twitter summary card teaser: skinny-bones-demo.gif locale: en
 url:
 feed:
   path: atom.xml
@@ -82,8 +80,8 @@ collections:
     permalink: /:collection/:path/
 
 
-
 exclude:
+  - vendor 
   - "*.less"
   - "*.sublime-project"
   - "*.sublime-workspace"

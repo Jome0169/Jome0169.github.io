@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+	<title>My Toolbox • Generally Biology</title>
+    <meta name="description" content="It seems like everyone who does computational biology has a different workflow.
+Whether it be a different IDE, different libraries, everyone has a set up that is uniqly their own. In an attempt to distill my
+knowledge to those who might be interested, I thought I’d
+write a quick post detailing some components of my workflow that I couldn’t
+live without.
+
+">
+    <meta name="keywords" content="">
+    
+    	<!-- Twitter Cards -->
+	<meta name="twitter:title" content="My Toolbox">
+	<meta name="twitter:description" content="It seems like everyone who does computational biology has a different workflow.
+Whether it be a different IDE, different libraries, everyone has a set up that is uniqly their own. In an attempt to distill my
+knowledge to those who might be interested, I thought I’d
+write a quick post detailing some components of my workflow that I couldn’t
+live without.
+
+">
+	
+	
+	
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:image" content="/images/dnaimage.jpg">
+	
+	<!-- Open Graph -->
+	<meta property="og:locale" content="">
+	<meta property="og:type" content="article">
+	<meta property="og:title" content="My Toolbox">
+	<meta property="og:description" content="It seems like everyone who does computational biology has a different workflow.
+Whether it be a different IDE, different libraries, everyone has a set up that is uniqly their own. In an attempt to distill my
+knowledge to those who might be interested, I thought I’d
+write a quick post detailing some components of my workflow that I couldn’t
+live without.
+
+">
+	<meta property="og:url" content="/bioinformatics/my-toolbox/">
+	<meta property="og:site_name" content="Generally Biology">
+
+    <link rel="canonical" href="/bioinformatics/my-toolbox/">
+
+    <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Generally Biology Atom Feed">
+    <link href="/sitemap.xml" type="application/xml" rel="sitemap" title="Sitemap">
+
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="cleartype" content="on">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <!-- HTML5 Shiv and Media Query Support for IE -->
+    <!--[if lt IE 9]>
+      <script src="/js/vendor/html5shiv.min.js"></script>
+      <script src="/js/vendor/respond.min.js"></script>
+    <![endif]-->
+
+  </head>
+
+  <body id="js-body">
+    <!--[if lt IE 9]><div class="upgrade notice-warning"><strong>Your browser is quite old!</strong> Why not <a href="http://whatbrowser.org/">upgrade to a newer one</a> to better enjoy this site?</div><![endif]-->
+
+    <header id="masthead">
+  <div class="inner-wrap">
+    <a href="/" class="site-title">Generally Biology</a>
+    <nav role="navigation" class="menu top-menu">
+        <ul class="menu-item">
+	<li class="home"><a href="/">Generally Biology</a></li>
+	
+    
+    <li><a href="/" >Home</a></li>
+  
+    
+    <li><a href="/blog/" >Blog</a></li>
+  
+    
+    <li><a href="/collections/" >Collections</a></li>
+  
+    
+    <li><a href="/about/" >About</a></li>
+  
+</ul>
+    </nav>
+  </div><!-- /.inner-wrap -->
+</header><!-- /.masthead -->
+
+    <nav role="navigation" id="js-menu" class="sliding-menu-content">
+  <h5>Generally Biology <span></span></h5>
+  <ul class="menu-item">
+    <li>
+      <a href="/">
+        
+        <div class="title">Home</div>
+        <p class="excerpt">Generally Biology</p>
+      </a>
+    </li><li>
+      <a href="/blog/">
+        
+        <div class="title">Blog</div>
+        <p class="excerpt">My Writings on Biology, and computers, and the insane intersection between the two that we call bioinformatics/computational biology.</p>
+      </a>
+    </li><li>
+      <a href="/collections/">
+        
+        <div class="title">Collections</div>
+        <p class="excerpt">Writings on specific subjects</p>
+      </a>
+    </li><li>
+      <a href="/about/">
+        
+        <div class="title">About</div>
+        <p class="excerpt">John Pablo Mendieta</p>
+      </a>
+    </li>
+  </ul>
+</nav>
+<button type="button" id="js-menu-trigger" class="sliding-menu-button lines-button x2" role="button" aria-label="Toggle Navigation">
+  <span class="nav-lines"></span>
+</button>
+
+<div id="js-menu-screen" class="menu-screen"></div>
+
+
+    <div id="page-wrapper">
+      <div id="main" role="main">
+	<article class="wrap" itemscope itemtype="http://schema.org/Article">
+		
+		
+  <nav class="breadcrumbs">
+    <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+      <a href="" itemprop="url">
+        <span itemprop="title">Home</span>
+      </a> › 
+    <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+      <a href="/Bioinformatics/" itemprop="url">
+        <span itemprop="title">Bioinformatics</span>
+      </a>
+    </span>
+  </nav><!-- /.breadcrumbs -->
+
+		<div class="page-title">
+			<h1>My Toolbox</h1>
+		</div>
+		<div class="inner-wrap">
+			<div id="content" class="page-content" itemprop="articleBody">
+				<p>It seems like everyone who does computational biology has a different workflow.
+Whether it be a different IDE, different libraries, everyone has a set up that is uniqly their own. In an attempt to distill my
+knowledge to those who might be interested, I thought I’d
+write a quick post detailing some components of my workflow that I couldn’t
+live without.</p>
+
+<h2 id="idestext-editors">IDEs/Text Editors:</h2>
+
+<h4 id="vim">VIM</h4>
+
+<p>If you know me, this won’t surprise you. I’m an avid VIM user. I find its
+‘lightweightness’ as well as its universal occurrence on servers essential. Need to open a massive 4Gb file in it? Sure! It
+won’t be pretty, but god damn does it work. Need to make a quick edit to that
+script you just copied over? Easy Peazy.</p>
+
+<p>This paired with its massive archive of plugins makes it an amazing editor that
+can do anything sublime2 or visualstudio code can. It’s also a text editor that I find consistently rewards you for 
+sticking with it. If you find yourself coding along, consistenly hitting the
+same “Pain point”, the VIM community has come up with a macro combination to solve it.</p>
+
+<h4 id="rstudio">RStudio</h4>
+
+<p>If you use R, you know what this is and why you need it. It makes writing R
+scripts joyous, logically displays your environment, and makes graphing/ 
+dealing with packages easy.</p>
+
+<h2 id="command-line-accessories">Command Line ‘Accessories’</h2>
+
+<h4 id="tmux">TMUX</h4>
+<p>Honestly, between TMUX and VIM, I’m not sure which has had a larger
+effect on my workflow. At this point both are completely indispensable to me,
+albeit for different reasons.</p>
+
+<p>TMUX is a terminal multiplexer. It allows users to split their singular
+terminal session into multiple, allowing you login once, and then have a pane
+dedicated to writing bash scripts, copying over data, etc…</p>
+
+<p>Not sold? It ALSO doesn’t log off much like <strong>screen</strong>, meaning you can open up
+3-4 windows, run separate commands, detach the session, and come back later.
+This has so so so many added benefits. Hit the wrong hot key and close your
+terminal window? YOUR WORK IS STILL THERE!!!. Honestly, I can’t praise TMUX
+highly enough. It’s infinite customizability, and integration with VIM
+transforms both these softwares into an amazing IDE that can be accessed on any
+remote server.</p>
+
+<p>It’s a computational biologists dream.</p>
+
+<h4 id="fd-like-find-but-i-can-remember-the-command">fd (like find, but I can remember the command)</h4>
+
+<p>Finding files is a pain in the ass with the <code class="highlighter-rouge">find</code> command. For whatever reason
+I can never seem to remember the inane synatx</p>
+
+<h4 id="conda">CONDA</h4>
+<p>This is possibly my most recent addition to my workflow as of late. But my GOD,
+I don’t know how I ever lived without it before. Conda is a container workflow
+that allows a user to generate a specific enviornment to run their software. So
+if you’re having issue getting all of your python library installs to work
+across different clusters, conda is a god send. Its actually hard to imagine
+just how much time it has saved me overall.</p>
+
+<h2 id="libraries">Libraries</h2>
+
+<h4 id="pybedtoolspysamtools">pybedtools/pysamtools</h4>
+
+<p>Possibly the best python libraries I’ve ever used. Well documented, fast,
+excellent usage scenarios. It’s saved me countless hours, and allowed me to
+break up the standard worflow of “Data -&gt; Command Line App -&gt; python 
+-&gt; output” to just “Data -&gt; python -&gt; output”, allowing me to avoid a full
+step.</p>
+
+<p>This paired with the fact that these libraries are very well tested, and have
+some pretty sophisticated communities around them allow me to relax just a bit
+more, and focus on my science.</p>
+
+<h4 id="tidyverse">Tidyverse</h4>
+<p>I dislike the R programming language. I think it’s poorly written, and
+needlessly complex. It’s the perl of statistics in so many ways. The Tidyverse
+basically makes R usable. If you’re not using it I weep for you.</p>
+
+<h2 id="bonus">Bonus</h2>
+
+<h4 id="rhodia-sketch-pad">Rhodia Sketch pad</h4>
+<p>Honestly, sometimes you just desperatly need to sketch out your ideas. I’m a
+massive believer that</p>
+
+<h4 id="r-for-data-analysis">R for data analysis</h4>
+<p>I still suck at R for the most part. So this free E-book for me has been an
+absolute godsend.</p>
+
+<h4 id="good-headphones">Good headphones</h4>
+
+
+				<hr />
+				<footer class="page-footer">
+					
+
+<div class="author-image">
+	<img src="/images/" alt="">
+</div><!-- ./author-image -->
+<div class="author-content">
+	<h3 class="author-name" > <span itemprop="author"></span></h3>
+	<p class="author-bio"></p>
+</div><!-- ./author-content -->
+
+					
+					<div class="page-meta">
+	<p> <time datetime="2018-01-19T10:00:00Z" itemprop="datePublished">January 19, 2018</time></p>
+</div><!-- /.page-meta -->
+
+				</footer><!-- /.footer -->
+				<aside>
+					<hr />
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+	/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+	var disqus_shortname = '';
+
+	/* * * DON'T EDIT BELOW THIS LINE * * */
+	(function() {
+		var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+		dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+				</aside>
+			</div><!-- /.content -->
+		</div><!-- /.inner-wrap -->
+		
+	</article><!-- ./wrap -->
+</div><!-- /#main -->
+
+      <footer role="contentinfo" id="site-footer">
+	<nav role="navigation" class="menu bottom-menu">
+		<ul class="menu-item">
+		
+      
+			<li><a href="" >Follow:</a></li>
+		
+      
+			<li><a href="https://twitter.com/pabster212?lang=en" target="_blank">Twitter</a></li>
+		
+      
+			<li><a href="https://github.com/Jome0169" target="_blank">Github</a></li>
+		
+      
+			<li><a href="https://www.linkedin.com/in/john-mendieta-016305119/" target="_blank">Linkedin</a></li>
+		
+		</ul>
+	</nav><!-- /.bottom-menu -->
+	<p class="copyright">&#169; 2019 <a href="">Generally Biology</a> powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> + <a href="http://mmistakes.github.io/skinny-bones-jekyll/" rel="nofollow">Skinny Bones</a>.</p>
+</footer>
+
+    </div>
+
+    <script src="/js/vendor/jquery-1.9.1.min.js"></script>
+    <script src="/js/main.js"></script>
+
+  </body>
+
+</html>

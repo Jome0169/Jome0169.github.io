@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.6">Jekyll</generator><link href="/atom.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2019-06-12T11:34:15-04:00</updated><id>/</id><title>Generally Biology</title><subtitle>A blog about computer science, biology, and everything else</subtitle><entry><title>DoubleCheckUnderstanding</title><link href="/bioinforamtics/doublecheckunderstanding/" rel="alternate" type="text/html" title="DoubleCheckUnderstanding" /><published>2019-03-15T00:00:00-04:00</published><updated>2019-03-15T00:00:00-04:00</updated><id>/bioinforamtics/doublecheckunderstanding</id><content type="html" xml:base="/bioinforamtics/doublecheckunderstanding/">&lt;p&gt;Honestly, you probably know less than you think you do in this field. I can’t
+tell you how often I have been bitten in the ass by making an assumption about
+something I THOUGHT I understood, when in actuallity I was totally missing the
+point. So, here’s a list a few things you should activly question about.&lt;/p&gt;
+
+&lt;h3 id=&quot;do-you-actually-understand-strand-aware-sequencing-can-you-draw-it-out&quot;&gt;Do you actually understand strand aware sequencing? Can you draw it out?&lt;/h3&gt;
+&lt;p&gt;#### Are you sure?&lt;/p&gt;
+
+&lt;p&gt;If not, this is quick, and totally worth your time.&lt;/p&gt;
+
+&lt;p&gt;https://www.biostars.org/p/15938/&lt;/p&gt;</content><summary>Honestly, you probably know less than you think you do in this field. I can’t
+tell you how often I have been bitten in the ass by making an assumption about
+something I THOUGHT I understood, when in actuallity I was totally missing the
+point. So, here’s a list a few things you should activly question about.</summary></entry><entry><title>My Toolbox</title><link href="/bioinformatics/my-toolbox/" rel="alternate" type="text/html" title="My Toolbox" /><published>2018-01-19T10:00:00-05:00</published><updated>2018-01-19T10:00:00-05:00</updated><id>/bioinformatics/my-toolbox</id><content type="html" xml:base="/bioinformatics/my-toolbox/">&lt;p&gt;It seems like everyone who does computational biology has a different workflow.
+Whether it be a different IDE, different libraries, everyone has a set up that is uniqly their own. In an attempt to distill my
+knowledge to those who might be interested, I thought I’d
+write a quick post detailing some components of my workflow that I couldn’t
+live without.&lt;/p&gt;
+
+&lt;h2 id=&quot;idestext-editors&quot;&gt;IDEs/Text Editors:&lt;/h2&gt;
+
+&lt;h4 id=&quot;vim&quot;&gt;VIM&lt;/h4&gt;
+
+&lt;p&gt;If you know me, this won’t surprise you. I’m an avid VIM user. I find its
+‘lightweightness’ as well as its universal occurrence on servers essential. Need to open a massive 4Gb file in it? Sure! It
+won’t be pretty, but god damn does it work. Need to make a quick edit to that
+script you just copied over? Easy Peazy.&lt;/p&gt;
+
+&lt;p&gt;This paired with its massive archive of plugins makes it an amazing editor that
+can do anything sublime2 or visualstudio code can. It’s also a text editor that I find consistently rewards you for 
+sticking with it. If you find yourself coding along, consistenly hitting the
+same “Pain point”, the VIM community has come up with a macro combination to solve it.&lt;/p&gt;
+
+&lt;h4 id=&quot;rstudio&quot;&gt;RStudio&lt;/h4&gt;
+
+&lt;p&gt;If you use R, you know what this is and why you need it. It makes writing R
+scripts joyous, logically displays your environment, and makes graphing/ 
+dealing with packages easy.&lt;/p&gt;
+
+&lt;h2 id=&quot;command-line-accessories&quot;&gt;Command Line ‘Accessories’&lt;/h2&gt;
+
+&lt;h4 id=&quot;tmux&quot;&gt;TMUX&lt;/h4&gt;
+&lt;p&gt;Honestly, between TMUX and VIM, I’m not sure which has had a larger
+effect on my workflow. At this point both are completely indispensable to me,
+albeit for different reasons.&lt;/p&gt;
+
+&lt;p&gt;TMUX is a terminal multiplexer. It allows users to split their singular
+terminal session into multiple, allowing you login once, and then have a pane
+dedicated to writing bash scripts, copying over data, etc…&lt;/p&gt;
+
+&lt;p&gt;Not sold? It ALSO doesn’t log off much like &lt;strong&gt;screen&lt;/strong&gt;, meaning you can open up
+3-4 windows, run separate commands, detach the session, and come back later.
+This has so so so many added benefits. Hit the wrong hot key and close your
+terminal window? YOUR WORK IS STILL THERE!!!. Honestly, I can’t praise TMUX
+highly enough. It’s infinite customizability, and integration with VIM
+transforms both these softwares into an amazing IDE that can be accessed on any
+remote server.&lt;/p&gt;
+
+&lt;p&gt;It’s a computational biologists dream.&lt;/p&gt;
+
+&lt;h4 id=&quot;fd-like-find-but-i-can-remember-the-command&quot;&gt;fd (like find, but I can remember the command)&lt;/h4&gt;
+
+&lt;p&gt;Finding files is a pain in the ass with the &lt;code class=&quot;highlighter-rouge&quot;&gt;find&lt;/code&gt; command. For whatever reason
+I can never seem to remember the inane synatx&lt;/p&gt;
+
+&lt;h4 id=&quot;conda&quot;&gt;CONDA&lt;/h4&gt;
+&lt;p&gt;This is possibly my most recent addition to my workflow as of late. But my GOD,
+I don’t know how I ever lived without it before. Conda is a container workflow
+that allows a user to generate a specific enviornment to run their software. So
+if you’re having issue getting all of your python library installs to work
+across different clusters, conda is a god send. Its actually hard to imagine
+just how much time it has saved me overall.&lt;/p&gt;
+
+&lt;h2 id=&quot;libraries&quot;&gt;Libraries&lt;/h2&gt;
+
+&lt;h4 id=&quot;pybedtoolspysamtools&quot;&gt;pybedtools/pysamtools&lt;/h4&gt;
+
+&lt;p&gt;Possibly the best python libraries I’ve ever used. Well documented, fast,
+excellent usage scenarios. It’s saved me countless hours, and allowed me to
+break up the standard worflow of “Data -&amp;gt; Command Line App -&amp;gt; python 
+-&amp;gt; output” to just “Data -&amp;gt; python -&amp;gt; output”, allowing me to avoid a full
+step.&lt;/p&gt;
+
+&lt;p&gt;This paired with the fact that these libraries are very well tested, and have
+some pretty sophisticated communities around them allow me to relax just a bit
+more, and focus on my science.&lt;/p&gt;
+
+&lt;h4 id=&quot;tidyverse&quot;&gt;Tidyverse&lt;/h4&gt;
+&lt;p&gt;I dislike the R programming language. I think it’s poorly written, and
+needlessly complex. It’s the perl of statistics in so many ways. The Tidyverse
+basically makes R usable. If you’re not using it I weep for you.&lt;/p&gt;
+
+&lt;h2 id=&quot;bonus&quot;&gt;Bonus&lt;/h2&gt;
+
+&lt;h4 id=&quot;rhodia-sketch-pad&quot;&gt;Rhodia Sketch pad&lt;/h4&gt;
+&lt;p&gt;Honestly, sometimes you just desperatly need to sketch out your ideas. I’m a
+massive believer that&lt;/p&gt;
+
+&lt;h4 id=&quot;r-for-data-analysis&quot;&gt;R for data analysis&lt;/h4&gt;
+&lt;p&gt;I still suck at R for the most part. So this free E-book for me has been an
+absolute godsend.&lt;/p&gt;
+
+&lt;h4 id=&quot;good-headphones&quot;&gt;Good headphones&lt;/h4&gt;</content><summary>It seems like everyone who does computational biology has a different workflow.
+Whether it be a different IDE, different libraries, everyone has a set up that is uniqly their own. In an attempt to distill my
+knowledge to those who might be interested, I thought I’d
+write a quick post detailing some components of my workflow that I couldn’t
+live without.</summary></entry><entry><title>Running Peakranger Bcp</title><link href="/bioinformatics/running-peakranger/" rel="alternate" type="text/html" title="Running Peakranger Bcp" /><published>2018-01-19T10:00:00-05:00</published><updated>2018-01-19T10:00:00-05:00</updated><id>/bioinformatics/running-peakranger</id><content type="html" xml:base="/bioinformatics/running-peakranger/">&lt;p&gt;So, I was interestd in running the software peakranger bcp recently, but
+stumbeled into a rather irritating probelm. I kept getting the classic message
+&lt;code class=&quot;highlighter-rouge&quot;&gt;Segmentation fault (core dumped)&lt;/code&gt;. Upon looking around for the solution to
+this problem I found nothing. So I thought I would document briefly what I did
+to fix it.&lt;/p&gt;
+
+&lt;h3 id=&quot;initial-output&quot;&gt;Initial Output&lt;/h3&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;program version:          1.18
+Data files:
+ File format:             bam
+ Sample file:             chip_rep1_BWA.sorted.bam
+ Control file:            input_rep1_BWA.sorted.bam
+Qualities:
+ P value cut off:         0.0001
+ sliding window size:     500
+ Read extension length:   200
+Output:
+ Regions:                 test_region.bed
+ HTML reports:            Disabled(--report not specified)
+
+Reads statistics:
+
+ Treatment reads +:       12002431
+ Treatment reads -:       11987889
+ Average read length:     30
+ Control reads +:         11301505
+ Control reads -:         11298535
+ Average read length:     30
+ Verifying reads...
+Warning: B73V4_ctg162 only contains reads in the positive strand. The chromosome is removed.
+Warning: B73V4_ctg162 only contains reads in the positive strand. The chromosome is removed.
+
+Reads statistics after correction:
+
+ Treatment reads +:       12002424
+ Treatment reads -:       11987889
+ Control reads +:         11301503
+ Control reads -:         11298535
+
+ Calling peaks...
+
+Segmentation fault (core dumped)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Upon investigating this further, I decided to see if the issue was coming from the scaffold reported in the error, B73V4_ctg162. To see check this I first analysed how many reads were aligning to this contig in the maize genome using  using a quick samtools command:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#Command:
+samtools idxstats chip_B73_ear_H3K36me3_rep1_bowtie2algn.sorted.bam | grep B73V4_ctg162
+
+#Output:
+B73V4_ctg162    40634   0       0
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;So, there were ZERO reads aligning to this contig. Making me think the software might be chocking on this scaffold. But after removing this scaffold from the SAM file, I was still being greated by &lt;code class=&quot;highlighter-rouge&quot;&gt;Segmentation fault (core dumped)&lt;/code&gt; . So, in order to try again I took a more drastic measure removed all scaffolds that had CTG in them. I did this after checking the gff3 file for all scaffolds/contigs, and coming to the conclusion that none of them are particularly gene rich and/or interesting for my questions. I removed ALL of these scaffolds using the following command:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;grep -v &quot;B73V4_ctg*&quot; chip_rep1_bowtie2algn.sam  &amp;gt; chip_rep1_bowtie2algn.noctg_scaff.sam &amp;amp;&amp;amp; grep -v &quot;B73V4_ctg*&quot; chip_rep1_bowtie2algn.sam  &amp;gt; chip_rep1_bowtie2algn.noctg_scaff.sam 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;I eventuall re-ran this software using these generated SAM (I didn’t want to take the extra step of going from &lt;code class=&quot;highlighter-rouge&quot;&gt;samtools view | grep _v &lt;/code&gt; back to sam) files, and was eventually rewarded with:&lt;/p&gt;
+
+&lt;h3 id=&quot;final-output&quot;&gt;Final output:&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;program version:          1.18
+Data files:
+ File format:             sam
+ Sample file:             chip_rep1_bowtie2algn.noctg_scaff.sam
+ Control file:            chip_input_rep1_bowtie2algn.noctg_scaff.sam
+Qualities:
+ P value cut off:         0.0001
+ sliding window size:     500
+ Read extension length:   200
+Output:
+ Regions:                 test_sam_no162_region.bed
+ HTML reports:            Disabled(--report not specified)
+
+Reads statistics:
+
+ Treatment reads +:       20131985
+ Treatment reads -:       20126418
+ Average read length:     76
+ Control reads +:         15762557
+ Control reads -:         15771271
+ Average read length:     76
+ Verifying reads...
+
+Reads statistics after correction:
+
+ Treatment reads +:       20131985
+ Treatment reads -:       20126418
+ Control reads +:         15762557
+ Control reads -:         15771271
+
+ Calling peaks...
+
+Discovered 2693 regions in 1.
+Discovered 1222 regions in 10.
+Discovered 2065 regions in 2.
+Discovered 1902 regions in 3.
+Discovered 1879 regions in 4.
+Discovered 2085 regions in 5.
+Discovered 1538 regions in 6.
+Discovered 1445 regions in 7.
+Discovered 1649 regions in 8.
+Discovered 1396 regions in 9.
+Discovered 3    regions in Mt.
+Discovered 0    regions in Pt.
+
+
+
+Total regions discovered:       17877
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Success! It appears that those nasty scaffolds/contigs were proving to be quite troublesome for this software. But, this isn’t an ideal solution. We’re still casting out genomic information that I would prefer to keep for analysis. So… There has to be a smarter way of doing this. Maybe pin pointing the exact scaffolds that were failing and why? But in my case, this got me the desired results I needed.&lt;/p&gt;</content><summary>So, I was interestd in running the software peakranger bcp recently, but
+stumbeled into a rather irritating probelm. I kept getting the classic message
+Segmentation fault (core dumped). Upon looking around for the solution to
+this problem I found nothing. So I thought I would document briefly what I did
+to fix it.</summary></entry><entry><title>Getting Started in Bioinformatics</title><link href="/bioinformatics/GettingIntoBioInformatics/" rel="alternate" type="text/html" title="Getting Started in Bioinformatics" /><published>2018-01-19T10:00:00-05:00</published><updated>2018-01-19T10:00:00-05:00</updated><id>/bioinformatics/GettingIntoBioInformatics</id><content type="html" xml:base="/bioinformatics/GettingIntoBioInformatics/">&lt;p&gt;This is a question I see all the time online. It has many variants, but the
+most frequent I see goes something like - “Where should I start, and what do I need to learn to get into bioinformatics/genomics?”. So, in the hopes of providing decent answer to those just getting started in the field, I wanted to write a brief post with the hopes of pointing you in the right direction. This guide it by no means intensive introduction to the field, nor is it meant to be. The reality is that bioinformatics as a field is far too vast and large for me to try and  describe everything you will need to learn. Rather, I’ll just be highlighting a few powerful building blocks that’ll get you started quicklky.&lt;/p&gt;
+
+&lt;p&gt;One point I want to make clear before we begin, is that this blog post is
+written for those who have biological questions they want to ANSWER using
+computation and computer science. This is wholly different from the valuable 
+group of biologist pursuing method development (creating software). While many of the skills
+overlap, I can’t appreciably write a guide from this perspective as it’s not
+my own.&lt;/p&gt;
+
+&lt;p&gt;Someone who is a biologist who wants to answer biological questions qill have a
+very different avenue of learning than someone who is trying to create tools
+for biologist to learn. But alas, the roadmap waits…&lt;/p&gt;
+
+&lt;h5 id=&quot;the-very-beginning&quot;&gt;1. The Very Beginning&lt;/h5&gt;
+
+&lt;p&gt;The first thing you must learn is command line. It’s the cornerstone of
+learning to interact with data on your computer, and learning that you can
+divorce yourself from programs such as EXcel and be totally fine. You can thinkg og command line as a simplified and stripped back method in which you can access and interact with your computer. Instead of using a &lt;a href=&quot;https://en.wikipedia.org/wiki/Graphical_user_interface&quot;&gt;graphical user interface&lt;/a&gt;(GUI for short), you’ll be working with your computer on a more basal level of only text commands. While this may appear intimidating at first, the pay offs of learning it thoroughly have massive returns on your productivity.&lt;/p&gt;
+
+&lt;p&gt;To learn the ins and outs of command line there are two places I would
+recommend starting. If you’re technophobic and a little unsure of yourself i would recommend &lt;a href=&quot;https://www.google.com/url?sa=t&amp;amp;rct=j&amp;amp;q=&amp;amp;esrc=s&amp;amp;source=web&amp;amp;cd=1&amp;amp;cad=rja&amp;amp;uact=8&amp;amp;ved=2ahUKEwjLgLKUia_fAhUln-AKHepWA58QFjAAegQIAxAC&amp;amp;url=https%3A%2F%2Fwww.codecademy.com%2Flearn%2Flearn-the-command-line&amp;amp;usg=AOvVaw2W4SXDZOVLJGgMMuEIe6j-&quot;&gt;Code Academys command line course&lt;/a&gt;. Code Academy offers users the opprotunity to begin learning the basics of using command lines on a computer without the need to worry about “messing up” your computer. However, while this might seem great, at some point you will have to pivot to actually using command line on your personal system. For this, I think the best turtorial I have found is http://www.ee.surrey.ac.uk/Teaching/Unix/ Basic
+commands and excercises. Worth your time. It covers the very fundamentals much
+like code academy, but makes the transition to your own machine easy and
+intuitive.&lt;/p&gt;
+
+&lt;p&gt;One of the main resons I tell people to start here is that most bioinformatics software is not created to be run with a GUI. The designers
+of said softwares are far more focused on results rather than creating a
+simplified programming interface. So if you’re interested in actually
+assembling your genome, or transcriptome, or calling peaks, or ANYTHING -
+you’ll have to use command line.Being proficient in it is of massive importance. I would go so far as to say that if you can’t use the command line, you can’t do bioinformatics on any discernible level. And while there are &lt;a href=&quot;https://www.geneious.com/&quot;&gt;companies&lt;/a&gt; attempting to mitigate the need for command line interfaces, these tools are severluy under powered, and slow in comparison to doing it to yourself.&lt;/p&gt;
+
+&lt;h5 id=&quot;the-actual-programming&quot;&gt;2. The Actual Programming&lt;/h5&gt;
+
+&lt;p&gt;While learning the command line is a crucial step in bioinforamtics, learning
+to program and script are fundamental and important skills any developing
+bioinformatician must learn.&lt;/p&gt;
+
+&lt;p&gt;Often times the output from software isn’t exactly what you want. Or it simply
+won’t be imputed very easily due to the nature of the file format. But then
+you’re left with an issue. How do you parse a 3GB file and remove the
+information you want? You might be able to do it on command line using a combo
+of awk, and or grep, but what if the operations you’re performing are very
+complex?&lt;/p&gt;
+
+&lt;p&gt;The best solution to this issue is to begin teaching yourself ‘scripting’. Scripting can basically be thought of as writing small pieces of code that can help you impute different types of data to a more reasonable format. At a basic level if can make working with text files a much easier affair, and at a higher level it opens up avenues for publishing bioinforamtics software for others to use.&lt;/p&gt;
+
+&lt;p&gt;Something I want to mention is that if you’re just getting into scripting, the
+distance between writing your first for loop, and solving your first
+bioinformatics task can be quite large. With this space irritation can easily
+creep in and frusturate first time learners. That’s why I always reccomend
+people attempt to apply the skill they’re learning as quickly as they can, to
+begin to give them direction and an a basic understanding of use cases.&lt;/p&gt;
+
+&lt;p&gt;At first scripting can seem like and inconquerable task. It can seem like the
+difference between someo one who is fluent in a langauge and yourself is
+massive. But like anything else, it’s simply a matter of taking your time, and
+practicing. Writing scripts that are always a little bit outside of what you’re
+capabale of.&lt;/p&gt;
+
+&lt;p&gt;But, enough motivation, and on to the resources. First and formost, learn
+python, and Python 3 at that. Any other langauge is simply archaic, and not
+worth your time (come at me perl boys). To learn python, the most effective
+tools I used were two fold - &lt;a href=&quot;https://learnpythonthehardway.org/&quot;&gt;Learn python the hard
+way&lt;/a&gt;, and &lt;a href=&quot;https://www.codecademy.com/learn/learn-python&quot;&gt;code academy 
+intro to python course&lt;/a&gt;. Both offer the basics of the language and syntax
+and put you on the fast path to learning a language. Make sure you’re focusing
+on questions such as “how could I use this data type in my own questions?
+Should i put this fasta file into a string, or a dictionary, and what are the
+benefits?””&lt;/p&gt;
+
+&lt;p&gt;If you’re looking for immediate practice as well, check our
+http://rosalind.info . Rosalind is an awesome sight named after one of the
+discoverers of DNA (Rosalind Franklin), and offers some excellent practice
+problems that allow you to pivot your basic python understanding to solving
+basic bioinformatics task. These probelms scale quickly, so be ready for a
+challenge!&lt;/p&gt;
+
+&lt;h5 id=&quot;getting-to-know-the-greatest-hits&quot;&gt;3. Getting to Know The “Greatest Hits”&lt;/h5&gt;
+
+&lt;p&gt;Time and time again in this field you will most likely find yourself reaching
+for the same slew of tools. Tools that are so central to the analysis and usage
+of next generation sequencing (NGS) data that you’ll find yourself using them
+consistenly. A brief list of tools that I find myself using on the regular are
+tools such as&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;SAMTOOLS
+    &lt;ul&gt;
+      &lt;li&gt;Alignment software for aligning whole genome shotgun (WGS) reads from an experiment to a reference genome. This is an essential step in almost all
+analysis in bioinformatics&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;BLAST
+    &lt;ul&gt;
+      &lt;li&gt;BLAST is a pariwise alignment tool that lets you align two sequences
+  together that you wish to compare. Lets say you want to compare two genes
+from the same family and see how “similar” they are? Blast can get the job done&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;BEDTools
+    &lt;ul&gt;
+      &lt;li&gt;Can be thought of as the cousin to samtools. Operates on slightly
+different data types, but the usage remains the same. How do I find where
+certain genes intersect with my reference genome? How do I know how many reads
+cover a certain regions?&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This list is by no means exhaustive, nor is it really even close to being so.
+The tools you end up using will be very specific to your own questions and
+emthods you are pursuing.&lt;/p&gt;
+
+&lt;p&gt;And my last note on this. Don’t worry about memorizing the manuals for any of
+these tools. What I always say is the first time you use a tool, read the
+manual all the way through ONCE - so you have an idea of what it can and cannot
+do. After this, make sure you’re using the right tool for the job. Find a
+review where it is compared to other known tools, and ensure that its
+performance is at least in the ballpark of usability.&lt;/p&gt;
+
+&lt;p&gt;If you’re looking for the best guide I have found on using these tools I would
+reccomend XXXXX qebstei. A phenomenal blog post that seeks to teach you the
+basics of some of these aplpliocations with the real tool sets you’ll be using.&lt;/p&gt;
+
+&lt;h5 id=&quot;reading-scienctific-articles&quot;&gt;4. Reading Scienctific Articles&lt;/h5&gt;
+
+&lt;p&gt;This is an aspect of bioinformatics/genomics that I believe is heavily
+understated in most “intro” guides. While many such guides instruct you to get
+a handle and grasp on programming, far fewer discuss the necessity of reading
+everything you possibly can related to the field. With whatever you end up
+pursiong there’s no point in redoing work that has been done by a precursor.
+Why try and create a genome assembler without knowing the current
+methods? Reading, and reserach is crucial. Don’t reinvent the wheel and expect
+to be hailed as the genius in the field. Rather, use the wheel to get somewhere
+you want to be.&lt;/p&gt;
+
+&lt;p&gt;Something I have found to be consistenly true in bioiformatics, and ascience as
+a whole is that those who read ask the better questions, allowing them to publish research that we all actually want to read.&lt;/p&gt;
+
+&lt;p&gt;It’s east to cruise on your programming in this field. It’s easy to be the guy
+in the lab people need to write python scripts. But if you want to be a
+scientist and not just someones code moneky you HAVE to, and I mean HAVE to
+read widly and deeply in the field. It will make you great.&lt;/p&gt;
+
+&lt;h5 id=&quot;continuing-to-learn&quot;&gt;5. Continuing to learn&lt;/h5&gt;
+
+&lt;p&gt;The last point I’ll make in this list is that this list is far from exhaustive
+in what you’ll need to do learn to ‘be a bioinforamtician’.
+Bioinforamtics is a massive field that is only getting more complex and
+advanced as time goes on. This puts the task of continuoius development
+direcltly on the individual. There comes a point where no one can teach you
+everything you must learn, so it’s up to you to figure out what you need to
+learn, and how to learn it.&lt;/p&gt;
+
+&lt;p&gt;The best people in thie field are those who have a voracious desire to learn
+and understand. My advice is to keep trying, and keep advancing. It’s amazing
+what consisten effort can yield even if you don’t belive yourself to be ‘gifted’. Just enjoy the process, and don’t be afraid to mess up and get your hands dirty. Learning is all about making mistakes. So who really cares if you ruin a Fasta file because of a bad carrot command as long as you have backups?&lt;/p&gt;
+
+&lt;p&gt;Bioinformatics rewards Do-ers, so make sure you are one.&lt;/p&gt;
+
+&lt;p&gt;-Pablo&lt;/p&gt;</content><summary>This is a question I see all the time online. It has many variants, but the
+most frequent I see goes something like - “Where should I start, and what do I need to learn to get into bioinformatics/genomics?”. So, in the hopes of providing decent answer to those just getting started in the field, I wanted to write a brief post with the hopes of pointing you in the right direction. This guide it by no means intensive introduction to the field, nor is it meant to be. The reality is that bioinformatics as a field is far too vast and large for me to try and  describe everything you will need to learn. Rather, I’ll just be highlighting a few powerful building blocks that’ll get you started quicklky.</summary></entry></feed>
