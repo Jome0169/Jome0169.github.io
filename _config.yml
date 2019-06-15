@@ -1,7 +1,7 @@
 # Site wide configuration
 
 title: Generally Biology
-description: A blog about computer science, biology, and everything else
+description: A blog about the intersection of computer science and biology
 logo: dnaimage.jpg # 120x120 px default image used for Twitter summary card teaser: skinny-bones-demo.gif locale: en
 url:
 feed:
@@ -35,7 +35,7 @@ breadcrumb_separator  : ">"
 # Site owner
 owner: jome0169
 name: Pablo-Mendieta
-email: John.mendieta@colorado.edu
+email: John.mendieta@uga.edu
 twitter: pabster212
 google:
   ad-client:
