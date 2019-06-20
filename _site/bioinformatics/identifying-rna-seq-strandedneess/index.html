@@ -2,21 +2,21 @@
 <html>
   <head>
     <meta charset="utf-8">
-	<title>You Probably Don't Understand Strandedness and RNA-Sequencing • Generally Biology</title>
-    <meta name="description" content="Honestly, you probably know less than you think you do in this field. I can’t
-tell you how often I have been bitten in the ass by making an assumption about
-something I THOUGHT I understood, when in actuallity I was totally missing the
-point. So, here’s a list a few things you should activly question about.
+	<title>Identifying RNA-Seq strandedneess • Generally Biology</title>
+    <meta name="description" content="Often times it’s essential to know the strand orientation of your library. If
+for instance you have overlapping genes, or very closely nested genes, you wont
+be able to accuretly identify the correct strand orintation for your genes
+of interest.
 
 ">
     <meta name="keywords" content="">
     
     	<!-- Twitter Cards -->
-	<meta name="twitter:title" content="You Probably Don't Understand Strandedness and RNA-Sequencing">
-	<meta name="twitter:description" content="Honestly, you probably know less than you think you do in this field. I can’t
-tell you how often I have been bitten in the ass by making an assumption about
-something I THOUGHT I understood, when in actuallity I was totally missing the
-point. So, here’s a list a few things you should activly question about.
+	<meta name="twitter:title" content="Identifying RNA-Seq strandedneess">
+	<meta name="twitter:description" content="Often times it’s essential to know the strand orientation of your library. If
+for instance you have overlapping genes, or very closely nested genes, you wont
+be able to accuretly identify the correct strand orintation for your genes
+of interest.
 
 ">
 	
@@ -28,17 +28,17 @@ point. So, here’s a list a few things you should activly question about.
 	<!-- Open Graph -->
 	<meta property="og:locale" content="">
 	<meta property="og:type" content="article">
-	<meta property="og:title" content="You Probably Don't Understand Strandedness and RNA-Sequencing">
-	<meta property="og:description" content="Honestly, you probably know less than you think you do in this field. I can’t
-tell you how often I have been bitten in the ass by making an assumption about
-something I THOUGHT I understood, when in actuallity I was totally missing the
-point. So, here’s a list a few things you should activly question about.
+	<meta property="og:title" content="Identifying RNA-Seq strandedneess">
+	<meta property="og:description" content="Often times it’s essential to know the strand orientation of your library. If
+for instance you have overlapping genes, or very closely nested genes, you wont
+be able to accuretly identify the correct strand orintation for your genes
+of interest.
 
 ">
-	<meta property="og:url" content="/bioinforamtics/doublecheckunderstanding/">
+	<meta property="og:url" content="/bioinformatics/identifying-rna-seq-strandedneess/">
 	<meta property="og:site_name" content="Generally Biology">
 
-    <link rel="canonical" href="/bioinforamtics/doublecheckunderstanding/">
+    <link rel="canonical" href="/bioinformatics/identifying-rna-seq-strandedneess/">
 
     <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Generally Biology Atom Feed">
     <link href="/sitemap.xml" type="application/xml" rel="sitemap" title="Sitemap">
@@ -132,27 +132,54 @@ point. So, here’s a list a few things you should activly question about.
         <span itemprop="title">Home</span>
       </a> › 
     <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
-      <a href="/Bioinforamtics/" itemprop="url">
-        <span itemprop="title">Bioinforamtics</span>
+      <a href="/Bioinformatics/" itemprop="url">
+        <span itemprop="title">Bioinformatics</span>
       </a>
     </span>
   </nav><!-- /.breadcrumbs -->
 
 		<div class="page-title">
-			<h1>You Probably Don't Understand Strandedness and RNA-Sequencing</h1>
+			<h1>Identifying RNA-Seq strandedneess</h1>
 		</div>
 		<div class="inner-wrap">
 			<div id="content" class="page-content" itemprop="articleBody">
-				<p>Honestly, you probably know less than you think you do in this field. I can’t
-tell you how often I have been bitten in the ass by making an assumption about
-something I THOUGHT I understood, when in actuallity I was totally missing the
-point. So, here’s a list a few things you should activly question about.</p>
+				<p>Often times it’s essential to know the strand orientation of your library. If
+for instance you have overlapping genes, or very closely nested genes, you wont
+be able to accuretly identify the correct strand orintation for your genes
+of interest.</p>
 
-<h3 id="do-you-actually-understand-strand-aware-sequencing-can-you-draw-it-out">Do you actually understand strand aware sequencing? Can you draw it out?</h3>
-<p>#### Are you sure?</p>
+<p>In order to identify the strand orientation of some NGS libraries I
+downloaded from SRA I stumpbled upon this excellent little tool called
+<code class="highlighter-rouge">infer_experiment.py</code> from the <a href="http://rseqc.sourceforge.net">RseqC</a>. It’s
+a great resource for this kind of thing. <code class="highlighter-rouge">infer_experiment.py</code> takes in a bam
+file as well as a BED file on genes with known strandedness.</p>
 
-<p>If not, this is quick, and totally worth your time.
-<a href="https://www.biostars.org/p/15938/">https://www.biostars.org/p/15938/</a></p>
+<p>So - to run it in parallel on all my bam libraries I just did a simple
+parallel command to expedite it as it’s quite quick.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>parallel -j 2 "infer_experiment.py -r Zea_mays.AGPv4.36.gene_only_strand.bed -i {} &gt; library_type_id_{/.}.txt" ::: ../all_aligned_files_sorted/*.bam
+</code></pre>
+</div>
+
+<p>After this runs, the output looks like 
+```
+This is PairEnd Data
+Fraction of reads failed to determine: 0.0067
+Fraction of reads explained by “1++,1–,2+-,2-+”: 0.4973
+Fraction of reads explained by “1+-,1-+,2++,2–”: 0.4960</p>
+
+<p>This is PairEnd Data
+Fraction of reads failed to determine: 0.0104
+Fraction of reads explained by “1++,1–,2+-,2-+”: 0.5001
+Fraction of reads explained by “1+-,1-+,2++,2–”: 0.4895
+```</p>
+
+<p>In case you’re looking for some extra reading on strand libraries I found the
+following links extemely useful</p>
+
+<p><a href="https://chipster.csc.fi/manual/library-type-summary.html">https://chipster.csc.fi/manual/library-type-summary.html</a>
+<a href="http://onetipperday.sterding.com/2012/07/how-to-tell-which-library-type-to-use.html">http://onetipperday.sterding.com/2012/07/how-to-tell-which-library-type-to-use.html</a></p>
+
 
 				<hr />
 				<footer class="page-footer">
@@ -166,12 +193,9 @@ point. So, here’s a list a few things you should activly question about.</p>
 	<p class="author-bio"></p>
 </div><!-- ./author-content -->
 
-					<div class="inline-btn">
-	<a class="btn-social twitter" href="https://twitter.com/intent/tweet?text=You%20Probably%20Don&#39;t%20Understand%20Strandedness%20and%20RNA-Sequencing&amp;url=/bioinforamtics/doublecheckunderstanding/&amp;via=" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i>  Twitter</a>
-	</div><!-- /.share-this -->
-
+					
 					<div class="page-meta">
-	<p> <time datetime="2019-03-15T00:00:00Z" itemprop="datePublished">March 15, 2019</time></p>
+	<p> <time datetime="2019-06-20T16:32:00Z" itemprop="datePublished">June 20, 2019</time></p>
 </div><!-- /.page-meta -->
 
 				</footer><!-- /.footer -->

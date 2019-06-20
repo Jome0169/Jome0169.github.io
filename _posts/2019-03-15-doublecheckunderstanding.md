@@ -14,5 +14,4 @@ point. So, here's a list a few things you should activly question about.
 #### Are you sure?
 
 If not, this is quick, and totally worth your time.
-
-https://www.biostars.org/p/15938/
+<https://www.biostars.org/p/15938/>

@@ -1,4 +1,96 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.6">Jekyll</generator><link href="/atom.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2019-06-15T11:49:15-04:00</updated><id>/</id><title>Generally Biology</title><subtitle>A blog about the intersection of computer science and biology</subtitle><entry><title>You Probably Don’t Understand Strandedness and RNA-Sequencing</title><link href="/bioinforamtics/doublecheckunderstanding/" rel="alternate" type="text/html" title="You Probably Don&#39;t Understand Strandedness and RNA-Sequencing" /><published>2019-03-15T00:00:00-04:00</published><updated>2019-03-15T00:00:00-04:00</updated><id>/bioinforamtics/doublecheckunderstanding</id><content type="html" xml:base="/bioinforamtics/doublecheckunderstanding/">&lt;p&gt;Honestly, you probably know less than you think you do in this field. I can’t
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.6">Jekyll</generator><link href="/atom.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2019-06-20T17:28:42-04:00</updated><id>/</id><title>Generally Biology</title><subtitle>A blog about the intersection of computer science and biology</subtitle><entry><title>Identifying RNA-Seq strandedneess</title><link href="/bioinformatics/identifying-rna-seq-strandedneess/" rel="alternate" type="text/html" title="Identifying RNA-Seq strandedneess" /><published>2019-06-20T16:32:00-04:00</published><updated>2019-06-20T16:32:00-04:00</updated><id>/bioinformatics/identifying-rna-seq-strandedneess</id><content type="html" xml:base="/bioinformatics/identifying-rna-seq-strandedneess/">&lt;p&gt;Often times it’s essential to know the strand orientation of your library. If
+for instance you have overlapping genes, or very closely nested genes, you wont
+be able to accuretly identify the correct strand orintation for your genes
+of interest.&lt;/p&gt;
+
+&lt;p&gt;In order to identify the strand orientation of some NGS libraries I
+downloaded from SRA I stumpbled upon this excellent little tool called
+&lt;code class=&quot;highlighter-rouge&quot;&gt;infer_experiment.py&lt;/code&gt; from the &lt;a href=&quot;http://rseqc.sourceforge.net&quot;&gt;RseqC&lt;/a&gt;. It’s
+a great resource for this kind of thing. &lt;code class=&quot;highlighter-rouge&quot;&gt;infer_experiment.py&lt;/code&gt; takes in a bam
+file as well as a BED file on genes with known strandedness.&lt;/p&gt;
+
+&lt;p&gt;So - to run it in parallel on all my bam libraries I just did a simple
+parallel command to expedite it as it’s quite quick.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;parallel -j 2 &quot;infer_experiment.py -r Zea_mays.AGPv4.36.gene_only_strand.bed -i {} &amp;gt; library_type_id_{/.}.txt&quot; ::: ../all_aligned_files_sorted/*.bam
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;After this runs, the output looks like 
+```
+This is PairEnd Data
+Fraction of reads failed to determine: 0.0067
+Fraction of reads explained by “1++,1–,2+-,2-+”: 0.4973
+Fraction of reads explained by “1+-,1-+,2++,2–”: 0.4960&lt;/p&gt;
+
+&lt;p&gt;This is PairEnd Data
+Fraction of reads failed to determine: 0.0104
+Fraction of reads explained by “1++,1–,2+-,2-+”: 0.5001
+Fraction of reads explained by “1+-,1-+,2++,2–”: 0.4895
+```&lt;/p&gt;
+
+&lt;p&gt;In case you’re looking for some extra reading on strand libraries I found the
+following links extemely useful&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://chipster.csc.fi/manual/library-type-summary.html&quot;&gt;https://chipster.csc.fi/manual/library-type-summary.html&lt;/a&gt;
+&lt;a href=&quot;http://onetipperday.sterding.com/2012/07/how-to-tell-which-library-type-to-use.html&quot;&gt;http://onetipperday.sterding.com/2012/07/how-to-tell-which-library-type-to-use.html&lt;/a&gt;&lt;/p&gt;</content><summary>Often times it’s essential to know the strand orientation of your library. If
+for instance you have overlapping genes, or very closely nested genes, you wont
+be able to accuretly identify the correct strand orintation for your genes
+of interest.</summary></entry><entry><title>Cowplot and Gviz</title><link href="/bioinformatics/cowplot-and-gviz/" rel="alternate" type="text/html" title="Cowplot and Gviz" /><published>2019-06-15T11:00:00-04:00</published><updated>2019-06-15T11:00:00-04:00</updated><id>/bioinformatics/cowplot-and-gviz</id><content type="html" xml:base="/bioinformatics/cowplot-and-gviz/">&lt;p&gt;If you’re trying to use both Gviz and cowplot in the same package it can be
+done. It took me a while, but I eventually found the answer on a combination of
+a github page/as well as what I presume to be a chinese version of github. So
+for example - lets say you’re generating the following Gviz image with the
+follwoing code:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;plotTracks(c(axisTrack,grtrack, leaf_H3K36me3_ranges_4, leaf_H4K4me1_ranges_4,
+rna_Seq_data_ranges_4), from=10633266, to=10643235, chromosome=&#39;4&#39;, type=&quot;h&quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;With the output looking like:
+&lt;img src=&quot;images/gviz_cow/P1.png&quot; alt=&quot;alt text&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;You can catch this image using  &lt;code class=&quot;highlighter-rouge&quot;&gt;grid::grid.grabExpr()&lt;/code&gt; which saves your output as a glob image for later proccessing. So if you’re planning on outputting it to cowplot/combining it with another plot you can do something like&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;p1 &amp;lt;- grid::grid.grabExpr(plotTracks(c(axisTrack,grtrack,
+leaf_H3K36me3_ranges_4, leaf_H4K4me1_ranges_4, rna_Seq_data_ranges_4),
+from=10633266, to=10643235, chromosome=&#39;4&#39;, type=&quot;h&quot;),wrap.grobs = TRUE)
+
+
+p2 &amp;lt;- grid::grid.grabExpr(plotTracks(c(axisTrack,grtrack,leaf_H3K36me3_ranges_2,
+leaf_H4K4me1_ranges_2, rna_Seq_data_ranges_2), from=198700931, to=198710900,
+chromosome=&#39;2&#39;, type=&quot;h&quot;),wrap.grobs = TRUE)
+
+final_figure_1A_plot &amp;lt;- gridExtra::grid.arrange(p1, p2, ncol=2) 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Not we’ve combined out two plots, which looks like:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;images/gviz_cow/P1_P2.png&quot; alt=&quot;alt text&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;And finally, we take the ‘final’ plot from Figure 1A, and then plot it with the
+other figures using plot grid using the code below&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#Generate Empty plot for Examples
+empty_plot &amp;lt;- ggplot(mtcars, aes(x = wt, y = mpg)) 
+
+final_everything &amp;lt;- plot_grid(final_figure_1A_plot, OTHER_FIGURE, labels = c(&quot;A&quot;, &quot;&quot;), nrow = 2, ncol = 1, rel_heights = c(1, 1.5))
+final_everything
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;which then makes:
+&lt;img src=&quot;images/gviz_cow/Final.png&quot; alt=&quot;Final&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;which will allow you to smack you GVIZ object with other objects. This little
+work around single handedly allowed me to avoid illustrator all together!
+yippie!&lt;/p&gt;</content><summary>If you’re trying to use both Gviz and cowplot in the same package it can be
+done. It took me a while, but I eventually found the answer on a combination of
+a github page/as well as what I presume to be a chinese version of github. So
+for example - lets say you’re generating the following Gviz image with the
+follwoing code:</summary></entry><entry><title>You Probably Don’t Understand Strandedness and RNA-Sequencing</title><link href="/bioinforamtics/doublecheckunderstanding/" rel="alternate" type="text/html" title="You Probably Don&#39;t Understand Strandedness and RNA-Sequencing" /><published>2019-03-15T00:00:00-04:00</published><updated>2019-03-15T00:00:00-04:00</updated><id>/bioinforamtics/doublecheckunderstanding</id><content type="html" xml:base="/bioinforamtics/doublecheckunderstanding/">&lt;p&gt;Honestly, you probably know less than you think you do in this field. I can’t
 tell you how often I have been bitten in the ass by making an assumption about
 something I THOUGHT I understood, when in actuallity I was totally missing the
 point. So, here’s a list a few things you should activly question about.&lt;/p&gt;
@@ -6,9 +98,8 @@ point. So, here’s a list a few things you should activly question about.&lt;/p
 &lt;h3 id=&quot;do-you-actually-understand-strand-aware-sequencing-can-you-draw-it-out&quot;&gt;Do you actually understand strand aware sequencing? Can you draw it out?&lt;/h3&gt;
 &lt;p&gt;#### Are you sure?&lt;/p&gt;
 
-&lt;p&gt;If not, this is quick, and totally worth your time.&lt;/p&gt;
-
-&lt;p&gt;https://www.biostars.org/p/15938/&lt;/p&gt;</content><summary>Honestly, you probably know less than you think you do in this field. I can’t
+&lt;p&gt;If not, this is quick, and totally worth your time.
+&lt;a href=&quot;https://www.biostars.org/p/15938/&quot;&gt;https://www.biostars.org/p/15938/&lt;/a&gt;&lt;/p&gt;</content><summary>Honestly, you probably know less than you think you do in this field. I can’t
 tell you how often I have been bitten in the ass by making an assumption about
 something I THOUGHT I understood, when in actuallity I was totally missing the
 point. So, here’s a list a few things you should activly question about.</summary></entry><entry><title>My Toolbox</title><link href="/bioinformatics/my-toolbox/" rel="alternate" type="text/html" title="My Toolbox" /><published>2018-01-19T10:00:00-05:00</published><updated>2018-01-19T10:00:00-05:00</updated><id>/bioinformatics/my-toolbox</id><content type="html" xml:base="/bioinformatics/my-toolbox/">&lt;p&gt;It seems like everyone who does computational biology has a different workflow.
