@@ -3,7 +3,7 @@
 title: Generally Biology
 description: A blog about the intersection of computer science and biology
 logo: dnaimage.jpg # 120x120 px default image used for Twitter summary card teaser: skinny-bones-demo.gif locale: en
-url:
+url: http://generallybiology.com/
 feed:
   path: atom.xml
 
@@ -41,7 +41,7 @@ google:
   ad-client:
   ad-slot:
 bio: A computational biologist interested in those little green things that stick out of the ground everywhere
-avatar: /images/Pablo_small.jpg # 160x160 px image for author byline
+avatar: "/images/Pablo_small.jpg" # 160x160 px image for author byline
 disqus-shortname:
 
 

@@ -37,10 +37,9 @@ chromosome='2', type="h"),wrap.grobs = TRUE)
 final_figure_1A_plot <- gridExtra::grid.arrange(p1, p2, ncol=2) 
 ```
 
-Not we've combined out two plots, which looks like:
+Now we've combined our two plots, it looks like:
 
 ![alt text](/images/gviz_cow/P1_P2.png)
-
 
 And finally, we take the 'final' plot from Figure 1A, and then plot it with the
 other figures using plot grid using the code below
@@ -57,8 +56,5 @@ final_everything
 which then makes:
 ![Final](/images/gviz_cow/Final.png)
 
-which will allow you to smack you GVIZ object with other objects. This little
-work around single handedly allowed me to avoid illustrator all together!
-yippie!
-
-
+Which will allow you to smack you GVIZ object with other graphs. This little
+work around single handedly allowed me to avoid illustrator all together! yippie!
