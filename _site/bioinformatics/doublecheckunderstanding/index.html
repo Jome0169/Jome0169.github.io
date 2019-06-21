@@ -2,23 +2,21 @@
 <html>
   <head>
     <meta charset="utf-8">
-	<title>Cowplot and Gviz • Generally Biology</title>
-    <meta name="description" content="If you’re trying to use both Gviz and cowplot in the same package it can be
-done. It took me a while, but I eventually found the answer on a combination of
-a github page/as well as what I presume to be a chinese version of github. So
-for example - lets say you’re generating the following Gviz image with the
-follwoing code:
+	<title>You Probably Don't Understand Strandedness and RNA-Sequencing • Generally Biology</title>
+    <meta name="description" content="Honestly, you probably know less than you think you do. I can’t
+tell you how often I have been bitten in the ass by making an assumption about
+something I THOUGHT I understood, when in actuallity I was totally missing the
+point. So, here’s a list a few things you should activly question about.
 
 ">
     <meta name="keywords" content="">
     
     	<!-- Twitter Cards -->
-	<meta name="twitter:title" content="Cowplot and Gviz">
-	<meta name="twitter:description" content="If you’re trying to use both Gviz and cowplot in the same package it can be
-done. It took me a while, but I eventually found the answer on a combination of
-a github page/as well as what I presume to be a chinese version of github. So
-for example - lets say you’re generating the following Gviz image with the
-follwoing code:
+	<meta name="twitter:title" content="You Probably Don't Understand Strandedness and RNA-Sequencing">
+	<meta name="twitter:description" content="Honestly, you probably know less than you think you do. I can’t
+tell you how often I have been bitten in the ass by making an assumption about
+something I THOUGHT I understood, when in actuallity I was totally missing the
+point. So, here’s a list a few things you should activly question about.
 
 ">
 	
@@ -30,18 +28,17 @@ follwoing code:
 	<!-- Open Graph -->
 	<meta property="og:locale" content="">
 	<meta property="og:type" content="article">
-	<meta property="og:title" content="Cowplot and Gviz">
-	<meta property="og:description" content="If you’re trying to use both Gviz and cowplot in the same package it can be
-done. It took me a while, but I eventually found the answer on a combination of
-a github page/as well as what I presume to be a chinese version of github. So
-for example - lets say you’re generating the following Gviz image with the
-follwoing code:
+	<meta property="og:title" content="You Probably Don't Understand Strandedness and RNA-Sequencing">
+	<meta property="og:description" content="Honestly, you probably know less than you think you do. I can’t
+tell you how often I have been bitten in the ass by making an assumption about
+something I THOUGHT I understood, when in actuallity I was totally missing the
+point. So, here’s a list a few things you should activly question about.
 
 ">
-	<meta property="og:url" content="/bioinformatics/cowplot-and-gviz/">
+	<meta property="og:url" content="/bioinformatics/doublecheckunderstanding/">
 	<meta property="og:site_name" content="Generally Biology">
 
-    <link rel="canonical" href="/bioinformatics/cowplot-and-gviz/">
+    <link rel="canonical" href="/bioinformatics/doublecheckunderstanding/">
 
     <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Generally Biology Atom Feed">
     <link href="/sitemap.xml" type="application/xml" rel="sitemap" title="Sitemap">
@@ -142,62 +139,20 @@ follwoing code:
   </nav><!-- /.breadcrumbs -->
 
 		<div class="page-title">
-			<h1>Cowplot and Gviz</h1>
+			<h1>You Probably Don't Understand Strandedness and RNA-Sequencing</h1>
 		</div>
 		<div class="inner-wrap">
 			<div id="content" class="page-content" itemprop="articleBody">
-				<p>If you’re trying to use both Gviz and cowplot in the same package it can be
-done. It took me a while, but I eventually found the answer on a combination of
-a github page/as well as what I presume to be a chinese version of github. So
-for example - lets say you’re generating the following Gviz image with the
-follwoing code:</p>
+				<p>Honestly, you probably know less than you think you do. I can’t
+tell you how often I have been bitten in the ass by making an assumption about
+something I THOUGHT I understood, when in actuallity I was totally missing the
+point. So, here’s a list a few things you should activly question about.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>plotTracks(c(axisTrack,grtrack, leaf_H3K36me3_ranges_4, leaf_H4K4me1_ranges_4,
-rna_Seq_data_ranges_4), from=10633266, to=10643235, chromosome='4', type="h")
-</code></pre>
-</div>
+<h3 id="do-you-actually-understand-strand-aware-sequencing-can-you-draw-it-out">Do you actually understand strand aware sequencing? Can you draw it out?</h3>
+<p>#### Are you sure?</p>
 
-<p>With the output looking like:
-<img src="/images/gviz_cow/P1.png" alt="alt text" /></p>
-
-<p>You can catch this image using  <code class="highlighter-rouge">grid::grid.grabExpr()</code> which saves your output as a glob image for later proccessing. So if you’re planning on outputting it to cowplot/combining it with another plot you can do something like</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>p1 &lt;- grid::grid.grabExpr(plotTracks(c(axisTrack,grtrack,
-leaf_H3K36me3_ranges_4, leaf_H4K4me1_ranges_4, rna_Seq_data_ranges_4),
-from=10633266, to=10643235, chromosome='4', type="h"),wrap.grobs = TRUE)
-
-
-p2 &lt;- grid::grid.grabExpr(plotTracks(c(axisTrack,grtrack,leaf_H3K36me3_ranges_2,
-leaf_H4K4me1_ranges_2, rna_Seq_data_ranges_2), from=198700931, to=198710900,
-chromosome='2', type="h"),wrap.grobs = TRUE)
-
-final_figure_1A_plot &lt;- gridExtra::grid.arrange(p1, p2, ncol=2) 
-</code></pre>
-</div>
-
-<p>Not we’ve combined out two plots, which looks like:</p>
-
-<p><img src="/images/gviz_cow/P1_P2.png" alt="alt text" /></p>
-
-<p>And finally, we take the ‘final’ plot from Figure 1A, and then plot it with the
-other figures using plot grid using the code below</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>#Generate Empty plot for Examples
-empty_plot &lt;- ggplot(mtcars, aes(x = wt, y = mpg)) 
-
-final_everything &lt;- plot_grid(final_figure_1A_plot, OTHER_FIGURE, labels = c("A", ""), nrow = 2, ncol = 1, rel_heights = c(1, 1.5))
-final_everything
-
-</code></pre>
-</div>
-
-<p>which then makes:
-<img src="/images/gviz_cow/Final.png" alt="Final" /></p>
-
-<p>which will allow you to smack you GVIZ object with other objects. This little
-work around single handedly allowed me to avoid illustrator all together!
-yippie!</p>
-
+<p>If not, this is quick, and totally worth your time.
+<a href="https://www.biostars.org/p/15938/">https://www.biostars.org/p/15938/</a></p>
 
 				<hr />
 				<footer class="page-footer">
@@ -211,9 +166,12 @@ yippie!</p>
 	<p class="author-bio"></p>
 </div><!-- ./author-content -->
 
-					
+					<div class="inline-btn">
+	<a class="btn-social twitter" href="https://twitter.com/intent/tweet?text=You%20Probably%20Don&#39;t%20Understand%20Strandedness%20and%20RNA-Sequencing&amp;url=/bioinformatics/doublecheckunderstanding/&amp;via=" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i>  Twitter</a>
+	</div><!-- /.share-this -->
+
 					<div class="page-meta">
-	<p> <time datetime="2019-06-15T11:00:00Z" itemprop="datePublished">June 15, 2019</time></p>
+	<p> <time datetime="2019-03-15T00:00:00Z" itemprop="datePublished">March 15, 2019</time></p>
 </div><!-- /.page-meta -->
 
 				</footer><!-- /.footer -->

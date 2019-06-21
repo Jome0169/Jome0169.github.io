@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.6">Jekyll</generator><link href="/atom.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2019-06-20T17:28:42-04:00</updated><id>/</id><title>Generally Biology</title><subtitle>A blog about the intersection of computer science and biology</subtitle><entry><title>Identifying RNA-Seq strandedneess</title><link href="/bioinformatics/identifying-rna-seq-strandedneess/" rel="alternate" type="text/html" title="Identifying RNA-Seq strandedneess" /><published>2019-06-20T16:32:00-04:00</published><updated>2019-06-20T16:32:00-04:00</updated><id>/bioinformatics/identifying-rna-seq-strandedneess</id><content type="html" xml:base="/bioinformatics/identifying-rna-seq-strandedneess/">&lt;p&gt;Often times it’s essential to know the strand orientation of your library. If
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.6">Jekyll</generator><link href="/atom.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2019-06-21T09:23:09-04:00</updated><id>/</id><title>Generally Biology</title><subtitle>A blog about the intersection of computer science and biology</subtitle><entry><title>Identifying RNA-Seq strandedneess</title><link href="/bioinformatics/identifying-rna-seq-strandedneess/" rel="alternate" type="text/html" title="Identifying RNA-Seq strandedneess" /><published>2019-06-20T16:32:00-04:00</published><updated>2019-06-20T16:32:00-04:00</updated><id>/bioinformatics/identifying-rna-seq-strandedneess</id><content type="html" xml:base="/bioinformatics/identifying-rna-seq-strandedneess/">&lt;p&gt;Often times it’s essential to know the strand orientation of your library. If
 for instance you have overlapping genes, or very closely nested genes, you wont
 be able to accuretly identify the correct strand orintation for your genes
 of interest.&lt;/p&gt;
@@ -48,7 +48,7 @@ rna_Seq_data_ranges_4), from=10633266, to=10643235, chromosome=&#39;4&#39;, type
 &lt;/div&gt;
 
 &lt;p&gt;With the output looking like:
-&lt;img src=&quot;images/gviz_cow/P1.png&quot; alt=&quot;alt text&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;/images/gviz_cow/P1.png&quot; alt=&quot;alt text&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;You can catch this image using  &lt;code class=&quot;highlighter-rouge&quot;&gt;grid::grid.grabExpr()&lt;/code&gt; which saves your output as a glob image for later proccessing. So if you’re planning on outputting it to cowplot/combining it with another plot you can do something like&lt;/p&gt;
 
@@ -67,7 +67,7 @@ final_figure_1A_plot &amp;lt;- gridExtra::grid.arrange(p1, p2, ncol=2)
 
 &lt;p&gt;Not we’ve combined out two plots, which looks like:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;images/gviz_cow/P1_P2.png&quot; alt=&quot;alt text&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/gviz_cow/P1_P2.png&quot; alt=&quot;alt text&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;And finally, we take the ‘final’ plot from Figure 1A, and then plot it with the
 other figures using plot grid using the code below&lt;/p&gt;
@@ -82,7 +82,7 @@ final_everything
 &lt;/div&gt;
 
 &lt;p&gt;which then makes:
-&lt;img src=&quot;images/gviz_cow/Final.png&quot; alt=&quot;Final&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;/images/gviz_cow/Final.png&quot; alt=&quot;Final&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;which will allow you to smack you GVIZ object with other objects. This little
 work around single handedly allowed me to avoid illustrator all together!
@@ -90,7 +90,7 @@ yippie!&lt;/p&gt;</content><summary>If you’re trying to use both Gviz and cowp
 done. It took me a while, but I eventually found the answer on a combination of
 a github page/as well as what I presume to be a chinese version of github. So
 for example - lets say you’re generating the following Gviz image with the
-follwoing code:</summary></entry><entry><title>You Probably Don’t Understand Strandedness and RNA-Sequencing</title><link href="/bioinforamtics/doublecheckunderstanding/" rel="alternate" type="text/html" title="You Probably Don&#39;t Understand Strandedness and RNA-Sequencing" /><published>2019-03-15T00:00:00-04:00</published><updated>2019-03-15T00:00:00-04:00</updated><id>/bioinforamtics/doublecheckunderstanding</id><content type="html" xml:base="/bioinforamtics/doublecheckunderstanding/">&lt;p&gt;Honestly, you probably know less than you think you do in this field. I can’t
+follwoing code:</summary></entry><entry><title>You Probably Don’t Understand Strandedness and RNA-Sequencing</title><link href="/bioinformatics/doublecheckunderstanding/" rel="alternate" type="text/html" title="You Probably Don&#39;t Understand Strandedness and RNA-Sequencing" /><published>2019-03-15T00:00:00-04:00</published><updated>2019-03-15T00:00:00-04:00</updated><id>/bioinformatics/doublecheckunderstanding</id><content type="html" xml:base="/bioinformatics/doublecheckunderstanding/">&lt;p&gt;Honestly, you probably know less than you think you do. I can’t
 tell you how often I have been bitten in the ass by making an assumption about
 something I THOUGHT I understood, when in actuallity I was totally missing the
 point. So, here’s a list a few things you should activly question about.&lt;/p&gt;
@@ -99,7 +99,7 @@ point. So, here’s a list a few things you should activly question about.&lt;/p
 &lt;p&gt;#### Are you sure?&lt;/p&gt;
 
 &lt;p&gt;If not, this is quick, and totally worth your time.
-&lt;a href=&quot;https://www.biostars.org/p/15938/&quot;&gt;https://www.biostars.org/p/15938/&lt;/a&gt;&lt;/p&gt;</content><summary>Honestly, you probably know less than you think you do in this field. I can’t
+&lt;a href=&quot;https://www.biostars.org/p/15938/&quot;&gt;https://www.biostars.org/p/15938/&lt;/a&gt;&lt;/p&gt;</content><summary>Honestly, you probably know less than you think you do. I can’t
 tell you how often I have been bitten in the ass by making an assumption about
 something I THOUGHT I understood, when in actuallity I was totally missing the
 point. So, here’s a list a few things you should activly question about.</summary></entry><entry><title>My Toolbox</title><link href="/bioinformatics/my-toolbox/" rel="alternate" type="text/html" title="My Toolbox" /><published>2018-01-19T10:00:00-05:00</published><updated>2018-01-19T10:00:00-05:00</updated><id>/bioinformatics/my-toolbox</id><content type="html" xml:base="/bioinformatics/my-toolbox/">&lt;p&gt;It seems like everyone who does computational biology has a different workflow.
