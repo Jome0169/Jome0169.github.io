@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.6">Jekyll</generator><link href="http://generallybiology.com//atom.xml" rel="self" type="application/atom+xml" /><link href="http://generallybiology.com//" rel="alternate" type="text/html" /><updated>2019-07-28T11:06:36-04:00</updated><id>http://generallybiology.com//</id><title>Generally Biology</title><subtitle>A blog about the intersection of computer science and biology</subtitle><entry><title>Identifying RNA-Seq strandedneess</title><link href="http://generallybiology.com//bioinformatics/identifying-rna-seq-strandedneess/" rel="alternate" type="text/html" title="Identifying RNA-Seq strandedneess" /><published>2019-06-20T16:32:00-04:00</published><updated>2019-06-20T16:32:00-04:00</updated><id>http://generallybiology.com//bioinformatics/identifying-rna-seq-strandedneess</id><content type="html" xml:base="http://generallybiology.com//bioinformatics/identifying-rna-seq-strandedneess/">&lt;p&gt;Often times it’s essential to know the strand orientation of your library. If
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.6">Jekyll</generator><link href="http://generallybiology.com//atom.xml" rel="self" type="application/atom+xml" /><link href="http://generallybiology.com//" rel="alternate" type="text/html" /><updated>2019-07-28T11:06:37-04:00</updated><id>http://generallybiology.com//</id><title>Generally Biology</title><subtitle>A blog about the intersection of computer science and biology</subtitle><entry><title>Identifying RNA-Seq strandedneess</title><link href="http://generallybiology.com//bioinformatics/identifying-rna-seq-strandedneess/" rel="alternate" type="text/html" title="Identifying RNA-Seq strandedneess" /><published>2019-06-20T16:32:00-04:00</published><updated>2019-06-20T16:32:00-04:00</updated><id>http://generallybiology.com//bioinformatics/identifying-rna-seq-strandedneess</id><content type="html" xml:base="http://generallybiology.com//bioinformatics/identifying-rna-seq-strandedneess/">&lt;p&gt;Often times it’s essential to know the strand orientation of your library. If
 for instance you have overlapping genes, or very closely nested genes, you wont
 be able to accuretly identify the correct strand orintation for your genes
 of interest.&lt;/p&gt;
@@ -59,17 +59,18 @@ system (mouse) and test the hypothesis that enhancers have emergent quallities. 
 &lt;p&gt;Rather you have an additive effect between enhancers. So, nothing super
 special.&lt;/p&gt;
 
-&lt;p&gt;Other great takeaways:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- Enhancer Assys don&#39;t always line up with genomic prediction. Three
-  reported enhancers appear to have no reporting capability in vivo (granted this might be due to poor reporting assays, or requirnemtns for local chromatin envriorments)
-- &quot;Super&quot; enhancers appear to offer quite a bit of backup capabilities.
-  Delete one - or two (Figure 4 B/C) and you may not see any change, or any **signifigant** change in phenotype. 
-- Looping doesn&#39;t seem to be altered by deletion of the strongest
-  enhancers. For whatever reason topological assocations appear to be tough as nails
--Enhancer Accessible chromatin formation is NOT dependent on other Enhancers. So if you delete the big Kahuna - all the other enhancers form just fine
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;</content><summary>There’s a ton of papers out there. Some are good, some are bad, and some are
+&lt;p&gt;Other great takeaways:
+    * Enhancer Assys don’t always line up with genomic prediction. Three reported enhancers appear to have no reporting capability in vivo (granted this might be due to poor reporting assays, or requirnemtns for local
+chromatin envriorments)
+    * “Super” enhancers appear to offer quite a bit of backup capabilities.
+      Delete one - or two (Figure 4 B/C) and you may not see any change, or any
+&lt;strong&gt;signifigant&lt;/strong&gt; change in phenotype. 
+    * Looping doesn’t seem to be altered by deletion of the strongest
+      enhancers. For whatever reason topological assocations appear to be tough
+as nails
+    * Enhancer Accessible chromatin formation is NOT dependent on other
+Enhancers. So if you delete the big Kahuna - all the other enhancers form just
+fine&lt;/p&gt;</content><summary>There’s a ton of papers out there. Some are good, some are bad, and some are
 really - really important. So, here is a collection of papers that I think are
 important, and one or two reasons why I think so. This is going to be broken
 down loosely by subject matter, and will be updated as I go along.</summary></entry><entry><title>Cowplot and Gviz</title><link href="http://generallybiology.com//bioinformatics/cowplot-and-gviz/" rel="alternate" type="text/html" title="Cowplot and Gviz" /><published>2019-06-15T11:00:00-04:00</published><updated>2019-06-15T11:00:00-04:00</updated><id>http://generallybiology.com//bioinformatics/cowplot-and-gviz</id><content type="html" xml:base="http://generallybiology.com//bioinformatics/cowplot-and-gviz/">&lt;p&gt;If you’re trying to use both Gviz and cowplot in the same package it can be

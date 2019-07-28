@@ -28,18 +28,15 @@ Rather you have an additive effect between enhancers. So, nothing super
 special. 
 
 Other great takeaways:
-
-    - Enhancer Assys don't always line up with genomic prediction. Three
-      reported enhancers appear to have no reporting capability in vivo
-(granted this might be due to poor reporting assays, or requirnemtns for local
+    * Enhancer Assys don't always line up with genomic prediction. Three reported enhancers appear to have no reporting capability in vivo (granted this might be due to poor reporting assays, or requirnemtns for local
 chromatin envriorments)
-    - "Super" enhancers appear to offer quite a bit of backup capabilities.
+    * "Super" enhancers appear to offer quite a bit of backup capabilities.
       Delete one - or two (Figure 4 B/C) and you may not see any change, or any
 **signifigant** change in phenotype. 
-    - Looping doesn't seem to be altered by deletion of the strongest
+    * Looping doesn't seem to be altered by deletion of the strongest
       enhancers. For whatever reason topological assocations appear to be tough
 as nails
-    -Enhancer Accessible chromatin formation is NOT dependent on other
+    * Enhancer Accessible chromatin formation is NOT dependent on other
 Enhancers. So if you delete the big Kahuna - all the other enhancers form just
 fine
 
