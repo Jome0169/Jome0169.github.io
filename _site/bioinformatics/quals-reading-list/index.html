@@ -2,21 +2,21 @@
 <html>
   <head>
     <meta charset="utf-8">
-	<title>Identifying RNA-Seq strandedneess • Generally Biology</title>
-    <meta name="description" content="Often times it’s essential to know the strand orientation of your library. If
-for instance you have overlapping genes, or very closely nested genes, you wont
-be able to accuretly identify the correct strand orintation for your genes
-of interest.
+	<title>My Reading List • Generally Biology</title>
+    <meta name="description" content="There’s a ton of papers out there. Some are good, some are bad, and some are
+really - really important. So, here is a collection of papers that I think are
+important, and one or two reasons why I think so. This is going to be broken
+down loosely by subject matter, and will be updated as I go along.
 
 ">
     <meta name="keywords" content="">
     
     	<!-- Twitter Cards -->
-	<meta name="twitter:title" content="Identifying RNA-Seq strandedneess">
-	<meta name="twitter:description" content="Often times it’s essential to know the strand orientation of your library. If
-for instance you have overlapping genes, or very closely nested genes, you wont
-be able to accuretly identify the correct strand orintation for your genes
-of interest.
+	<meta name="twitter:title" content="My Reading List">
+	<meta name="twitter:description" content="There’s a ton of papers out there. Some are good, some are bad, and some are
+really - really important. So, here is a collection of papers that I think are
+important, and one or two reasons why I think so. This is going to be broken
+down loosely by subject matter, and will be updated as I go along.
 
 ">
 	
@@ -28,17 +28,17 @@ of interest.
 	<!-- Open Graph -->
 	<meta property="og:locale" content="">
 	<meta property="og:type" content="article">
-	<meta property="og:title" content="Identifying RNA-Seq strandedneess">
-	<meta property="og:description" content="Often times it’s essential to know the strand orientation of your library. If
-for instance you have overlapping genes, or very closely nested genes, you wont
-be able to accuretly identify the correct strand orintation for your genes
-of interest.
+	<meta property="og:title" content="My Reading List">
+	<meta property="og:description" content="There’s a ton of papers out there. Some are good, some are bad, and some are
+really - really important. So, here is a collection of papers that I think are
+important, and one or two reasons why I think so. This is going to be broken
+down loosely by subject matter, and will be updated as I go along.
 
 ">
-	<meta property="og:url" content="http://generallybiology.com//bioinformatics/identifying-rna-seq-strandedneess/">
+	<meta property="og:url" content="http://generallybiology.com//bioinformatics/quals-reading-list/">
 	<meta property="og:site_name" content="Generally Biology">
 
-    <link rel="canonical" href="http://generallybiology.com//bioinformatics/identifying-rna-seq-strandedneess/">
+    <link rel="canonical" href="http://generallybiology.com//bioinformatics/quals-reading-list/">
 
     <link href="http://generallybiology.com//atom.xml" type="application/atom+xml" rel="alternate" title="Generally Biology Atom Feed">
     <link href="http://generallybiology.com//sitemap.xml" type="application/xml" rel="sitemap" title="Sitemap">
@@ -139,51 +139,39 @@ of interest.
   </nav><!-- /.breadcrumbs -->
 
 		<div class="page-title">
-			<h1>Identifying RNA-Seq strandedneess</h1>
+			<h1>My Reading List</h1>
 		</div>
 		<div class="inner-wrap">
 			<div id="content" class="page-content" itemprop="articleBody">
-				<p>Often times it’s essential to know the strand orientation of your library. If
-for instance you have overlapping genes, or very closely nested genes, you wont
-be able to accuretly identify the correct strand orintation for your genes
-of interest.</p>
+				<p>There’s a ton of papers out there. Some are good, some are bad, and some are
+really - really important. So, here is a collection of papers that I think are
+important, and one or two reasons why I think so. This is going to be broken
+down loosely by subject matter, and will be updated as I go along.</p>
 
-<p>In order to identify the strand orientation of some NGS libraries I
-downloaded from SRA I stumpbled upon this excellent little tool called
-<code class="highlighter-rouge">infer_experiment.py</code> from the <a href="http://rseqc.sourceforge.net">RseqC</a>. It’s
-a great resource for this kind of thing. <code class="highlighter-rouge">infer_experiment.py</code> takes in a bam
-file as well as a BED file on genes with known strandedness.</p>
+<h3 id="enhancers">Enhancers</h3>
 
-<p>So - to run it in parallel on all my bam libraries I just did a simple
-parallel command to expedite it as it’s quite quick.</p>
+<h4 id="genetic-dissection-of-the--alpha--globin-super-enhancer-in-vivo">Genetic dissection of the  alpha -globin super-enhancer in vivo</h4>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>parallel -j 2 "infer_experiment.py -r Zea_mays.AGPv4.36.gene_only_strand.bed -i {} &gt; library_type_id_{/.}.txt" ::: ../all_aligned_files_sorted/*.bam
+<p>This <a href="https://www.nature.com/articles/ng.3605">paper</a> by Hay et al is an
+excellent read. Often times in genomics we describe phenomena wich we believe
+have strong biological implications. The discovery and calssifications of super
+enhancers being one such instance. This paper does a great job in going into a
+system (mouse) and test the hypothesis that enhancers have emergent quallities. So - if you and all your enhancer buddies are hanging out - do you get stronger? Much like Bros lifting in a gym. The answer appears to be… No.</p>
+
+<p>Rather you have an additive effect between enhancers. So, nothing super
+special.</p>
+
+<p>Other great takeaways:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>- Enhancer Assys don't always line up with genomic prediction. Three
+  reported enhancers appear to have no reporting capability in vivo (granted this might be due to poor reporting assays, or requirnemtns for local chromatin envriorments)
+- "Super" enhancers appear to offer quite a bit of backup capabilities.
+  Delete one - or two (Figure 4 B/C) and you may not see any change, or any **signifigant** change in phenotype. 
+- Looping doesn't seem to be altered by deletion of the strongest
+  enhancers. For whatever reason topological assocations appear to be tough as nails
+-Enhancer Accessible chromatin formation is NOT dependent on other Enhancers. So if you delete the big Kahuna - all the other enhancers form just fine
 </code></pre>
 </div>
-
-<p>After this runs, the output looks like 
-```
-This is PairEnd Data
-Fraction of reads failed to determine: 0.0067
-Fraction of reads explained by “1++,1–,2+-,2-+”: 0.4973
-Fraction of reads explained by “1+-,1-+,2++,2–”: 0.4960</p>
-
-<p>This is PairEnd Data
-Fraction of reads failed to determine: 0.0104
-Fraction of reads explained by “1++,1–,2+-,2-+”: 0.5001
-Fraction of reads explained by “1+-,1-+,2++,2–”: 0.4895
-```</p>
-
-<p>So, what this output is telling you is that the reads are coming from either
-hte posotive or negative strand, and do NOT agree with the strandedness of the
-genes they’re aligning to. So this is an UNSTRANDED library.</p>
-
-<p>In case you’re looking for some extra reading on strand libraries I found the
-following links extemely useful</p>
-
-<p><a href="https://chipster.csc.fi/manual/library-type-summary.html">https://chipster.csc.fi/manual/library-type-summary.html</a></p>
-
-<p><a href="http://onetipperday.sterding.com/2012/07/how-to-tell-which-library-type-to-use.html">http://onetipperday.sterding.com/2012/07/how-to-tell-which-library-type-to-use.html</a></p>
 
 
 				<hr />
@@ -200,7 +188,7 @@ following links extemely useful</p>
 
 					
 					<div class="page-meta">
-	<p> <time datetime="2019-06-20T16:32:00Z" itemprop="datePublished">June 20, 2019</time></p>
+	<p> <time datetime="2019-06-15T11:00:00Z" itemprop="datePublished">June 15, 2019</time></p>
 </div><!-- /.page-meta -->
 
 				</footer><!-- /.footer -->

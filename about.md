@@ -15,17 +15,10 @@ taught to believe. Biology is for everyone, and that includes you.
 
 2. You're also a in the field of computational biology or bioinformatics and you're trying to use software that was not meant for human consumption. In that case, welcome my brothers and sisters! You'll feel right at home. 
 
-My focus is on plant genetics/genomics with a dash of computer science thrown in. So hopefully you can find something of use. You can find me on [github](https://github.com/Jome0169), or follow me on [twitter](https://twitter.com/pabster212?lang=en). A little about me, I'm currently a rotating graduate student at the University of Georgia. I'm an impassioned lover of plant biology and agriculture, and an adamant believer that our food security depends on our capacity to use emerging technology to advance agriculture. 
+My focus is on plant genetics/genomics with a dash of computer science thrown in. So hopefully you can find something of use. You can find me on [github](https://github.com/Jome0169), or follow me on [twitter](https://twitter.com/pabster212?lang=en). A little about me, I'm currently a graduate student at the University of Georgia in the laboratory of Robert Schmitz. I'm an impassioned lover of plant biology and agriculture, and an adamant believer that our food security depends on our capacity to use emerging technology to advance agriculture. 
 
 Feel free to contact me with any thoughts, questions, or opinions.
 
 --Pablo Mendieta
-
-
-
-
-
-
-
 
 

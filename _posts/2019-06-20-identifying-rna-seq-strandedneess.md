@@ -39,9 +39,14 @@ Fraction of reads explained by "1++,1--,2+-,2-+": 0.5001
 Fraction of reads explained by "1+-,1-+,2++,2--": 0.4895
 ```
 
+So, what this output is telling you is that the reads are coming from either
+hte posotive or negative strand, and do NOT agree with the strandedness of the
+genes they're aligning to. So this is an UNSTRANDED library.
+
 In case you're looking for some extra reading on strand libraries I found the
 following links extemely useful
 
 <https://chipster.csc.fi/manual/library-type-summary.html>
+
 <http://onetipperday.sterding.com/2012/07/how-to-tell-which-library-type-to-use.html>
 
