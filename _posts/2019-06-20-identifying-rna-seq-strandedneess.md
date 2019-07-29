@@ -9,14 +9,15 @@ image:
 
 Often times it's essential to know the strand orientation of your library. If
 for instance you have overlapping genes, or very closely nested genes, you wont
-be able to accuretly identify the correct strand orintation for your genes
+be able to accuretly calculate transcription units unless you know the strand
+of origin of both your RNA library and your genes
 of interest. 
 
-In order to identify the strand orientation of some NGS libraries I
+In order to identify the strand orientation of RNA NGS libraries I
 downloaded from SRA I stumpbled upon this excellent little tool called
 `infer_experiment.py` from the [RseqC](http://rseqc.sourceforge.net). It's
 a great resource for this kind of thing. `infer_experiment.py` takes in a bam
-file as well as a BED file on genes with known strandedness.
+file (aligned to your genome) and a BED file of genes with known strandedness.
 
 So - to run it in parallel on all my bam libraries I just did a simple
 parallel command to expedite it as it's quite quick.

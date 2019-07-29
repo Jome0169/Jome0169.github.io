@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.6">Jekyll</generator><link href="http://generallybiology.com//atom.xml" rel="self" type="application/atom+xml" /><link href="http://generallybiology.com//" rel="alternate" type="text/html" /><updated>2019-07-29T13:26:22-04:00</updated><id>http://generallybiology.com//</id><title>Generally Biology</title><subtitle>A blog about the intersection of computer science and biology</subtitle><entry><title>My Reading List</title><link href="http://generallybiology.com//bioinformatics/quals-reading-list/" rel="alternate" type="text/html" title="My Reading List" /><published>2019-07-28T11:00:00-04:00</published><updated>2019-07-28T11:00:00-04:00</updated><id>http://generallybiology.com//bioinformatics/quals-reading-list</id><content type="html" xml:base="http://generallybiology.com//bioinformatics/quals-reading-list/">&lt;p&gt;There’s a ton of papers out there. Some are good, some are bad, and some are
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.6">Jekyll</generator><link href="http://generallybiology.com//atom.xml" rel="self" type="application/atom+xml" /><link href="http://generallybiology.com//" rel="alternate" type="text/html" /><updated>2019-07-29T13:29:55-04:00</updated><id>http://generallybiology.com//</id><title>Generally Biology</title><subtitle>A blog about the intersection of computer science and biology</subtitle><entry><title>My Reading List</title><link href="http://generallybiology.com//bioinformatics/quals-reading-list/" rel="alternate" type="text/html" title="My Reading List" /><published>2019-07-28T11:00:00-04:00</published><updated>2019-07-28T11:00:00-04:00</updated><id>http://generallybiology.com//bioinformatics/quals-reading-list</id><content type="html" xml:base="http://generallybiology.com//bioinformatics/quals-reading-list/">&lt;p&gt;There’s a ton of papers out there. Some are good, some are bad, and some are
 really - really important. So, here is a collection of papers that I think are
 important, and one or two reasons why I think so. This is going to be broken
 down loosely by subject matter, and will be updated as I go along.&lt;/p&gt;
@@ -26,14 +26,15 @@ really - really important. So, here is a collection of papers that I think are
 important, and one or two reasons why I think so. This is going to be broken
 down loosely by subject matter, and will be updated as I go along.</summary></entry><entry><title>Identifying RNA-Seq strandedneess</title><link href="http://generallybiology.com//bioinformatics/identifying-rna-seq-strandedneess/" rel="alternate" type="text/html" title="Identifying RNA-Seq strandedneess" /><published>2019-06-20T16:32:00-04:00</published><updated>2019-06-20T16:32:00-04:00</updated><id>http://generallybiology.com//bioinformatics/identifying-rna-seq-strandedneess</id><content type="html" xml:base="http://generallybiology.com//bioinformatics/identifying-rna-seq-strandedneess/">&lt;p&gt;Often times it’s essential to know the strand orientation of your library. If
 for instance you have overlapping genes, or very closely nested genes, you wont
-be able to accuretly identify the correct strand orintation for your genes
+be able to accuretly calculate transcription units unless you know the strand
+of origin of both your RNA library and your genes
 of interest.&lt;/p&gt;
 
-&lt;p&gt;In order to identify the strand orientation of some NGS libraries I
+&lt;p&gt;In order to identify the strand orientation of RNA NGS libraries I
 downloaded from SRA I stumpbled upon this excellent little tool called
 &lt;code class=&quot;highlighter-rouge&quot;&gt;infer_experiment.py&lt;/code&gt; from the &lt;a href=&quot;http://rseqc.sourceforge.net&quot;&gt;RseqC&lt;/a&gt;. It’s
 a great resource for this kind of thing. &lt;code class=&quot;highlighter-rouge&quot;&gt;infer_experiment.py&lt;/code&gt; takes in a bam
-file as well as a BED file on genes with known strandedness.&lt;/p&gt;
+file (aligned to your genome) and a BED file of genes with known strandedness.&lt;/p&gt;
 
 &lt;p&gt;So - to run it in parallel on all my bam libraries I just did a simple
 parallel command to expedite it as it’s quite quick.&lt;/p&gt;
@@ -66,7 +67,8 @@ following links extemely useful&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://onetipperday.sterding.com/2012/07/how-to-tell-which-library-type-to-use.html&quot;&gt;http://onetipperday.sterding.com/2012/07/how-to-tell-which-library-type-to-use.html&lt;/a&gt;&lt;/p&gt;</content><summary>Often times it’s essential to know the strand orientation of your library. If
 for instance you have overlapping genes, or very closely nested genes, you wont
-be able to accuretly identify the correct strand orintation for your genes
+be able to accuretly calculate transcription units unless you know the strand
+of origin of both your RNA library and your genes
 of interest.</summary></entry><entry><title>Cowplot and Gviz</title><link href="http://generallybiology.com//bioinformatics/cowplot-and-gviz/" rel="alternate" type="text/html" title="Cowplot and Gviz" /><published>2019-06-15T11:00:00-04:00</published><updated>2019-06-15T11:00:00-04:00</updated><id>http://generallybiology.com//bioinformatics/cowplot-and-gviz</id><content type="html" xml:base="http://generallybiology.com//bioinformatics/cowplot-and-gviz/">&lt;p&gt;If you’re trying to use both Gviz and cowplot in the same package it can be
 done. It took me a while, but I eventually found the answer on a combination of
 a github page/as well as what I presume to be a chinese version of github. So

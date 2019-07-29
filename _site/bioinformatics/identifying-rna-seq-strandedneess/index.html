@@ -5,7 +5,8 @@
 	<title>Identifying RNA-Seq strandedneess • Generally Biology</title>
     <meta name="description" content="Often times it’s essential to know the strand orientation of your library. If
 for instance you have overlapping genes, or very closely nested genes, you wont
-be able to accuretly identify the correct strand orintation for your genes
+be able to accuretly calculate transcription units unless you know the strand
+of origin of both your RNA library and your genes
 of interest.
 
 ">
@@ -15,7 +16,8 @@ of interest.
 	<meta name="twitter:title" content="Identifying RNA-Seq strandedneess">
 	<meta name="twitter:description" content="Often times it’s essential to know the strand orientation of your library. If
 for instance you have overlapping genes, or very closely nested genes, you wont
-be able to accuretly identify the correct strand orintation for your genes
+be able to accuretly calculate transcription units unless you know the strand
+of origin of both your RNA library and your genes
 of interest.
 
 ">
@@ -31,7 +33,8 @@ of interest.
 	<meta property="og:title" content="Identifying RNA-Seq strandedneess">
 	<meta property="og:description" content="Often times it’s essential to know the strand orientation of your library. If
 for instance you have overlapping genes, or very closely nested genes, you wont
-be able to accuretly identify the correct strand orintation for your genes
+be able to accuretly calculate transcription units unless you know the strand
+of origin of both your RNA library and your genes
 of interest.
 
 ">
@@ -145,14 +148,15 @@ of interest.
 			<div id="content" class="page-content" itemprop="articleBody">
 				<p>Often times it’s essential to know the strand orientation of your library. If
 for instance you have overlapping genes, or very closely nested genes, you wont
-be able to accuretly identify the correct strand orintation for your genes
+be able to accuretly calculate transcription units unless you know the strand
+of origin of both your RNA library and your genes
 of interest.</p>
 
-<p>In order to identify the strand orientation of some NGS libraries I
+<p>In order to identify the strand orientation of RNA NGS libraries I
 downloaded from SRA I stumpbled upon this excellent little tool called
 <code class="highlighter-rouge">infer_experiment.py</code> from the <a href="http://rseqc.sourceforge.net">RseqC</a>. It’s
 a great resource for this kind of thing. <code class="highlighter-rouge">infer_experiment.py</code> takes in a bam
-file as well as a BED file on genes with known strandedness.</p>
+file (aligned to your genome) and a BED file of genes with known strandedness.</p>
 
 <p>So - to run it in parallel on all my bam libraries I just did a simple
 parallel command to expedite it as it’s quite quick.</p>
