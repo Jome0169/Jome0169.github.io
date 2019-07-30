@@ -31,10 +31,10 @@ Really calls into question some of the rhetoric that has been deployed around th
 
 Other great takeaways: 
 
-    + Enhancer Assys don't always line up with genomic prediction. Three reported enhancers appear to have no reporting capability in vivo (granted this might be due to poor reporting assays, or local chromatin envriorments)
-    + "Super" enhancers appear to offer quite a bit of backup capabilities. Delete one - or two (Figure 4 B/C) and you may not see any change, or any **signifigant** change in phenotype. 
-    + Looping doesn't seem to be altered by deletion of the strongest enhancers. For whatever reason topological assocations appear to be tough as nails
-    + Enhancer Accessible chromatin formation is NOT dependent on other Enhancers. So if you delete the big Kahuna - all the other enhancers form just fine
++ Enhancer Assys don't always line up with genomic prediction. Three reported enhancers appear to have no reporting capability in vivo (granted this might be due to poor reporting assays, or local chromatin envriorments)
++ "Super" enhancers appear to offer quite a bit of backup capabilities. Delete one - or two (Figure 4 B/C) and you may not see any change, or any **signifigant** change in phenotype. 
++ Looping doesn't seem to be altered by deletion of the strongest enhancers. For whatever reason topological assocations appear to be tough as nails
++ Enhancer Accessible chromatin formation is NOT dependent on other Enhancers. So if you delete the big Kahuna - all the other enhancers form just fine
 
 Key-Figure: 4
 
@@ -73,11 +73,9 @@ what mediate TADs
 Enhancers appear to be able to find their cognate gene without speicially
 defined TADs (You'll just have to take the authors word here that this is
 happening. Mainly point to phenotype of this last conclustion)
-
 + Inversions don't alter TADs UNLESS the inversion also contains the TAD
 boundries (Figure 4b/c). However- kcnj2 DOES have increased contacts with the
 enhancer elements and does exhibit increased gene expression
-
 + Of the structural re-aragnmetns they caused gain of function mutations. With
 expression of kcnj2. IN the inversion contining the TAD boundries, kcnj2
 actually took up the phenotype of sox9 (wild). This gain of function patter
