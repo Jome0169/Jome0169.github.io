@@ -23,13 +23,11 @@ excellent read. Often times in genomics we describe phenomena wich we believe
 have strong biological implications. The discovery and calssifications of super
 enhancers being one such instance. This paper does a great job in going into a
 system (mouse) and test the hypothesis that enhancers have emergent qualities. 
-So - if you and all your enhancer buddies are hanging out - do you get stronger, 
-much like Bros lifting in a gym? The answer appears to be... No.
+So - if you and all your enhancer buddies are hanging out - do you get stronger,much like Bros lifting in a gym? The answer appears to be... No.
 
-Rather you have an additive effect between enhancers. So, nothing super special. 
-Really calls into question some of the rhetoric that has been deployed around these pieces of the genome.
+Rather you have an additive effect between enhancers. So, nothing super special.Really calls into question some of the rhetoric that has been deployed around these pieces of the genome.
 
-Other great takeaways: 
+Other great takeaways:
 
 + Enhancer Assys don't always line up with genomic prediction. Three reported enhancers appear to have no reporting capability in vivo (granted this might be due to poor reporting assays, or local chromatin envriorments)
 + "Super" enhancers appear to offer quite a bit of backup capabilities. Delete one - or two (Figure 4 B/C) and you may not see any change, or any **signifigant** change in phenotype. 
