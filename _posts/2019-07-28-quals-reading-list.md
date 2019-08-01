@@ -92,5 +92,100 @@ Key Figures: 2-5 tbh. Hugely important paper that's really worth getting into
 
 
 
+### lncRNAs
+
+#### Noncoding Transcription by Alternative RNA Polymerases Dynamically Regulates an Auxin-Driven Chromatin Loop (2014)
+
+This [paper](https://www.ncbi.nlm.nih.gov/pubmed/25018019) is an interesting
+one because it's really one of the first paper to find an lncRNA in
+arabidopsis, delete it, and show a phenotypic effect. This alone makes it a
+fairly important piece of plant genomics literature in my opinion. Authors on
+this guy are Ariel et al, with crespi being the senior investigator.
+
+But diving into this paper, this paper seeks to demonstrate the link that an
+identified lncRNA by the name of APOLO regulates PINOID (PID), a well known gene in root development.
+
+So, to takcle this the authors generated a system to interfere with APOLO using
+RnaI techniques. Upon knocking down APOLO transcription, PID was knocked down
+as well, and generated longer roots as a byproduct - Figures 1 B-D.
+
+Next, the authros attempt to demonstrate that the epigenetic landscape of APOLO and PID
+dynamically change in response to AUXIN treatment. I find this section (Figure
+2) fairly poorly explained, and hard to interpret. Their ChIP-qPCR graphs
+strike me as being nearly indecipherable. That being said they take this study
+in an intersting direction as they attempt to elucidate how APOLO is being
+transcribed. They know from mutants like nrpd2a (pol IV subunit)
+that APOLO was still transcribed meaning it's most likely transcribed by POL II.
+
+With this paper however, I do have some issues. I think Figure 2 is nearly
+illegible here. It's challenging to understand, and the trends to authors point
+to are rather opaque. Secondly, the mechanism which they draw upon is quite
+complex, making me wonder well... Is it really that complex? Or have they
+heaped on a complex mechanism in an attempt to explain this. Added on top of
+this is recent research in the plant field pointing to the idea that
+methylation may not be the end all be all of gene silencing, esecially
+considering that some gene body nethylated genes are heavily transcribed.
+
+Other issues - ChIP-qpcr in 2014 to me seems really... Questionable. Why not do
+ChIP-seq? There's no need, and it would have made many of their figures far
+more convincing in my opinion. 
+
+Main Takaways:
++ There are lncRNAs in the arabidopsis genome that have phenotypes. I've had
+  more than a few poeple ask me if such a thing exist so that's great to have
++ They can be possibly transcribed by different POLs either POL II or POL IV. 
++ They appear (possibly) to have a capacity to regulat the epigenetic
+  landscape in regards to recruiting PCRC1/2 (not sure I buy this. Other review
+  have said this point is overblow in mammals)
+
+Key Figures: 1
 
 
+### Transcription
+
+#### Stochastic mRNA Synthesis in Mammalian Cells (2006)
+
+This paper by Raj et al is a pretty sweet study that really began our
+understanding of the 'burst' dynamics of transcription, and man oh man it's
+cool. Often times I feel as if the term 'elegent' is overused when describing
+papers, but this one, this one is certainly elegant. 
+
+The authors initiated this study by wanting to study transcription in vivo. To
+do so they develope this awesome system where thye basically create an reporter gene
+with a ton of binding sites for florescent probes. When expressed and annealed,
+these probes are able to pinpoint single molecules in the cell.
+
+After demonstrating that this 'works' the authors then go on to describe where
+mRNA localizes. Their big point is that when you see these lit up regions of
+transcription you generally see more mRNA in the nucleus, and when you don't
+see these transcriptionally active points you tend to find more mRNA in the
+cytoplasm, Figure 2D. They also make a point that in 2D these two cells while
+having vastly different localization of mRNA also appear to be delinated from
+the same parent cell, indicating that mRNA variation is not simply due to
+differences in cell cycle stages.
+
+Next, the authors modify their reporter gene with either one or seven copies of
+totO, a reporter that you're able to shut off in the prescence of Doxycycline.
+Doxycline minimizes the required holodimer tTA required to drive transcription.
+Bascially they found that increasing the amount of doxycline reduces the amont
+of mRNA of the gene, but the NOISE, here defined as (standard deviation/mean )
+did NOT change. They chock this up to being reflective of the thing that really
+matters is the activation state of the gene itself.
+
+Then go on to show that increasing the number of TF factors that bind OR
+increasing the number of transcription factor sites increases the size of the
+burst. This paper goes on pionting out that it appears genes that genes being
+turned on is intrinsically random.
+
+Main Takeways:
++ Transcription happens in burst, the size of these burst are modulated by thing liks Transcription factor binding and such
++ The pinpoint chromatin as a likely cause of which changes genes from
+being 'on' or 'off' pointint to the idea that the rate limiting step of
+transcription is most likely chromatin decondensation.
++ Give these results there are most likely two ways in which transcription
+is able to increase - (ii) increase the rate of transcription when the gene
+is in the active state, or (iii) decrease the rate of gene inactivation
+(the opposite behaviors, of course, apply should a cell decide to
+downregulate a gene’s transcription)
+
+Key Figures: 3
