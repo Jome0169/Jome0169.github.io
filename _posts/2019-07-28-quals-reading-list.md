@@ -141,6 +141,45 @@ Main Takaways:
 Key Figures: 1
 
 
+#### Unlinking an lncRNA from Its Associated cis Element (2016)
+
+I really like this paper overall. I think it does an excellent job of
+displaying a somewhat novel mechanism of lncRNAs. It's short, sweet, to the
+point, and does the exact exerpiments you want them to do. Anyways, to the
+paper.
+
+This paper by [Parakallar et al](https://www.ncbi.nlm.nih.gov/pubmed/27041223)
+basically ask the question, "does the lncRNA matter" compared to the sequence
+underneath it? It does so by looking at the lncRNA Lockd and the gene Cdkn1b.
+The authors start off by demonstrating that if you delete the lncRNA Lockd
+using cirps/cas9, the gene product is reduced (Figure 1).
+
+However, if you simply add a polyadenalation signal to the middle of exon 1 of
+the lncRNA, the lncRNA product is reduce, but the gene product remains almost
+unchanged. Demonstarting that the lncRNA product itself isn't important, but
+the loci is. 
+
+
+It should be noted though, that this doesn't mean that the lncRNA product
+itself is TOTALLY useless. Rather, it's useless to it's closest gene. The
+authors didn't explore the possability that Lockd was acting in Trans in any
+way. Granted, most of the known lncRNAs (xist mainly) appear to act in a
+neighborhood esque manner.
+
+Other Takeaways:
++ Man, I'm so envious how easy it is to generate knockouts in cell lines. Seems
+  like you're so unrestrained in some systems (yay plants!)
++ Excellent concise review of other mechanisms found in the lncRNA literature,
+  and some other things to brush up on.
+
+
+Key Figure: 2B
+
+
+
+
+
+
 ### Transcription
 
 #### Stochastic mRNA Synthesis in Mammalian Cells (2006)
