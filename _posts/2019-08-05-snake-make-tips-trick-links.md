@@ -1,7 +1,7 @@
 ---
 layout: article
 title:  "Useful Snakemake Questions from StackOverflow"
-date:   2018-01-19 9:00 -0600
+date:   2019-08-05 9:00 -0600
 categories: Bioinformatics
 share: false
 image: /images/snake_boy.jpg

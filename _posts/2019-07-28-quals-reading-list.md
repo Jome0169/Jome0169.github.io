@@ -16,7 +16,7 @@ down loosely by subject matter, and will be updated as I go along.
 
 ### Enhancers 
 
-#### Genetic dissection of the  alpha -globin super-enhancer in vivo
+#### Genetic dissection of the  alpha-globin super-enhancer in vivo
 
 This [paper](https://www.nature.com/articles/ng.3605) by Hay et al is an
 excellent read. Often times in genomics we describe phenomena wich we believe
