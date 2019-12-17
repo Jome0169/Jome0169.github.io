@@ -1,7 +1,7 @@
 ---
 layout: article
 title: "My Reading List"
-date:   2019-07-28 9:00 -0600
+date:   2019-09-03 9:00 -0600
 categories: Bioinformatics
 share: false
 image:
@@ -81,7 +81,6 @@ wast still seen just with the fusuion of the TAD boundries, here incDeltaBOR
 (Figure 5c)
 
 Other great takeaways: 
-
 + Fusing TADs doesn't really seem to matter too much which is intersting.
 + The authors point to phase separation as a possible mechanism of how enhancers
 are still accessing their cognate gene. Will phase separation be the next
@@ -159,7 +158,6 @@ the lncRNA, the lncRNA product is reduce, but the gene product remains almost
 unchanged. Demonstarting that the lncRNA product itself isn't important, but
 the loci is. 
 
-
 It should be noted though, that this doesn't mean that the lncRNA product
 itself is TOTALLY useless. Rather, it's useless to it's closest gene. The
 authors didn't explore the possability that Lockd was acting in Trans in any
@@ -172,13 +170,7 @@ Other Takeaways:
 + Excellent concise review of other mechanisms found in the lncRNA literature,
   and some other things to brush up on.
 
-
 Key Figure: 2B
-
-
-
-
-
 
 ### Transcription
 

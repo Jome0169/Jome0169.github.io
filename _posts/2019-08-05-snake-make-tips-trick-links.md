@@ -16,10 +16,8 @@ That being said, I feel like I revisit the same 20 stack overflow examples. So,
 here's an ever updating list of examples I find useful
 
 1. How to mix Globbing and Wilcards
-https://bioinformatics.stackexchange.com/questions/7184/mix-globbing-and-wildcards-when-specifying-rule-input
+https://www.bioinformatics.stackexchange.com/questions/7184/mix-globbing-and-wildcards-when-specifying-rule-input
 
 2. How to use a nested YAML file 
 Long but worth it 
-https://stackoverflow.com/questions/50198628/snakemake-confusion-on-how-to-access-config-files-properly
-
-
+https://www.stackoverflow.com/questions/50198628/snakemake-confusion-on-how-to-access-config-files-properly
