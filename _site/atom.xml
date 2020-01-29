@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.6">Jekyll</generator><link href="http://generallybiology.com//atom.xml" rel="self" type="application/atom+xml" /><link href="http://generallybiology.com//" rel="alternate" type="text/html" /><updated>2020-01-29T13:59:40-05:00</updated><id>http://generallybiology.com//</id><title>Generally Biology</title><subtitle>A blog about the intersection of computer science and biology</subtitle><entry><title>Jin Et al 2015</title><link href="http://generallybiology.com//bioinformatics/jin_et_al2015/" rel="alternate" type="text/html" title="Jin Et al 2015" /><published>2020-01-29T00:00:00-05:00</published><updated>2020-01-29T00:00:00-05:00</updated><id>http://generallybiology.com//bioinformatics/jin_et_al2015</id><content type="html" xml:base="http://generallybiology.com//bioinformatics/jin_et_al2015/">&lt;h1 id=&quot;section&quot;&gt;#&lt;/h1&gt;
-
-&lt;p&gt;Understanding the landscape of histone readers is of crucial importance to my
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.6">Jekyll</generator><link href="http://generallybiology.com//atom.xml" rel="self" type="application/atom+xml" /><link href="http://generallybiology.com//" rel="alternate" type="text/html" /><updated>2020-01-29T14:11:14-05:00</updated><id>http://generallybiology.com//</id><title>Generally Biology</title><subtitle>A blog about the intersection of computer science and biology</subtitle><entry><title>Jin Et al 2015</title><link href="http://generallybiology.com//bioinformatics/jin_et_al2015/" rel="alternate" type="text/html" title="Jin Et al 2015" /><published>2020-01-29T00:00:00-05:00</published><updated>2020-01-29T00:00:00-05:00</updated><id>http://generallybiology.com//bioinformatics/jin_et_al2015</id><content type="html" xml:base="http://generallybiology.com//bioinformatics/jin_et_al2015/">&lt;p&gt;Understanding the landscape of histone readers is of crucial importance to my
 reserach. These proteins which recognize, and recruit various complexes and
 proteins to post tranlational modification (PTMs) cause many of the correlated
 effects of we recognize in epigenomic research. For example, when methylation
@@ -42,7 +40,7 @@ knockouts putativly in similar pathways. Interestingly similar phenotypes were
 found, pointing to the fact that these are more than likely operating in the
 same genetic pathway.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;images/Jin_et_al_2015_imgs/Jin_plants.png&quot; alt=&quot;My helpful screenshot&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/Jin_et_al_2015_imgs/Jin_plants.png&quot; alt=&quot;Pretty Plants!&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Figures #2 and #3 basically get at the phenotypes of these knockouts, and while
 they look somewhat striking, they rely on a few test of Brassinosteroid
@@ -66,20 +64,28 @@ don’t get size information), you find specific binding of MRG702 for H3K36me3,
 and both H3K4me2 and H3K4me3. Basically, big poing MRG702 has histone
 specificity!!! Woo!&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;images/Jin_et_al_2015_imgs/Jin_dot_blot.png&quot; alt=&quot;My helpful screenshot&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/Jin_et_al_2015_imgs/Jin_dot_blot.png&quot; alt=&quot;Dot Plot&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Finally, the authors do ChIP, and demonstrate that MRG702 binding acts on
 H3K36me3, and use a 725Ri-i mutant (SDG8 mutant) to demonstrate the MRG702
 binds to known loci whith H3K36me3 deposited, and that in the abscence of this
 methylation (mutatnt), you no longer MRG binding. Pretty neat!!!&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;images/Jin_et_al_2015_imgs/Jin_chip.png&quot; alt=&quot;My helpful screenshot&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/Jin_et_al_2015_imgs/Jin_chip.png&quot; alt=&quot;Chip&quot; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;final-thoughts&quot;&gt;Final Thoughts&lt;/h4&gt;
 &lt;p&gt;A solid paper overall that I believe did a decent job identifying a reader of
 H3K36me3 in Oryza sativa. I still wish the authors didn’t use rt-PCRl, and
 instead had done RNA-seq as well as ChIP-seq. But I recognize I have some
-intense genomic bias in this.&lt;/p&gt;</content><summary>#</summary></entry><entry><title>My Reading List</title><link href="http://generallybiology.com//bioinformatics/quals-reading-list/" rel="alternate" type="text/html" title="My Reading List" /><published>2019-09-03T11:00:00-04:00</published><updated>2019-09-03T11:00:00-04:00</updated><id>http://generallybiology.com//bioinformatics/quals-reading-list</id><content type="html" xml:base="http://generallybiology.com//bioinformatics/quals-reading-list/">&lt;p&gt;There’s a ton of papers out there. Some are good, some are bad, and some are
+intense genomic bias in this.&lt;/p&gt;</content><summary>Understanding the landscape of histone readers is of crucial importance to my
+reserach. These proteins which recognize, and recruit various complexes and
+proteins to post tranlational modification (PTMs) cause many of the correlated
+effects of we recognize in epigenomic research. For example, when methylation
+is added to a lysine on the alpha globulin tail of a histone (K36 in this
+instance), this methylation has no direct effect on
+altering the chromatin like acetylation does. Rather it affects transcription
+by recruiting a series of readers which in turn recruit more factors. And so
+the chromatin cylcle of influcence continues.</summary></entry><entry><title>My Reading List</title><link href="http://generallybiology.com//bioinformatics/quals-reading-list/" rel="alternate" type="text/html" title="My Reading List" /><published>2019-09-03T11:00:00-04:00</published><updated>2019-09-03T11:00:00-04:00</updated><id>http://generallybiology.com//bioinformatics/quals-reading-list</id><content type="html" xml:base="http://generallybiology.com//bioinformatics/quals-reading-list/">&lt;p&gt;There’s a ton of papers out there. Some are good, some are bad, and some are
 really - really important. So, here is a collection of papers that I think are
 important, and one or two reasons why I think so. This is going to be broken
 down loosely by subject matter, and will be updated as I go along.&lt;/p&gt;
