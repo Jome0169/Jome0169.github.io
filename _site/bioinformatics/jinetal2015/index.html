@@ -2,23 +2,15 @@
 <html>
   <head>
     <meta charset="utf-8">
-	<title>My Toolbox • Generally Biology</title>
-    <meta name="description" content="It seems like everyone who does computational biology has a different workflow.
-Whether it be a different IDE, different libraries, everyone has a set up that is uniqly their own. In an attempt to distill my
-knowledge to those who might be interested, I thought I’d
-write a quick post detailing some components of my workflow that I couldn’t
-live without.
+	<title>Jin Et al 2015 • Generally Biology</title>
+    <meta name="description" content="#
 
 ">
     <meta name="keywords" content="">
     
     	<!-- Twitter Cards -->
-	<meta name="twitter:title" content="My Toolbox">
-	<meta name="twitter:description" content="It seems like everyone who does computational biology has a different workflow.
-Whether it be a different IDE, different libraries, everyone has a set up that is uniqly their own. In an attempt to distill my
-knowledge to those who might be interested, I thought I’d
-write a quick post detailing some components of my workflow that I couldn’t
-live without.
+	<meta name="twitter:title" content="Jin Et al 2015">
+	<meta name="twitter:description" content="#
 
 ">
 	
@@ -30,18 +22,14 @@ live without.
 	<!-- Open Graph -->
 	<meta property="og:locale" content="">
 	<meta property="og:type" content="article">
-	<meta property="og:title" content="My Toolbox">
-	<meta property="og:description" content="It seems like everyone who does computational biology has a different workflow.
-Whether it be a different IDE, different libraries, everyone has a set up that is uniqly their own. In an attempt to distill my
-knowledge to those who might be interested, I thought I’d
-write a quick post detailing some components of my workflow that I couldn’t
-live without.
+	<meta property="og:title" content="Jin Et al 2015">
+	<meta property="og:description" content="#
 
 ">
-	<meta property="og:url" content="http://generallybiology.com//bioinformatics/my-toolbox/">
+	<meta property="og:url" content="http://generallybiology.com//bioinformatics/jinetal2015/">
 	<meta property="og:site_name" content="Generally Biology">
 
-    <link rel="canonical" href="http://generallybiology.com//bioinformatics/my-toolbox/">
+    <link rel="canonical" href="http://generallybiology.com//bioinformatics/jinetal2015/">
 
     <link href="http://generallybiology.com//atom.xml" type="application/atom+xml" rel="alternate" title="Generally Biology Atom Feed">
     <link href="http://generallybiology.com//sitemap.xml" type="application/xml" rel="sitemap" title="Sitemap">
@@ -142,100 +130,92 @@ live without.
   </nav><!-- /.breadcrumbs -->
 
 		<div class="page-title">
-			<h1>My Toolbox</h1>
+			<h1>Jin Et al 2015</h1>
 		</div>
 		<div class="inner-wrap">
 			<div id="content" class="page-content" itemprop="articleBody">
-				<p>It seems like everyone who does computational biology has a different workflow.
-Whether it be a different IDE, different libraries, everyone has a set up that is uniqly their own. In an attempt to distill my
-knowledge to those who might be interested, I thought I’d
-write a quick post detailing some components of my workflow that I couldn’t
-live without.</p>
+				<h1 id="section">#</h1>
 
-<h2 id="idestext-editors">IDEs/Text Editors:</h2>
+<p>Understanding the landscape of histone readers is of crucial importance to my
+reserach. These proteins which recognize, and recruit various complexes and
+proteins to post tranlational modification (PTMs) cause many of the correlated
+effects of we recognize in epigenomic research. For example, when methylation
+is added to a lysine on the alpha globulin tail of a histone (K36 in this
+instance), this methylation has no direct effect on
+altering the chromatin like acetylation does. Rather it affects transcription
+by recruiting a series of readers which in turn recruit more factors. And so
+the chromatin cylcle of influcence continues.</p>
 
-<h4 id="vim">VIM</h4>
+<p>An essential mark I use to identify novel transcription regions in monocots is
+H3K36me3. So in turn, I wanted to read a paper getting into the identification
+of a reader enzyme for this specific mark. Enter Jin et al, 2015, “MORF-RELATED
+GENE702, a Reader Protein of Trimethylated Histone H3 Lysine 4 and Histone H3
+Lysine 36, Is Involved in Brassinosteroid-Regulated Growth and Flowering Time
+Control in Rice”. A paper diving into this very question.</p>
 
-<p>If you know me, this won’t surprise you. I’m an avid VIM user. I find its
-‘lightweightness’ as well as its universal occurrence on servers essential. Need to open a massive 4Gb file in it? Sure! It
-won’t be pretty, but god damn does it work. Need to make a quick edit to that
-script you just copied over? Easy Peazy.</p>
+<h4 id="background">Background</h4>
+<p>The basic set-up of this paper is this group had previously identifed two
+proteins in Arabidopsis that recognize H3K4me3 and H3K36me3, namely
+MORF RELATED GENE (MRG) 1 &amp; 2 via their chromodomains, and a series of
+functional studies. Therefor, this group was curious how MRG would operate in
+monocots since it had only been tested in dicots. So, they chose to investigate
+this proteins function in rice.</p>
 
-<p>This paired with its massive archive of plugins makes it an amazing editor that
-can do anything sublime2 or visualstudio code can. It’s also a text editor that I find consistently rewards you for 
-sticking with it. If you find yourself coding along, consistenly hitting the
-same “Pain point”, the VIM community has come up with a macro combination to solve it.</p>
+<h4 id="experiments">Experiments</h4>
+<p>This group initially tested the expression of MRG702 and MRG 701, ortholgs of
+the Arabidposis version. Found that MRG 702 was the more up-regulated version,
+and used this as evidence to call it the more important functional copy.</p>
 
-<h4 id="rstudio">RStudio</h4>
+<p>They they generated knock-down version of 702, and both 701 and 702. They
+discovered that the knockdown of 702 had an almost identical phenotype to
+knocking out both, allowing the scientist to conclude that 702 is the more
+important protein here as the phenotype wasn’t exacterbated at all.</p>
 
-<p>If you use R, you know what this is and why you need it. It makes writing R
-scripts joyous, logically displays your environment, and makes graphing/ 
-dealing with packages easy.</p>
+<p>I have to say, the knockdown phenotypes look pretty good! They also had a smart
+decision here where they also knocked down the histone methyltransferase
+responsible for laying down H3K36me3. This allowed the authors to compare
+knockouts putativly in similar pathways. Interestingly similar phenotypes were
+found, pointing to the fact that these are more than likely operating in the
+same genetic pathway.</p>
 
-<h2 id="command-line-accessories">Command Line ‘Accessories’</h2>
+<p><img src="images/Jin_et_al_2015_imgs/Jin_plants.png" alt="My helpful screenshot" /></p>
 
-<h4 id="tmux">TMUX</h4>
-<p>Honestly, between TMUX and VIM, I’m not sure which has had a larger
-effect on my workflow. At this point both are completely indispensable to me,
-albeit for different reasons.</p>
+<p>Figures #2 and #3 basically get at the phenotypes of these knockouts, and while
+they look somewhat striking, they rely on a few test of Brassinosteroid
+sensing, and flowering time that I don’t like very much. For first their
+assays, while I’m sure valuable, are incredibly domain specific, and make me
+question how valuable they really are.</p>
 
-<p>TMUX is a terminal multiplexer. It allows users to split their singular
-terminal session into multiple, allowing you login once, and then have a pane
-dedicated to writing bash scripts, copying over data, etc…</p>
+<p>Second, I have an issue with this studies repeated use of RT-PCR at a few
+select loci. When measuring complex phenotypes, they attempt to use previous
+literature to select loci that they beleive should have signifigantly different
+expression from their knockouts. While this appears to be true, I would have
+preffered if this lab had done RNA seq to look at a more global level of
+transcription. Since this reader is more than likely not targeted to this
+single pathway, I would have found it more convincing if they had demonstrated
+this on a global level.</p>
 
-<p>Not sold? It ALSO doesn’t log off much like <strong>screen</strong>, meaning you can open up
-3-4 windows, run separate commands, detach the session, and come back later.
-This has so so so many added benefits. Hit the wrong hot key and close your
-terminal window? YOUR WORK IS STILL THERE!!!. Honestly, I can’t praise TMUX
-highly enough. It’s infinite customizability, and integration with VIM
-transforms both these softwares into an amazing IDE that can be accessed on any
-remote server.</p>
+<p>Figure #4 is in my opinion the second key figure of this entire paper. It
+illustrates that in a dot blot assay link:
+https://en.wikipedia.org/wiki/Dot_blot (a varient of western where you basically
+don’t get size information), you find specific binding of MRG702 for H3K36me3,
+and both H3K4me2 and H3K4me3. Basically, big poing MRG702 has histone
+specificity!!! Woo!</p>
 
-<p>It’s a computational biologists dream.</p>
+<p><img src="images/Jin_et_al_2015_imgs/Jin_dot_blot.png" alt="My helpful screenshot" /></p>
 
-<h4 id="fd-like-find-but-i-can-remember-the-command">fd (like find, but I can remember the command)</h4>
+<p>Finally, the authors do ChIP, and demonstrate that MRG702 binding acts on
+H3K36me3, and use a 725Ri-i mutant (SDG8 mutant) to demonstrate the MRG702
+binds to known loci whith H3K36me3 deposited, and that in the abscence of this
+methylation (mutatnt), you no longer MRG binding. Pretty neat!!!</p>
 
-<p>Finding files is a pain in the ass with the <code class="highlighter-rouge">find</code> command. For whatever reason
-I can never seem to remember the inane synatx</p>
+<p><img src="images/Jin_et_al_2015_imgs/Jin_chip.png" alt="My helpful screenshot" /></p>
 
-<h4 id="conda">CONDA</h4>
-<p>This is possibly my most recent addition to my workflow as of late. But my GOD,
-I don’t know how I ever lived without it before. Conda is a container workflow
-that allows a user to generate a specific enviornment to run their software. So
-if you’re having issue getting all of your python library installs to work
-across different clusters, conda is a god send. Its actually hard to imagine
-just how much time it has saved me overall.</p>
-
-<h2 id="libraries">Libraries</h2>
-
-<h4 id="pybedtoolspysamtools">pybedtools/pysamtools</h4>
-
-<p>Possibly the best python libraries I’ve ever used. Well documented, fast,
-excellent usage scenarios. It’s saved me countless hours, and allowed me to
-break up the standard worflow of “Data -&gt; Command Line App -&gt; python 
--&gt; output” to just “Data -&gt; python -&gt; output”, allowing me to avoid a full
-step.</p>
-
-<p>This paired with the fact that these libraries are very well tested, and have
-some pretty sophisticated communities around them allow me to relax just a bit
-more, and focus on my science.</p>
-
-<h4 id="tidyverse">Tidyverse</h4>
-<p>I dislike the R programming language. I think it’s poorly written, and
-needlessly complex. It’s the perl of statistics in so many ways. The Tidyverse
-basically makes R usable. If you’re not using it I weep for you.</p>
-
-<h2 id="bonus">Bonus</h2>
-
-<h4 id="rhodia-sketch-pad">Rhodia Sketch pad</h4>
-<p>Honestly, sometimes you just desperatly need to sketch out your ideas. I’m a
-massive believer that</p>
-
-<h4 id="r-for-data-analysis">R for data analysis</h4>
-<p>I still suck at R for the most part. So this free E-book for me has been an
-absolute godsend.</p>
-
-<h4 id="good-headphones">Good headphones</h4>
+<h4 id="final-thoughts">Final Thoughts</h4>
+<p>A solid paper overall that I believe did a decent job identifying a reader of
+H3K36me3 in Oryza sativa. I still wish the authors didn’t use rt-PCRl, and
+instead had done RNA-seq as well as ChIP-seq. But I recognize I have some
+intense genomic bias in this.</p>
 
 
 				<hr />
@@ -252,7 +232,7 @@ absolute godsend.</p>
 
 					
 					<div class="page-meta">
-	<p> <time datetime="2018-01-19T10:00:00Z" itemprop="datePublished">January 19, 2018</time></p>
+	<p> <time datetime="2020-01-29T00:00:00Z" itemprop="datePublished">January 29, 2020</time></p>
 </div><!-- /.page-meta -->
 
 				</footer><!-- /.footer -->

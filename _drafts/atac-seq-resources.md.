@@ -1,0 +1,20 @@
+---
+layout: article
+title:  "ATAC-seq Resources"
+date:   2019-12-16 9:00 -0600
+categories: Bioinformatics
+share: false
+image:
+---
+
+If you're unaware of ATAC-seq, that's quick to change. This fast method for
+assaying accesible chromatin has been a powerful tool in the chromatin, and
+functional genomics community going on 4 years, and arguably it has had
+profound effects on our understanding of Cis-regulation.
+
+By utilizing a TN5-transposase we're now able to ID regions of the genome that
+are nucleosome free (possibly functional).
+
+So, with
+
+https://yiweiniu.github.io/blog/2019/03/ATAC-seq-data-analysis-from-FASTQ-to-peaks/

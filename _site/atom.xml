@@ -1,28 +1,110 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.6">Jekyll</generator><link href="http://generallybiology.com//atom.xml" rel="self" type="application/atom+xml" /><link href="http://generallybiology.com//" rel="alternate" type="text/html" /><updated>2019-07-30T10:27:55-04:00</updated><id>http://generallybiology.com//</id><title>Generally Biology</title><subtitle>A blog about the intersection of computer science and biology</subtitle><entry><title>My Reading List</title><link href="http://generallybiology.com//bioinformatics/quals-reading-list/" rel="alternate" type="text/html" title="My Reading List" /><published>2019-07-28T11:00:00-04:00</published><updated>2019-07-28T11:00:00-04:00</updated><id>http://generallybiology.com//bioinformatics/quals-reading-list</id><content type="html" xml:base="http://generallybiology.com//bioinformatics/quals-reading-list/">&lt;p&gt;There’s a ton of papers out there. Some are good, some are bad, and some are
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.6">Jekyll</generator><link href="http://generallybiology.com//atom.xml" rel="self" type="application/atom+xml" /><link href="http://generallybiology.com//" rel="alternate" type="text/html" /><updated>2020-01-29T13:59:40-05:00</updated><id>http://generallybiology.com//</id><title>Generally Biology</title><subtitle>A blog about the intersection of computer science and biology</subtitle><entry><title>Jin Et al 2015</title><link href="http://generallybiology.com//bioinformatics/jin_et_al2015/" rel="alternate" type="text/html" title="Jin Et al 2015" /><published>2020-01-29T00:00:00-05:00</published><updated>2020-01-29T00:00:00-05:00</updated><id>http://generallybiology.com//bioinformatics/jin_et_al2015</id><content type="html" xml:base="http://generallybiology.com//bioinformatics/jin_et_al2015/">&lt;h1 id=&quot;section&quot;&gt;#&lt;/h1&gt;
+
+&lt;p&gt;Understanding the landscape of histone readers is of crucial importance to my
+reserach. These proteins which recognize, and recruit various complexes and
+proteins to post tranlational modification (PTMs) cause many of the correlated
+effects of we recognize in epigenomic research. For example, when methylation
+is added to a lysine on the alpha globulin tail of a histone (K36 in this
+instance), this methylation has no direct effect on
+altering the chromatin like acetylation does. Rather it affects transcription
+by recruiting a series of readers which in turn recruit more factors. And so
+the chromatin cylcle of influcence continues.&lt;/p&gt;
+
+&lt;p&gt;An essential mark I use to identify novel transcription regions in monocots is
+H3K36me3. So in turn, I wanted to read a paper getting into the identification
+of a reader enzyme for this specific mark. Enter Jin et al, 2015, “MORF-RELATED
+GENE702, a Reader Protein of Trimethylated Histone H3 Lysine 4 and Histone H3
+Lysine 36, Is Involved in Brassinosteroid-Regulated Growth and Flowering Time
+Control in Rice”. A paper diving into this very question.&lt;/p&gt;
+
+&lt;h4 id=&quot;background&quot;&gt;Background&lt;/h4&gt;
+&lt;p&gt;The basic set-up of this paper is this group had previously identifed two
+proteins in Arabidopsis that recognize H3K4me3 and H3K36me3, namely
+MORF RELATED GENE (MRG) 1 &amp;amp; 2 via their chromodomains, and a series of
+functional studies. Therefor, this group was curious how MRG would operate in
+monocots since it had only been tested in dicots. So, they chose to investigate
+this proteins function in rice.&lt;/p&gt;
+
+&lt;h4 id=&quot;experiments&quot;&gt;Experiments&lt;/h4&gt;
+&lt;p&gt;This group initially tested the expression of MRG702 and MRG 701, ortholgs of
+the Arabidposis version. Found that MRG 702 was the more up-regulated version,
+and used this as evidence to call it the more important functional copy.&lt;/p&gt;
+
+&lt;p&gt;They they generated knock-down version of 702, and both 701 and 702. They
+discovered that the knockdown of 702 had an almost identical phenotype to
+knocking out both, allowing the scientist to conclude that 702 is the more
+important protein here as the phenotype wasn’t exacterbated at all.&lt;/p&gt;
+
+&lt;p&gt;I have to say, the knockdown phenotypes look pretty good! They also had a smart
+decision here where they also knocked down the histone methyltransferase
+responsible for laying down H3K36me3. This allowed the authors to compare
+knockouts putativly in similar pathways. Interestingly similar phenotypes were
+found, pointing to the fact that these are more than likely operating in the
+same genetic pathway.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;images/Jin_et_al_2015_imgs/Jin_plants.png&quot; alt=&quot;My helpful screenshot&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Figures #2 and #3 basically get at the phenotypes of these knockouts, and while
+they look somewhat striking, they rely on a few test of Brassinosteroid
+sensing, and flowering time that I don’t like very much. For first their
+assays, while I’m sure valuable, are incredibly domain specific, and make me
+question how valuable they really are.&lt;/p&gt;
+
+&lt;p&gt;Second, I have an issue with this studies repeated use of RT-PCR at a few
+select loci. When measuring complex phenotypes, they attempt to use previous
+literature to select loci that they beleive should have signifigantly different
+expression from their knockouts. While this appears to be true, I would have
+preffered if this lab had done RNA seq to look at a more global level of
+transcription. Since this reader is more than likely not targeted to this
+single pathway, I would have found it more convincing if they had demonstrated
+this on a global level.&lt;/p&gt;
+
+&lt;p&gt;Figure #4 is in my opinion the second key figure of this entire paper. It
+illustrates that in a dot blot assay link:
+https://en.wikipedia.org/wiki/Dot_blot (a varient of western where you basically
+don’t get size information), you find specific binding of MRG702 for H3K36me3,
+and both H3K4me2 and H3K4me3. Basically, big poing MRG702 has histone
+specificity!!! Woo!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;images/Jin_et_al_2015_imgs/Jin_dot_blot.png&quot; alt=&quot;My helpful screenshot&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Finally, the authors do ChIP, and demonstrate that MRG702 binding acts on
+H3K36me3, and use a 725Ri-i mutant (SDG8 mutant) to demonstrate the MRG702
+binds to known loci whith H3K36me3 deposited, and that in the abscence of this
+methylation (mutatnt), you no longer MRG binding. Pretty neat!!!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;images/Jin_et_al_2015_imgs/Jin_chip.png&quot; alt=&quot;My helpful screenshot&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;final-thoughts&quot;&gt;Final Thoughts&lt;/h4&gt;
+&lt;p&gt;A solid paper overall that I believe did a decent job identifying a reader of
+H3K36me3 in Oryza sativa. I still wish the authors didn’t use rt-PCRl, and
+instead had done RNA-seq as well as ChIP-seq. But I recognize I have some
+intense genomic bias in this.&lt;/p&gt;</content><summary>#</summary></entry><entry><title>My Reading List</title><link href="http://generallybiology.com//bioinformatics/quals-reading-list/" rel="alternate" type="text/html" title="My Reading List" /><published>2019-09-03T11:00:00-04:00</published><updated>2019-09-03T11:00:00-04:00</updated><id>http://generallybiology.com//bioinformatics/quals-reading-list</id><content type="html" xml:base="http://generallybiology.com//bioinformatics/quals-reading-list/">&lt;p&gt;There’s a ton of papers out there. Some are good, some are bad, and some are
 really - really important. So, here is a collection of papers that I think are
 important, and one or two reasons why I think so. This is going to be broken
 down loosely by subject matter, and will be updated as I go along.&lt;/p&gt;
 
 &lt;h3 id=&quot;enhancers&quot;&gt;Enhancers&lt;/h3&gt;
 
-&lt;h4 id=&quot;genetic-dissection-of-the--alpha--globin-super-enhancer-in-vivo&quot;&gt;Genetic dissection of the  alpha -globin super-enhancer in vivo&lt;/h4&gt;
+&lt;h4 id=&quot;genetic-dissection-of-the--alpha-globin-super-enhancer-in-vivo&quot;&gt;Genetic dissection of the  alpha-globin super-enhancer in vivo&lt;/h4&gt;
 
 &lt;p&gt;This &lt;a href=&quot;https://www.nature.com/articles/ng.3605&quot;&gt;paper&lt;/a&gt; by Hay et al is an
 excellent read. Often times in genomics we describe phenomena wich we believe
 have strong biological implications. The discovery and calssifications of super
 enhancers being one such instance. This paper does a great job in going into a
 system (mouse) and test the hypothesis that enhancers have emergent qualities. 
-So - if you and all your enhancer buddies are hanging out - do you get stronger, 
-much like Bros lifting in a gym? The answer appears to be… No.&lt;/p&gt;
+So - if you and all your enhancer buddies are hanging out - do you get stronger,much like Bros lifting in a gym? The answer appears to be… No.&lt;/p&gt;
 
-&lt;p&gt;Rather you have an additive effect between enhancers. So, nothing super special. 
-Really calls into question some of the rhetoric that has been deployed around these pieces of the genome.&lt;/p&gt;
+&lt;p&gt;Rather you have an additive effect between enhancers. So, nothing super special.Really calls into question some of the rhetoric that has been deployed around these pieces of the genome.&lt;/p&gt;
 
-&lt;p&gt;Other great takeaways: 
-    *Enhancer Assys don’t always line up with genomic prediction. Three reported enhancers appear to have no reporting capability in vivo (granted this might be due to poor reporting assays, or local chromatin envriorments)
-    *“Super” enhancers appear to offer quite a bit of backup capabilities. Delete one - or two (Figure 4 B/C) and you may not see any change, or any &lt;strong&gt;signifigant&lt;/strong&gt; change in phenotype. 
-    *Looping doesn’t seem to be altered by deletion of the strongest enhancers. For whatever reason topological assocations appear to be tough as nails
-    *Enhancer Accessible chromatin formation is NOT dependent on other Enhancers. So if you delete the big Kahuna - all the other enhancers form just fine&lt;/p&gt;
+&lt;p&gt;Other great takeaways:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Enhancer Assys don’t always line up with genomic prediction. Three reported enhancers appear to have no reporting capability in vivo (granted this might be due to poor reporting assays, or local chromatin envriorments)&lt;/li&gt;
+  &lt;li&gt;“Super” enhancers appear to offer quite a bit of backup capabilities. Delete one - or two (Figure 4 B/C) and you may not see any change, or any &lt;strong&gt;signifigant&lt;/strong&gt; change in phenotype.&lt;/li&gt;
+  &lt;li&gt;Looping doesn’t seem to be altered by deletion of the strongest enhancers. For whatever reason topological assocations appear to be tough as nails&lt;/li&gt;
+  &lt;li&gt;Enhancer Accessible chromatin formation is NOT dependent on other Enhancers. So if you delete the big Kahuna - all the other enhancers form just fine&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;Key-Figure: 4&lt;/p&gt;
 
@@ -38,8 +120,9 @@ cognate enhancers, while others argue that they really don’t do as much as we
 perceive.&lt;/p&gt;
 
 &lt;p&gt;Basic model of loop extrusion model (this is going to be displayed as an image
-because I could write a blog post about the intricacies of how this works)
-&lt;img src=&quot;/images/loop_model.jpg&quot; alt=&quot;alt text&quot; /&gt;&lt;/p&gt;
+because I could write a blog post about the intricacies of how this works)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/loop_model.jpg&quot; alt=&quot;alt text&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;This &lt;a href=&quot;https://www.nature.com/articles/s41588-019-0466-z&quot;&gt;paper&lt;/a&gt; by Despang et
 al seeks to answer these questions by functionally dissecting, altering and
@@ -50,38 +133,183 @@ enhancer rich, allowing the authors to get at one outstanding question in
 looping-enhancer biology. Mainly - do loops dictate enhancer gene expression,
 thus altering gene expression?&lt;/p&gt;
 
-&lt;p&gt;Main Take Aways: CTCF sites and TAD substructure, PAIRED with TAD boundry are
-what mediate TADs&lt;/p&gt;
-
-&lt;p&gt;Fusing of TADs has no large change on gene expression or phenotype. So…
+&lt;p&gt;Main Take Aways: 
++ CTCF sites and TAD substructure, PAIRED with TAD boundry are
+what mediate TADs
++ Fusing of TADs has no large change on gene expression or phenotype. So…
 Enhancers appear to be able to find their cognate gene without speicially
 defined TADs (You’ll just have to take the authors word here that this is
-happening. Mainly point to phenotype of this last conclustion)&lt;/p&gt;
-
-&lt;p&gt;Inversions don’t alter TADs UNLESS the inversion also contains the TAD
+happening. Mainly point to phenotype of this last conclustion)
++ Inversions don’t alter TADs UNLESS the inversion also contains the TAD
 boundries (Figure 4b/c). However- kcnj2 DOES have increased contacts with the
-enhancer elements and does exhibit increased gene expression&lt;/p&gt;
-
-&lt;p&gt;Of the structural re-aragnmetns they caused gain of function mutations. With
-miexpression of kcnj2. IN the inversion contining the TAD boundries, kcnj2
+enhancer elements and does exhibit increased gene expression
++ Of the structural re-aragnmetns they caused gain of function mutations. With
+expression of kcnj2. IN the inversion contining the TAD boundries, kcnj2
 actually took up the phenotype of sox9 (wild). This gain of function patter
 wast still seen just with the fusuion of the TAD boundries, here incDeltaBOR
 (Figure 5c)&lt;/p&gt;
 
-&lt;p&gt;Other great takeaways:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Fusing TADs doesn’t really seem to matter too much which is intersting.&lt;/li&gt;
-  &lt;li&gt;The authors point to phase separation as a possible mechanism of how enhancers
+&lt;p&gt;Other great takeaways: 
++ Fusing TADs doesn’t really seem to matter too much which is intersting.
++ The authors point to phase separation as a possible mechanism of how enhancers
 are still accessing their cognate gene. Will phase separation be the next
-looping? Time will tell! (yes it will)&lt;/li&gt;
-  &lt;li&gt;Excellent figures imo&lt;/li&gt;
-&lt;/ul&gt;
+looping? Time will tell! (yes it will)
++ Excellent figures imo&lt;/p&gt;
 
-&lt;p&gt;Key Figures: 2-5 tbh. Hugely important paper that’s really worth getting into&lt;/p&gt;</content><summary>There’s a ton of papers out there. Some are good, some are bad, and some are
+&lt;p&gt;Key Figures: 2-5 tbh. Hugely important paper that’s really worth getting into&lt;/p&gt;
+
+&lt;h3 id=&quot;lncrnas&quot;&gt;lncRNAs&lt;/h3&gt;
+
+&lt;h4 id=&quot;noncoding-transcription-by-alternative-rna-polymerases-dynamically-regulates-an-auxin-driven-chromatin-loop-2014&quot;&gt;Noncoding Transcription by Alternative RNA Polymerases Dynamically Regulates an Auxin-Driven Chromatin Loop (2014)&lt;/h4&gt;
+
+&lt;p&gt;This &lt;a href=&quot;https://www.ncbi.nlm.nih.gov/pubmed/25018019&quot;&gt;paper&lt;/a&gt; is an interesting
+one because it’s really one of the first paper to find an lncRNA in
+arabidopsis, delete it, and show a phenotypic effect. This alone makes it a
+fairly important piece of plant genomics literature in my opinion. Authors on
+this guy are Ariel et al, with crespi being the senior investigator.&lt;/p&gt;
+
+&lt;p&gt;But diving into this paper, this paper seeks to demonstrate the link that an
+identified lncRNA by the name of APOLO regulates PINOID (PID), a well known gene in root development.&lt;/p&gt;
+
+&lt;p&gt;So, to takcle this the authors generated a system to interfere with APOLO using
+RnaI techniques. Upon knocking down APOLO transcription, PID was knocked down
+as well, and generated longer roots as a byproduct - Figures 1 B-D.&lt;/p&gt;
+
+&lt;p&gt;Next, the authros attempt to demonstrate that the epigenetic landscape of APOLO and PID
+dynamically change in response to AUXIN treatment. I find this section (Figure
+2) fairly poorly explained, and hard to interpret. Their ChIP-qPCR graphs
+strike me as being nearly indecipherable. That being said they take this study
+in an intersting direction as they attempt to elucidate how APOLO is being
+transcribed. They know from mutants like nrpd2a (pol IV subunit)
+that APOLO was still transcribed meaning it’s most likely transcribed by POL II.&lt;/p&gt;
+
+&lt;p&gt;With this paper however, I do have some issues. I think Figure 2 is nearly
+illegible here. It’s challenging to understand, and the trends to authors point
+to are rather opaque. Secondly, the mechanism which they draw upon is quite
+complex, making me wonder well… Is it really that complex? Or have they
+heaped on a complex mechanism in an attempt to explain this. Added on top of
+this is recent research in the plant field pointing to the idea that
+methylation may not be the end all be all of gene silencing, esecially
+considering that some gene body nethylated genes are heavily transcribed.&lt;/p&gt;
+
+&lt;p&gt;Other issues - ChIP-qpcr in 2014 to me seems really… Questionable. Why not do
+ChIP-seq? There’s no need, and it would have made many of their figures far
+more convincing in my opinion.&lt;/p&gt;
+
+&lt;p&gt;Main Takaways:
++ There are lncRNAs in the arabidopsis genome that have phenotypes. I’ve had
+  more than a few poeple ask me if such a thing exist so that’s great to have
++ They can be possibly transcribed by different POLs either POL II or POL IV. 
++ They appear (possibly) to have a capacity to regulat the epigenetic
+  landscape in regards to recruiting PCRC1/2 (not sure I buy this. Other review
+  have said this point is overblow in mammals)&lt;/p&gt;
+
+&lt;p&gt;Key Figures: 1&lt;/p&gt;
+
+&lt;h4 id=&quot;unlinking-an-lncrna-from-its-associated-cis-element-2016&quot;&gt;Unlinking an lncRNA from Its Associated cis Element (2016)&lt;/h4&gt;
+
+&lt;p&gt;I really like this paper overall. I think it does an excellent job of
+displaying a somewhat novel mechanism of lncRNAs. It’s short, sweet, to the
+point, and does the exact exerpiments you want them to do. Anyways, to the
+paper.&lt;/p&gt;
+
+&lt;p&gt;This paper by &lt;a href=&quot;https://www.ncbi.nlm.nih.gov/pubmed/27041223&quot;&gt;Parakallar et al&lt;/a&gt;
+basically ask the question, “does the lncRNA matter” compared to the sequence
+underneath it? It does so by looking at the lncRNA Lockd and the gene Cdkn1b.
+The authors start off by demonstrating that if you delete the lncRNA Lockd
+using cirps/cas9, the gene product is reduced (Figure 1).&lt;/p&gt;
+
+&lt;p&gt;However, if you simply add a polyadenalation signal to the middle of exon 1 of
+the lncRNA, the lncRNA product is reduce, but the gene product remains almost
+unchanged. Demonstarting that the lncRNA product itself isn’t important, but
+the loci is.&lt;/p&gt;
+
+&lt;p&gt;It should be noted though, that this doesn’t mean that the lncRNA product
+itself is TOTALLY useless. Rather, it’s useless to it’s closest gene. The
+authors didn’t explore the possability that Lockd was acting in Trans in any
+way. Granted, most of the known lncRNAs (xist mainly) appear to act in a
+neighborhood esque manner.&lt;/p&gt;
+
+&lt;p&gt;Other Takeaways:
++ Man, I’m so envious how easy it is to generate knockouts in cell lines. Seems
+  like you’re so unrestrained in some systems (yay plants!)
++ Excellent concise review of other mechanisms found in the lncRNA literature,
+  and some other things to brush up on.&lt;/p&gt;
+
+&lt;p&gt;Key Figure: 2B&lt;/p&gt;
+
+&lt;h3 id=&quot;transcription&quot;&gt;Transcription&lt;/h3&gt;
+
+&lt;h4 id=&quot;stochastic-mrna-synthesis-in-mammalian-cells-2006&quot;&gt;Stochastic mRNA Synthesis in Mammalian Cells (2006)&lt;/h4&gt;
+
+&lt;p&gt;This paper by Raj et al is a pretty sweet study that really began our
+understanding of the ‘burst’ dynamics of transcription, and man oh man it’s
+cool. Often times I feel as if the term ‘elegent’ is overused when describing
+papers, but this one, this one is certainly elegant.&lt;/p&gt;
+
+&lt;p&gt;The authors initiated this study by wanting to study transcription in vivo. To
+do so they develope this awesome system where thye basically create an reporter gene
+with a ton of binding sites for florescent probes. When expressed and annealed,
+these probes are able to pinpoint single molecules in the cell.&lt;/p&gt;
+
+&lt;p&gt;After demonstrating that this ‘works’ the authors then go on to describe where
+mRNA localizes. Their big point is that when you see these lit up regions of
+transcription you generally see more mRNA in the nucleus, and when you don’t
+see these transcriptionally active points you tend to find more mRNA in the
+cytoplasm, Figure 2D. They also make a point that in 2D these two cells while
+having vastly different localization of mRNA also appear to be delinated from
+the same parent cell, indicating that mRNA variation is not simply due to
+differences in cell cycle stages.&lt;/p&gt;
+
+&lt;p&gt;Next, the authors modify their reporter gene with either one or seven copies of
+totO, a reporter that you’re able to shut off in the prescence of Doxycycline.
+Doxycline minimizes the required holodimer tTA required to drive transcription.
+Bascially they found that increasing the amount of doxycline reduces the amont
+of mRNA of the gene, but the NOISE, here defined as (standard deviation/mean )
+did NOT change. They chock this up to being reflective of the thing that really
+matters is the activation state of the gene itself.&lt;/p&gt;
+
+&lt;p&gt;Then go on to show that increasing the number of TF factors that bind OR
+increasing the number of transcription factor sites increases the size of the
+burst. This paper goes on pionting out that it appears genes that genes being
+turned on is intrinsically random.&lt;/p&gt;
+
+&lt;p&gt;Main Takeways:
++ Transcription happens in burst, the size of these burst are modulated by thing liks Transcription factor binding and such
++ The pinpoint chromatin as a likely cause of which changes genes from
+being ‘on’ or ‘off’ pointint to the idea that the rate limiting step of
+transcription is most likely chromatin decondensation.
++ Give these results there are most likely two ways in which transcription
+is able to increase - (ii) increase the rate of transcription when the gene
+is in the active state, or (iii) decrease the rate of gene inactivation
+(the opposite behaviors, of course, apply should a cell decide to
+downregulate a gene’s transcription)&lt;/p&gt;
+
+&lt;p&gt;Key Figures: 3&lt;/p&gt;</content><summary>There’s a ton of papers out there. Some are good, some are bad, and some are
 really - really important. So, here is a collection of papers that I think are
 important, and one or two reasons why I think so. This is going to be broken
-down loosely by subject matter, and will be updated as I go along.</summary></entry><entry><title>Identifying RNA-Seq strandedneess</title><link href="http://generallybiology.com//bioinformatics/identifying-rna-seq-strandedneess/" rel="alternate" type="text/html" title="Identifying RNA-Seq strandedneess" /><published>2019-06-20T16:32:00-04:00</published><updated>2019-06-20T16:32:00-04:00</updated><id>http://generallybiology.com//bioinformatics/identifying-rna-seq-strandedneess</id><content type="html" xml:base="http://generallybiology.com//bioinformatics/identifying-rna-seq-strandedneess/">&lt;p&gt;Often times it’s essential to know the strand orientation of your library. If
+down loosely by subject matter, and will be updated as I go along.</summary></entry><entry><title>Useful Snakemake Questions from StackOverflow</title><link href="http://generallybiology.com//bioinformatics/snake-make-tips-trick-links/" rel="alternate" type="text/html" title="Useful Snakemake Questions from StackOverflow" /><published>2019-08-05T11:00:00-04:00</published><updated>2019-08-05T11:00:00-04:00</updated><id>http://generallybiology.com//bioinformatics/snake-make-tips-trick-links</id><content type="html" xml:base="http://generallybiology.com//bioinformatics/snake-make-tips-trick-links/">&lt;p&gt;I’ve been spending alot of time using snakemake recently, and I absoutly love
+it. It makes processing a ton of files relativly easy, and does a ton of the
+self documenting itself. Paired with this is that it’s far more pliable than a
+bash script.&lt;/p&gt;
+
+&lt;p&gt;That being said, I feel like I revisit the same 20 stack overflow examples. So,
+here’s an ever updating list of examples I find useful&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;How to mix Globbing and Wilcards
+https://www.bioinformatics.stackexchange.com/questions/7184/mix-globbing-and-wildcards-when-specifying-rule-input&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;How to use a nested YAML file 
+Long but worth it 
+https://www.stackoverflow.com/questions/50198628/snakemake-confusion-on-how-to-access-config-files-properly&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;</content><summary>I’ve been spending alot of time using snakemake recently, and I absoutly love
+it. It makes processing a ton of files relativly easy, and does a ton of the
+self documenting itself. Paired with this is that it’s far more pliable than a
+bash script.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://generallybiology.com//images/snake_boy.jpg" /></entry><entry><title>Identifying RNA-Seq strandedneess</title><link href="http://generallybiology.com//bioinformatics/identifying-rna-seq-strandedneess/" rel="alternate" type="text/html" title="Identifying RNA-Seq strandedneess" /><published>2019-06-20T16:32:00-04:00</published><updated>2019-06-20T16:32:00-04:00</updated><id>http://generallybiology.com//bioinformatics/identifying-rna-seq-strandedneess</id><content type="html" xml:base="http://generallybiology.com//bioinformatics/identifying-rna-seq-strandedneess/">&lt;p&gt;Often times it’s essential to know the strand orientation of your library. If
 for instance you have overlapping genes, or very closely nested genes, you wont
 be able to accuretly calculate transcription units unless you know the strand
 of origin of both your RNA library and your genes

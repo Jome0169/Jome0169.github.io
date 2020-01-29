@@ -2,23 +2,21 @@
 <html>
   <head>
     <meta charset="utf-8">
-	<title>My Toolbox • Generally Biology</title>
-    <meta name="description" content="It seems like everyone who does computational biology has a different workflow.
-Whether it be a different IDE, different libraries, everyone has a set up that is uniqly their own. In an attempt to distill my
-knowledge to those who might be interested, I thought I’d
-write a quick post detailing some components of my workflow that I couldn’t
-live without.
+	<title>Useful Snakemake Questions from StackOverflow • Generally Biology</title>
+    <meta name="description" content="I’ve been spending alot of time using snakemake recently, and I absoutly love
+it. It makes processing a ton of files relativly easy, and does a ton of the
+self documenting itself. Paired with this is that it’s far more pliable than a
+bash script.
 
 ">
     <meta name="keywords" content="">
     
     	<!-- Twitter Cards -->
-	<meta name="twitter:title" content="My Toolbox">
-	<meta name="twitter:description" content="It seems like everyone who does computational biology has a different workflow.
-Whether it be a different IDE, different libraries, everyone has a set up that is uniqly their own. In an attempt to distill my
-knowledge to those who might be interested, I thought I’d
-write a quick post detailing some components of my workflow that I couldn’t
-live without.
+	<meta name="twitter:title" content="Useful Snakemake Questions from StackOverflow">
+	<meta name="twitter:description" content="I’ve been spending alot of time using snakemake recently, and I absoutly love
+it. It makes processing a ton of files relativly easy, and does a ton of the
+self documenting itself. Paired with this is that it’s far more pliable than a
+bash script.
 
 ">
 	
@@ -30,18 +28,17 @@ live without.
 	<!-- Open Graph -->
 	<meta property="og:locale" content="">
 	<meta property="og:type" content="article">
-	<meta property="og:title" content="My Toolbox">
-	<meta property="og:description" content="It seems like everyone who does computational biology has a different workflow.
-Whether it be a different IDE, different libraries, everyone has a set up that is uniqly their own. In an attempt to distill my
-knowledge to those who might be interested, I thought I’d
-write a quick post detailing some components of my workflow that I couldn’t
-live without.
+	<meta property="og:title" content="Useful Snakemake Questions from StackOverflow">
+	<meta property="og:description" content="I’ve been spending alot of time using snakemake recently, and I absoutly love
+it. It makes processing a ton of files relativly easy, and does a ton of the
+self documenting itself. Paired with this is that it’s far more pliable than a
+bash script.
 
 ">
-	<meta property="og:url" content="http://generallybiology.com//bioinformatics/my-toolbox/">
+	<meta property="og:url" content="http://generallybiology.com//bioinformatics/snake-make-tips-trick-links/">
 	<meta property="og:site_name" content="Generally Biology">
 
-    <link rel="canonical" href="http://generallybiology.com//bioinformatics/my-toolbox/">
+    <link rel="canonical" href="http://generallybiology.com//bioinformatics/snake-make-tips-trick-links/">
 
     <link href="http://generallybiology.com//atom.xml" type="application/atom+xml" rel="alternate" title="Generally Biology Atom Feed">
     <link href="http://generallybiology.com//sitemap.xml" type="application/xml" rel="sitemap" title="Sitemap">
@@ -142,101 +139,29 @@ live without.
   </nav><!-- /.breadcrumbs -->
 
 		<div class="page-title">
-			<h1>My Toolbox</h1>
+			<h1>Useful Snakemake Questions from StackOverflow</h1>
 		</div>
 		<div class="inner-wrap">
 			<div id="content" class="page-content" itemprop="articleBody">
-				<p>It seems like everyone who does computational biology has a different workflow.
-Whether it be a different IDE, different libraries, everyone has a set up that is uniqly their own. In an attempt to distill my
-knowledge to those who might be interested, I thought I’d
-write a quick post detailing some components of my workflow that I couldn’t
-live without.</p>
+				<p>I’ve been spending alot of time using snakemake recently, and I absoutly love
+it. It makes processing a ton of files relativly easy, and does a ton of the
+self documenting itself. Paired with this is that it’s far more pliable than a
+bash script.</p>
 
-<h2 id="idestext-editors">IDEs/Text Editors:</h2>
+<p>That being said, I feel like I revisit the same 20 stack overflow examples. So,
+here’s an ever updating list of examples I find useful</p>
 
-<h4 id="vim">VIM</h4>
-
-<p>If you know me, this won’t surprise you. I’m an avid VIM user. I find its
-‘lightweightness’ as well as its universal occurrence on servers essential. Need to open a massive 4Gb file in it? Sure! It
-won’t be pretty, but god damn does it work. Need to make a quick edit to that
-script you just copied over? Easy Peazy.</p>
-
-<p>This paired with its massive archive of plugins makes it an amazing editor that
-can do anything sublime2 or visualstudio code can. It’s also a text editor that I find consistently rewards you for 
-sticking with it. If you find yourself coding along, consistenly hitting the
-same “Pain point”, the VIM community has come up with a macro combination to solve it.</p>
-
-<h4 id="rstudio">RStudio</h4>
-
-<p>If you use R, you know what this is and why you need it. It makes writing R
-scripts joyous, logically displays your environment, and makes graphing/ 
-dealing with packages easy.</p>
-
-<h2 id="command-line-accessories">Command Line ‘Accessories’</h2>
-
-<h4 id="tmux">TMUX</h4>
-<p>Honestly, between TMUX and VIM, I’m not sure which has had a larger
-effect on my workflow. At this point both are completely indispensable to me,
-albeit for different reasons.</p>
-
-<p>TMUX is a terminal multiplexer. It allows users to split their singular
-terminal session into multiple, allowing you login once, and then have a pane
-dedicated to writing bash scripts, copying over data, etc…</p>
-
-<p>Not sold? It ALSO doesn’t log off much like <strong>screen</strong>, meaning you can open up
-3-4 windows, run separate commands, detach the session, and come back later.
-This has so so so many added benefits. Hit the wrong hot key and close your
-terminal window? YOUR WORK IS STILL THERE!!!. Honestly, I can’t praise TMUX
-highly enough. It’s infinite customizability, and integration with VIM
-transforms both these softwares into an amazing IDE that can be accessed on any
-remote server.</p>
-
-<p>It’s a computational biologists dream.</p>
-
-<h4 id="fd-like-find-but-i-can-remember-the-command">fd (like find, but I can remember the command)</h4>
-
-<p>Finding files is a pain in the ass with the <code class="highlighter-rouge">find</code> command. For whatever reason
-I can never seem to remember the inane synatx</p>
-
-<h4 id="conda">CONDA</h4>
-<p>This is possibly my most recent addition to my workflow as of late. But my GOD,
-I don’t know how I ever lived without it before. Conda is a container workflow
-that allows a user to generate a specific enviornment to run their software. So
-if you’re having issue getting all of your python library installs to work
-across different clusters, conda is a god send. Its actually hard to imagine
-just how much time it has saved me overall.</p>
-
-<h2 id="libraries">Libraries</h2>
-
-<h4 id="pybedtoolspysamtools">pybedtools/pysamtools</h4>
-
-<p>Possibly the best python libraries I’ve ever used. Well documented, fast,
-excellent usage scenarios. It’s saved me countless hours, and allowed me to
-break up the standard worflow of “Data -&gt; Command Line App -&gt; python 
--&gt; output” to just “Data -&gt; python -&gt; output”, allowing me to avoid a full
-step.</p>
-
-<p>This paired with the fact that these libraries are very well tested, and have
-some pretty sophisticated communities around them allow me to relax just a bit
-more, and focus on my science.</p>
-
-<h4 id="tidyverse">Tidyverse</h4>
-<p>I dislike the R programming language. I think it’s poorly written, and
-needlessly complex. It’s the perl of statistics in so many ways. The Tidyverse
-basically makes R usable. If you’re not using it I weep for you.</p>
-
-<h2 id="bonus">Bonus</h2>
-
-<h4 id="rhodia-sketch-pad">Rhodia Sketch pad</h4>
-<p>Honestly, sometimes you just desperatly need to sketch out your ideas. I’m a
-massive believer that</p>
-
-<h4 id="r-for-data-analysis">R for data analysis</h4>
-<p>I still suck at R for the most part. So this free E-book for me has been an
-absolute godsend.</p>
-
-<h4 id="good-headphones">Good headphones</h4>
-
+<ol>
+  <li>
+    <p>How to mix Globbing and Wilcards
+https://www.bioinformatics.stackexchange.com/questions/7184/mix-globbing-and-wildcards-when-specifying-rule-input</p>
+  </li>
+  <li>
+    <p>How to use a nested YAML file 
+Long but worth it 
+https://www.stackoverflow.com/questions/50198628/snakemake-confusion-on-how-to-access-config-files-properly</p>
+  </li>
+</ol>
 
 				<hr />
 				<footer class="page-footer">
@@ -252,7 +177,7 @@ absolute godsend.</p>
 
 					
 					<div class="page-meta">
-	<p> <time datetime="2018-01-19T10:00:00Z" itemprop="datePublished">January 19, 2018</time></p>
+	<p> <time datetime="2019-08-05T11:00:00Z" itemprop="datePublished">August 05, 2019</time></p>
 </div><!-- /.page-meta -->
 
 				</footer><!-- /.footer -->
