@@ -1,0 +1,21 @@
+An Idiots Guide to Iso-seq analaysis
+
+
+So, in case you've been living in a hole in the ground, pac-bios iso-seq method
+stands to drastically change the game (so they say) in regards to RNA -
+sequencing. This method which allows you to capture full length cDNA is
+arguably a more efficient and accurate method of sequencing and capturing RNA
+molecules.
+
+However, while all this might be true, the guides to using Iso-seq data using
+the command line, as well as downloading reads from NCBI remains pretty much
+vacant. So, here i am.
+
+Also - this shit feels needlessly complicated. Funny how without either a
+`flaminghottommy` blog post or a `davetang` post I feel utterly lost. Light a
+candle for our boys.
+
+
+First - download reads. The read set I'm downloading is from Zea Mays, for the
+most recent genome annotation of version 5. Reads can be found here: 
+

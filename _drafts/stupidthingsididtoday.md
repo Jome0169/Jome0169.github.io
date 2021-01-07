@@ -28,7 +28,7 @@ INstead of needing to generate a home brewed solution most likely rife with
 errors and issues of zero indexing and genomic coordinates, bedtools offers an
 easy way to answer this question. 
 
-BUT - it's also a double edged sword. With its overall fleability comes some
+BUT - it's also a double edged sword. With its overall flexability comes some
 pretty serious issues. You can easily wind up cutting yourself if you're not
 careful and observant. For example... 
 
