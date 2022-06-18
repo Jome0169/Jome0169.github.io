@@ -1,0 +1,6 @@
+I"j<p>So, I was interestd in running the software peakranger bcp recently, but
+stumbeled into a rather irritating probelm. I kept getting the classic message
+<code class="highlighter-rouge">Segmentation fault (core dumped)</code>. Upon looking around for the solution to
+this problem I found nothing. So I thought I would document briefly what I did
+to fix it.</p>
+:ET

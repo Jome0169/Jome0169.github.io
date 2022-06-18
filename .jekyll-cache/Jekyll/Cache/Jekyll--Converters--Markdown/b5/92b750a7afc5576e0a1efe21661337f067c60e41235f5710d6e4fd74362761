@@ -1,0 +1,6 @@
+I"4<p>Often times it’s essential to know the strand orientation of your library. If
+for instance you have overlapping genes, or very closely nested genes, you wont
+be able to accuretly calculate transcription units unless you know the strand
+of origin of both your RNA library and your genes
+of interest.</p>
+:ET

@@ -1,0 +1,6 @@
+I"P<p>If you’re trying to use both Gviz and cowplot in the same package it can be
+done. It took me a while, but I eventually found the answer on a combination of
+a github page/as well as what I presume to be a chinese version of github. So
+for example - lets say you’re generating the following Gviz image with the
+follwoing code:</p>
+:ET

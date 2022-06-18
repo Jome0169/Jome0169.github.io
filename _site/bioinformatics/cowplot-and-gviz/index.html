@@ -8,7 +8,6 @@ done. It took me a while, but I eventually found the answer on a combination of
 a github page/as well as what I presume to be a chinese version of github. So
 for example - lets say you’re generating the following Gviz image with the
 follwoing code:
-
 ">
     <meta name="keywords" content="">
     
@@ -19,13 +18,12 @@ done. It took me a while, but I eventually found the answer on a combination of
 a github page/as well as what I presume to be a chinese version of github. So
 for example - lets say you’re generating the following Gviz image with the
 follwoing code:
-
 ">
 	
 	
 	
 	<meta name="twitter:card" content="summary">
-	<meta name="twitter:image" content="http://generallybiology.com//images/dnaimage.jpg">
+	<meta name="twitter:image" content="http://localhost:4000/images/dnaimage.jpg">
 	
 	<!-- Open Graph -->
 	<meta property="og:locale" content="">
@@ -36,26 +34,25 @@ done. It took me a while, but I eventually found the answer on a combination of
 a github page/as well as what I presume to be a chinese version of github. So
 for example - lets say you’re generating the following Gviz image with the
 follwoing code:
-
 ">
-	<meta property="og:url" content="http://generallybiology.com//bioinformatics/cowplot-and-gviz/">
+	<meta property="og:url" content="http://localhost:4000/bioinformatics/cowplot-and-gviz/">
 	<meta property="og:site_name" content="Generally Biology">
 
-    <link rel="canonical" href="http://generallybiology.com//bioinformatics/cowplot-and-gviz/">
+    <link rel="canonical" href="http://localhost:4000/bioinformatics/cowplot-and-gviz/">
 
-    <link href="http://generallybiology.com//atom.xml" type="application/atom+xml" rel="alternate" title="Generally Biology Atom Feed">
-    <link href="http://generallybiology.com//sitemap.xml" type="application/xml" rel="sitemap" title="Sitemap">
+    <link href="http://localhost:4000/atom.xml" type="application/atom+xml" rel="alternate" title="Generally Biology Atom Feed">
+    <link href="http://localhost:4000/sitemap.xml" type="application/xml" rel="sitemap" title="Sitemap">
 
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="cleartype" content="on">
 
-    <link rel="stylesheet" href="http://generallybiology.com//css/main.css">
+    <link rel="stylesheet" href="http://localhost:4000/css/main.css">
     <!-- HTML5 Shiv and Media Query Support for IE -->
     <!--[if lt IE 9]>
-      <script src="http://generallybiology.com//js/vendor/html5shiv.min.js"></script>
-      <script src="http://generallybiology.com//js/vendor/respond.min.js"></script>
+      <script src="http://localhost:4000/js/vendor/html5shiv.min.js"></script>
+      <script src="http://localhost:4000/js/vendor/respond.min.js"></script>
     <![endif]-->
 
   </head>
@@ -65,22 +62,22 @@ follwoing code:
 
     <header id="masthead">
   <div class="inner-wrap">
-    <a href="http://generallybiology.com//" class="site-title">Generally Biology</a>
+    <a href="http://localhost:4000/" class="site-title">Generally Biology</a>
     <nav role="navigation" class="menu top-menu">
         <ul class="menu-item">
 	<li class="home"><a href="/">Generally Biology</a></li>
 	
     
-    <li><a href="http://generallybiology.com//" >Home</a></li>
+    <li><a href="http://localhost:4000/" >Home</a></li>
   
     
-    <li><a href="http://generallybiology.com//blog/" >Blog</a></li>
+    <li><a href="http://localhost:4000/blog/" >Blog</a></li>
   
     
-    <li><a href="http://generallybiology.com//collections/" >Collections</a></li>
+    <li><a href="http://localhost:4000/collections/" >Collections</a></li>
   
     
-    <li><a href="http://generallybiology.com//about/" >About</a></li>
+    <li><a href="http://localhost:4000/about/" >About</a></li>
   
 </ul>
     </nav>
@@ -91,25 +88,25 @@ follwoing code:
   <h5>Generally Biology <span></span></h5>
   <ul class="menu-item">
     <li>
-      <a href="http://generallybiology.com//">
+      <a href="http://localhost:4000/">
         
         <div class="title">Home</div>
         <p class="excerpt">Generally Biology</p>
       </a>
     </li><li>
-      <a href="http://generallybiology.com//blog/">
+      <a href="http://localhost:4000/blog/">
         
         <div class="title">Blog</div>
         <p class="excerpt">My Writings on Biology, and computers, and the insane intersection between the two that we call bioinformatics/computational biology.</p>
       </a>
     </li><li>
-      <a href="http://generallybiology.com//collections/">
+      <a href="http://localhost:4000/collections/">
         
         <div class="title">Collections</div>
         <p class="excerpt">Writings on specific subjects</p>
       </a>
     </li><li>
-      <a href="http://generallybiology.com//about/">
+      <a href="http://localhost:4000/about/">
         
         <div class="title">About</div>
         <p class="excerpt">John Pablo Mendieta</p>
@@ -131,11 +128,11 @@ follwoing code:
 		
   <nav class="breadcrumbs">
     <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
-      <a href="http://generallybiology.com/" itemprop="url">
+      <a href="http://localhost:4000" itemprop="url">
         <span itemprop="title">Home</span>
       </a> › 
     <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
-      <a href="http://generallybiology.com//Bioinformatics/" itemprop="url">
+      <a href="http://localhost:4000/Bioinformatics/" itemprop="url">
         <span itemprop="title">Bioinformatics</span>
       </a>
     </span>
@@ -152,17 +149,16 @@ a github page/as well as what I presume to be a chinese version of github. So
 for example - lets say you’re generating the following Gviz image with the
 follwoing code:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>plotTracks(c(axisTrack,grtrack, leaf_H3K36me3_ranges_4, leaf_H4K4me1_ranges_4,
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>plotTracks(c(axisTrack,grtrack, leaf_H3K36me3_ranges_4, leaf_H4K4me1_ranges_4,
 rna_Seq_data_ranges_4), from=10633266, to=10643235, chromosome='4', type="h")
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>With the output looking like:
 <img src="/images/gviz_cow/P1.png" alt="alt text" /></p>
 
 <p>You can catch this image using  <code class="highlighter-rouge">grid::grid.grabExpr()</code> which saves your output as a glob image for later proccessing. So if you’re planning on outputting it to cowplot/combining it with another plot you can do something like</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>p1 &lt;- grid::grid.grabExpr(plotTracks(c(axisTrack,grtrack,
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>p1 &lt;- grid::grid.grabExpr(plotTracks(c(axisTrack,grtrack,
 leaf_H3K36me3_ranges_4, leaf_H4K4me1_ranges_4, rna_Seq_data_ranges_4),
 from=10633266, to=10643235, chromosome='4', type="h"),wrap.grobs = TRUE)
 
@@ -172,8 +168,7 @@ leaf_H4K4me1_ranges_2, rna_Seq_data_ranges_2), from=198700931, to=198710900,
 chromosome='2', type="h"),wrap.grobs = TRUE)
 
 final_figure_1A_plot &lt;- gridExtra::grid.arrange(p1, p2, ncol=2) 
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Now we’ve combined our two plots, it looks like:</p>
 
@@ -182,14 +177,13 @@ final_figure_1A_plot &lt;- gridExtra::grid.arrange(p1, p2, ncol=2)
 <p>And finally, we take the ‘final’ plot from Figure 1A, and then plot it with the
 other figures using plot grid using the code below</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>#Generate Empty plot for Examples
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#Generate Empty plot for Examples
 empty_plot &lt;- ggplot(mtcars, aes(x = wt, y = mpg)) 
 
 final_everything &lt;- plot_grid(final_figure_1A_plot, OTHER_FIGURE, labels = c("A", ""), nrow = 2, ncol = 1, rel_heights = c(1, 1.5))
 final_everything
 
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>which then makes:
 <img src="/images/gviz_cow/Final.png" alt="Final" /></p>
@@ -202,7 +196,7 @@ work around single handedly allowed me to avoid illustrator all together! yippie
 					
 
 <div class="author-image">
-	<img src="http://generallybiology.com//images/" alt="">
+	<img src="http://localhost:4000/images/" alt="">
 </div><!-- ./author-image -->
 <div class="author-content">
 	<h3 class="author-name" > <span itemprop="author"></span></h3>
@@ -243,7 +237,7 @@ work around single handedly allowed me to avoid illustrator all together! yippie
 		<ul class="menu-item">
 		
       
-			<li><a href="http://generallybiology.com/" >Follow:</a></li>
+			<li><a href="http://localhost:4000" >Follow:</a></li>
 		
       
 			<li><a href="https://twitter.com/pabster212?lang=en" target="_blank">Twitter</a></li>
@@ -256,13 +250,13 @@ work around single handedly allowed me to avoid illustrator all together! yippie
 		
 		</ul>
 	</nav><!-- /.bottom-menu -->
-	<p class="copyright">&#169; 2020 <a href="http://generallybiology.com/">Generally Biology</a> powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> + <a href="http://mmistakes.github.io/skinny-bones-jekyll/" rel="nofollow">Skinny Bones</a>.</p>
+	<p class="copyright">&#169; 2021 <a href="http://localhost:4000">Generally Biology</a> powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> + <a href="http://mmistakes.github.io/skinny-bones-jekyll/" rel="nofollow">Skinny Bones</a>.</p>
 </footer>
 
     </div>
 
-    <script src="http://generallybiology.com//js/vendor/jquery-1.9.1.min.js"></script>
-    <script src="http://generallybiology.com//js/main.js"></script>
+    <script src="http://localhost:4000/js/vendor/jquery-1.9.1.min.js"></script>
+    <script src="http://localhost:4000/js/main.js"></script>
 
   </body>
 

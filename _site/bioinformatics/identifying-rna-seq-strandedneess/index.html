@@ -8,7 +8,6 @@ for instance you have overlapping genes, or very closely nested genes, you wont
 be able to accuretly calculate transcription units unless you know the strand
 of origin of both your RNA library and your genes
 of interest.
-
 ">
     <meta name="keywords" content="">
     
@@ -19,13 +18,12 @@ for instance you have overlapping genes, or very closely nested genes, you wont
 be able to accuretly calculate transcription units unless you know the strand
 of origin of both your RNA library and your genes
 of interest.
-
 ">
 	
 	
 	
 	<meta name="twitter:card" content="summary">
-	<meta name="twitter:image" content="http://generallybiology.com//images/dnaimage.jpg">
+	<meta name="twitter:image" content="http://localhost:4000/images/dnaimage.jpg">
 	
 	<!-- Open Graph -->
 	<meta property="og:locale" content="">
@@ -36,26 +34,25 @@ for instance you have overlapping genes, or very closely nested genes, you wont
 be able to accuretly calculate transcription units unless you know the strand
 of origin of both your RNA library and your genes
 of interest.
-
 ">
-	<meta property="og:url" content="http://generallybiology.com//bioinformatics/identifying-rna-seq-strandedneess/">
+	<meta property="og:url" content="http://localhost:4000/bioinformatics/identifying-rna-seq-strandedneess/">
 	<meta property="og:site_name" content="Generally Biology">
 
-    <link rel="canonical" href="http://generallybiology.com//bioinformatics/identifying-rna-seq-strandedneess/">
+    <link rel="canonical" href="http://localhost:4000/bioinformatics/identifying-rna-seq-strandedneess/">
 
-    <link href="http://generallybiology.com//atom.xml" type="application/atom+xml" rel="alternate" title="Generally Biology Atom Feed">
-    <link href="http://generallybiology.com//sitemap.xml" type="application/xml" rel="sitemap" title="Sitemap">
+    <link href="http://localhost:4000/atom.xml" type="application/atom+xml" rel="alternate" title="Generally Biology Atom Feed">
+    <link href="http://localhost:4000/sitemap.xml" type="application/xml" rel="sitemap" title="Sitemap">
 
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="cleartype" content="on">
 
-    <link rel="stylesheet" href="http://generallybiology.com//css/main.css">
+    <link rel="stylesheet" href="http://localhost:4000/css/main.css">
     <!-- HTML5 Shiv and Media Query Support for IE -->
     <!--[if lt IE 9]>
-      <script src="http://generallybiology.com//js/vendor/html5shiv.min.js"></script>
-      <script src="http://generallybiology.com//js/vendor/respond.min.js"></script>
+      <script src="http://localhost:4000/js/vendor/html5shiv.min.js"></script>
+      <script src="http://localhost:4000/js/vendor/respond.min.js"></script>
     <![endif]-->
 
   </head>
@@ -65,22 +62,22 @@ of interest.
 
     <header id="masthead">
   <div class="inner-wrap">
-    <a href="http://generallybiology.com//" class="site-title">Generally Biology</a>
+    <a href="http://localhost:4000/" class="site-title">Generally Biology</a>
     <nav role="navigation" class="menu top-menu">
         <ul class="menu-item">
 	<li class="home"><a href="/">Generally Biology</a></li>
 	
     
-    <li><a href="http://generallybiology.com//" >Home</a></li>
+    <li><a href="http://localhost:4000/" >Home</a></li>
   
     
-    <li><a href="http://generallybiology.com//blog/" >Blog</a></li>
+    <li><a href="http://localhost:4000/blog/" >Blog</a></li>
   
     
-    <li><a href="http://generallybiology.com//collections/" >Collections</a></li>
+    <li><a href="http://localhost:4000/collections/" >Collections</a></li>
   
     
-    <li><a href="http://generallybiology.com//about/" >About</a></li>
+    <li><a href="http://localhost:4000/about/" >About</a></li>
   
 </ul>
     </nav>
@@ -91,25 +88,25 @@ of interest.
   <h5>Generally Biology <span></span></h5>
   <ul class="menu-item">
     <li>
-      <a href="http://generallybiology.com//">
+      <a href="http://localhost:4000/">
         
         <div class="title">Home</div>
         <p class="excerpt">Generally Biology</p>
       </a>
     </li><li>
-      <a href="http://generallybiology.com//blog/">
+      <a href="http://localhost:4000/blog/">
         
         <div class="title">Blog</div>
         <p class="excerpt">My Writings on Biology, and computers, and the insane intersection between the two that we call bioinformatics/computational biology.</p>
       </a>
     </li><li>
-      <a href="http://generallybiology.com//collections/">
+      <a href="http://localhost:4000/collections/">
         
         <div class="title">Collections</div>
         <p class="excerpt">Writings on specific subjects</p>
       </a>
     </li><li>
-      <a href="http://generallybiology.com//about/">
+      <a href="http://localhost:4000/about/">
         
         <div class="title">About</div>
         <p class="excerpt">John Pablo Mendieta</p>
@@ -131,11 +128,11 @@ of interest.
 		
   <nav class="breadcrumbs">
     <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
-      <a href="http://generallybiology.com/" itemprop="url">
+      <a href="http://localhost:4000" itemprop="url">
         <span itemprop="title">Home</span>
       </a> › 
     <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
-      <a href="http://generallybiology.com//Bioinformatics/" itemprop="url">
+      <a href="http://localhost:4000/Bioinformatics/" itemprop="url">
         <span itemprop="title">Bioinformatics</span>
       </a>
     </span>
@@ -161,22 +158,21 @@ file (aligned to your genome) and a BED file of genes with known strandedness.</
 <p>So - to run it in parallel on all my bam libraries I just did a simple
 parallel command to expedite it as it’s quite quick.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>parallel -j 2 "infer_experiment.py -r Zea_mays.AGPv4.36.gene_only_strand.bed -i {} &gt; library_type_id_{/.}.txt" ::: ../all_aligned_files_sorted/*.bam
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>parallel -j 2 "infer_experiment.py -r Zea_mays.AGPv4.36.gene_only_strand.bed -i {} &gt; library_type_id_{/.}.txt" ::: ../all_aligned_files_sorted/*.bam
+</code></pre></div></div>
 
-<p>After this runs, the output looks like 
-```
-This is PairEnd Data
+<p>After this runs, the output looks like</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>This is PairEnd Data
 Fraction of reads failed to determine: 0.0067
-Fraction of reads explained by “1++,1–,2+-,2-+”: 0.4973
-Fraction of reads explained by “1+-,1-+,2++,2–”: 0.4960</p>
+Fraction of reads explained by "1++,1--,2+-,2-+": 0.4973
+Fraction of reads explained by "1+-,1-+,2++,2--": 0.4960
 
-<p>This is PairEnd Data
+
+This is PairEnd Data
 Fraction of reads failed to determine: 0.0104
-Fraction of reads explained by “1++,1–,2+-,2-+”: 0.5001
-Fraction of reads explained by “1+-,1-+,2++,2–”: 0.4895
-```</p>
+Fraction of reads explained by "1++,1--,2+-,2-+": 0.5001
+Fraction of reads explained by "1+-,1-+,2++,2--": 0.4895
+</code></pre></div></div>
 
 <p>So, what this output is telling you is that the reads are coming from either
 hte posotive or negative strand, and do NOT agree with the strandedness of the
@@ -195,7 +191,7 @@ following links extemely useful</p>
 					
 
 <div class="author-image">
-	<img src="http://generallybiology.com//images/" alt="">
+	<img src="http://localhost:4000/images/" alt="">
 </div><!-- ./author-image -->
 <div class="author-content">
 	<h3 class="author-name" > <span itemprop="author"></span></h3>
@@ -236,7 +232,7 @@ following links extemely useful</p>
 		<ul class="menu-item">
 		
       
-			<li><a href="http://generallybiology.com/" >Follow:</a></li>
+			<li><a href="http://localhost:4000" >Follow:</a></li>
 		
       
 			<li><a href="https://twitter.com/pabster212?lang=en" target="_blank">Twitter</a></li>
@@ -249,13 +245,13 @@ following links extemely useful</p>
 		
 		</ul>
 	</nav><!-- /.bottom-menu -->
-	<p class="copyright">&#169; 2020 <a href="http://generallybiology.com/">Generally Biology</a> powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> + <a href="http://mmistakes.github.io/skinny-bones-jekyll/" rel="nofollow">Skinny Bones</a>.</p>
+	<p class="copyright">&#169; 2021 <a href="http://localhost:4000">Generally Biology</a> powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> + <a href="http://mmistakes.github.io/skinny-bones-jekyll/" rel="nofollow">Skinny Bones</a>.</p>
 </footer>
 
     </div>
 
-    <script src="http://generallybiology.com//js/vendor/jquery-1.9.1.min.js"></script>
-    <script src="http://generallybiology.com//js/main.js"></script>
+    <script src="http://localhost:4000/js/vendor/jquery-1.9.1.min.js"></script>
+    <script src="http://localhost:4000/js/main.js"></script>
 
   </body>
 

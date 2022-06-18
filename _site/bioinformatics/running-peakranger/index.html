@@ -8,7 +8,6 @@ stumbeled into a rather irritating probelm. I kept getting the classic message
 Segmentation fault (core dumped). Upon looking around for the solution to
 this problem I found nothing. So I thought I would document briefly what I did
 to fix it.
-
 ">
     <meta name="keywords" content="">
     
@@ -19,13 +18,12 @@ stumbeled into a rather irritating probelm. I kept getting the classic message
 Segmentation fault (core dumped). Upon looking around for the solution to
 this problem I found nothing. So I thought I would document briefly what I did
 to fix it.
-
 ">
 	
 	
 	
 	<meta name="twitter:card" content="summary">
-	<meta name="twitter:image" content="http://generallybiology.com//images/dnaimage.jpg">
+	<meta name="twitter:image" content="http://localhost:4000/images/dnaimage.jpg">
 	
 	<!-- Open Graph -->
 	<meta property="og:locale" content="">
@@ -36,26 +34,25 @@ stumbeled into a rather irritating probelm. I kept getting the classic message
 Segmentation fault (core dumped). Upon looking around for the solution to
 this problem I found nothing. So I thought I would document briefly what I did
 to fix it.
-
 ">
-	<meta property="og:url" content="http://generallybiology.com//bioinformatics/running-peakranger/">
+	<meta property="og:url" content="http://localhost:4000/bioinformatics/running-peakranger/">
 	<meta property="og:site_name" content="Generally Biology">
 
-    <link rel="canonical" href="http://generallybiology.com//bioinformatics/running-peakranger/">
+    <link rel="canonical" href="http://localhost:4000/bioinformatics/running-peakranger/">
 
-    <link href="http://generallybiology.com//atom.xml" type="application/atom+xml" rel="alternate" title="Generally Biology Atom Feed">
-    <link href="http://generallybiology.com//sitemap.xml" type="application/xml" rel="sitemap" title="Sitemap">
+    <link href="http://localhost:4000/atom.xml" type="application/atom+xml" rel="alternate" title="Generally Biology Atom Feed">
+    <link href="http://localhost:4000/sitemap.xml" type="application/xml" rel="sitemap" title="Sitemap">
 
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="cleartype" content="on">
 
-    <link rel="stylesheet" href="http://generallybiology.com//css/main.css">
+    <link rel="stylesheet" href="http://localhost:4000/css/main.css">
     <!-- HTML5 Shiv and Media Query Support for IE -->
     <!--[if lt IE 9]>
-      <script src="http://generallybiology.com//js/vendor/html5shiv.min.js"></script>
-      <script src="http://generallybiology.com//js/vendor/respond.min.js"></script>
+      <script src="http://localhost:4000/js/vendor/html5shiv.min.js"></script>
+      <script src="http://localhost:4000/js/vendor/respond.min.js"></script>
     <![endif]-->
 
   </head>
@@ -65,22 +62,22 @@ to fix it.
 
     <header id="masthead">
   <div class="inner-wrap">
-    <a href="http://generallybiology.com//" class="site-title">Generally Biology</a>
+    <a href="http://localhost:4000/" class="site-title">Generally Biology</a>
     <nav role="navigation" class="menu top-menu">
         <ul class="menu-item">
 	<li class="home"><a href="/">Generally Biology</a></li>
 	
     
-    <li><a href="http://generallybiology.com//" >Home</a></li>
+    <li><a href="http://localhost:4000/" >Home</a></li>
   
     
-    <li><a href="http://generallybiology.com//blog/" >Blog</a></li>
+    <li><a href="http://localhost:4000/blog/" >Blog</a></li>
   
     
-    <li><a href="http://generallybiology.com//collections/" >Collections</a></li>
+    <li><a href="http://localhost:4000/collections/" >Collections</a></li>
   
     
-    <li><a href="http://generallybiology.com//about/" >About</a></li>
+    <li><a href="http://localhost:4000/about/" >About</a></li>
   
 </ul>
     </nav>
@@ -91,25 +88,25 @@ to fix it.
   <h5>Generally Biology <span></span></h5>
   <ul class="menu-item">
     <li>
-      <a href="http://generallybiology.com//">
+      <a href="http://localhost:4000/">
         
         <div class="title">Home</div>
         <p class="excerpt">Generally Biology</p>
       </a>
     </li><li>
-      <a href="http://generallybiology.com//blog/">
+      <a href="http://localhost:4000/blog/">
         
         <div class="title">Blog</div>
         <p class="excerpt">My Writings on Biology, and computers, and the insane intersection between the two that we call bioinformatics/computational biology.</p>
       </a>
     </li><li>
-      <a href="http://generallybiology.com//collections/">
+      <a href="http://localhost:4000/collections/">
         
         <div class="title">Collections</div>
         <p class="excerpt">Writings on specific subjects</p>
       </a>
     </li><li>
-      <a href="http://generallybiology.com//about/">
+      <a href="http://localhost:4000/about/">
         
         <div class="title">About</div>
         <p class="excerpt">John Pablo Mendieta</p>
@@ -131,11 +128,11 @@ to fix it.
 		
   <nav class="breadcrumbs">
     <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
-      <a href="http://generallybiology.com/" itemprop="url">
+      <a href="http://localhost:4000" itemprop="url">
         <span itemprop="title">Home</span>
       </a> › 
     <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
-      <a href="http://generallybiology.com//Bioinformatics/" itemprop="url">
+      <a href="http://localhost:4000/Bioinformatics/" itemprop="url">
         <span itemprop="title">Bioinformatics</span>
       </a>
     </span>
@@ -153,7 +150,7 @@ this problem I found nothing. So I thought I would document briefly what I did
 to fix it.</p>
 
 <h3 id="initial-output">Initial Output</h3>
-<div class="highlighter-rouge"><pre class="highlight"><code>program version:          1.18
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>program version:          1.18
 Data files:
  File format:             bam
  Sample file:             chip_rep1_BWA.sorted.bam
@@ -188,30 +185,27 @@ Reads statistics after correction:
  Calling peaks...
 
 Segmentation fault (core dumped)
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Upon investigating this further, I decided to see if the issue was coming from the scaffold reported in the error, B73V4_ctg162. To see check this I first analysed how many reads were aligning to this contig in the maize genome using  using a quick samtools command:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>#Command:
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#Command:
 samtools idxstats chip_B73_ear_H3K36me3_rep1_bowtie2algn.sorted.bam | grep B73V4_ctg162
 
 #Output:
 B73V4_ctg162    40634   0       0
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>So, there were ZERO reads aligning to this contig. Making me think the software might be chocking on this scaffold. But after removing this scaffold from the SAM file, I was still being greated by <code class="highlighter-rouge">Segmentation fault (core dumped)</code> . So, in order to try again I took a more drastic measure removed all scaffolds that had CTG in them. I did this after checking the gff3 file for all scaffolds/contigs, and coming to the conclusion that none of them are particularly gene rich and/or interesting for my questions. I removed ALL of these scaffolds using the following command:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>grep -v "B73V4_ctg*" chip_rep1_bowtie2algn.sam  &gt; chip_rep1_bowtie2algn.noctg_scaff.sam &amp;&amp; grep -v "B73V4_ctg*" chip_rep1_bowtie2algn.sam  &gt; chip_rep1_bowtie2algn.noctg_scaff.sam 
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>grep -v "B73V4_ctg*" chip_rep1_bowtie2algn.sam  &gt; chip_rep1_bowtie2algn.noctg_scaff.sam &amp;&amp; grep -v "B73V4_ctg*" chip_rep1_bowtie2algn.sam  &gt; chip_rep1_bowtie2algn.noctg_scaff.sam 
+</code></pre></div></div>
 
 <p>I eventuall re-ran this software using these generated SAM (I didn’t want to take the extra step of going from <code class="highlighter-rouge">samtools view | grep _v </code> back to sam) files, and was eventually rewarded with:</p>
 
 <h3 id="final-output">Final output:</h3>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>program version:          1.18
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>program version:          1.18
 Data files:
  File format:             sam
  Sample file:             chip_rep1_bowtie2algn.noctg_scaff.sam
@@ -259,8 +253,7 @@ Discovered 0    regions in Pt.
 
 
 Total regions discovered:       17877
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Success! It appears that those nasty scaffolds/contigs were proving to be quite troublesome for this software. But, this isn’t an ideal solution. We’re still casting out genomic information that I would prefer to keep for analysis. So… There has to be a smarter way of doing this. Maybe pin pointing the exact scaffolds that were failing and why? But in my case, this got me the desired results I needed.</p>
 
@@ -270,7 +263,7 @@ Total regions discovered:       17877
 					
 
 <div class="author-image">
-	<img src="http://generallybiology.com//images/" alt="">
+	<img src="http://localhost:4000/images/" alt="">
 </div><!-- ./author-image -->
 <div class="author-content">
 	<h3 class="author-name" > <span itemprop="author"></span></h3>
@@ -311,7 +304,7 @@ Total regions discovered:       17877
 		<ul class="menu-item">
 		
       
-			<li><a href="http://generallybiology.com/" >Follow:</a></li>
+			<li><a href="http://localhost:4000" >Follow:</a></li>
 		
       
 			<li><a href="https://twitter.com/pabster212?lang=en" target="_blank">Twitter</a></li>
@@ -324,13 +317,13 @@ Total regions discovered:       17877
 		
 		</ul>
 	</nav><!-- /.bottom-menu -->
-	<p class="copyright">&#169; 2020 <a href="http://generallybiology.com/">Generally Biology</a> powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> + <a href="http://mmistakes.github.io/skinny-bones-jekyll/" rel="nofollow">Skinny Bones</a>.</p>
+	<p class="copyright">&#169; 2021 <a href="http://localhost:4000">Generally Biology</a> powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> + <a href="http://mmistakes.github.io/skinny-bones-jekyll/" rel="nofollow">Skinny Bones</a>.</p>
 </footer>
 
     </div>
 
-    <script src="http://generallybiology.com//js/vendor/jquery-1.9.1.min.js"></script>
-    <script src="http://generallybiology.com//js/main.js"></script>
+    <script src="http://localhost:4000/js/vendor/jquery-1.9.1.min.js"></script>
+    <script src="http://localhost:4000/js/main.js"></script>
 
   </body>
 
